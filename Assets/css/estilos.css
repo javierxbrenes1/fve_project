@@ -1,10 +1,39 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 22/12/2015, 12:34:09 PM
-    Author     : jbrenes
-*/
+.Producto{
+    margin-top: 10px;
+}
+
+.imgProd
+{
+    width: 150px; 
+    height:150px;
+}
+.AgregarCarrito
+{
+    font-size:30px;
+}
+.lblKilo, .PrecioArticulo, .ProdNom
+{
+    display: inline-block;
+    position: relative;
+}
+input[type="text"]
+{
+    appearance: none;
+    width: 45px;
+    height: 25px;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+}
+
+#carrito
+{
+    width: 25%; 
+    border: #000 solid 2px;
+    display: inline-block; 
+    position: relative;
+    right:0px; 
+    top: 0px; 
+    bottom: 0px;
+}
 
