@@ -31,16 +31,28 @@
         //Crear el codigo html que se muestra en el carrito 
         $Productos = $vloCarrito->get_content();
         //Recorre los productos
-        for($vloI = 0; $vloI < count($Productos);$vloI++)
+        //echo count($Productos);
+        //echo $Productos["nombre"][0];
+//        foreach($Productos as $C)
+//        {
+//            echo "hola";
+//            echo $C["nombre"];
+//        }
+        
+        $vloCodHtml = "<div>";
+        $vloCodHtml = $vloCodHtml.'<table class="table table-striped"';
+        foreach($Productos as $vloFila)
         {
-            $Subtotal = $Productos['cantidad'][$vloI]*$Productos['prod_prc_act'][$vloI];
-//            $vloCodHtml = $vloCodHtml."<div>"
-//                    . "<p>".$Productos['prod_nom'][$vloI]."</p> ".
-//                      "<p>".$Productos['cantidad'][$vloI]."</p>".
-//                      "<p>".$Subtotal."</p>"
-//                    . "</div>";
-            echo "hola";
+            $Subtotal = $vloFila['cantidad']*$vloFila['precio'];
+            $vloCodHtml = $vloCodHtml."<tr>";
+            $vloCodHtml = $vloCodHtml."<td>".'<img class="img-circle" width="50" height="50" src="Assets/img/'.$vloFila['img'].'">'."</td>";
+            $vloCodHtml = $vloCodHtml."<td>"."<p>".$vloFila['nombre']."</p>"."</td>";
+            $vloCodHtml = $vloCodHtml."<td>"."<p>".$vloFila['cantidad']."</p>"."</td>";
+            $vloCodHtml = $vloCodHtml."<td>"."<p>".$Subtotal."</p>"."</td>";
+            $vloCodHtml = $vloCodHtml."</tr>";
         }
+        $vloCodHtml = $vloCodHtml.'</table>';
+        $vloCodHtml = $vloCodHtml."</div>";
         echo $vloCodHtml;
     }
   
