@@ -1,46 +1,34 @@
+
 $("document").ready(function(){
-    $(".btnComprar").click(anade);
-    $("#carrito").hide();
-    
+    $(".btnComprar").click(pAgregarProd);
 });
 
-function mostrarCarrito()
+
+function pAgregarProd()
 {
-    $("#carrito").show();
+    var vlnCant = ObtenerCant($(this).val());
+    if(vlnCant.length > 0)
+    {
+        $("#carrito").load("LN/Almacen.php?id="+$(this).val()+"&cant="+cant);
+    }else
+    {
+        
+    }
 }
 
-function OcultarCarrito()
-{
-    $("#carrito").hide();
-}
-function anade()
-{
-    var cant = ObtenerCant($(this).val());
-    if(cant.length > 0){
-    $("#carrito").load("LN/Almacen.php?id="+$(this).val()+"&cant="+cant);
-    $("#carrito").show();}else {alert("error");}
-    
-}
-
-function LimpiarCarrito()
-{
-    $("#carrito").load("LN/Almacen.php?id=-1&cant=-1");
-}
 
 function ObtenerCant(vloIdProd)
 {
-    var Elementos = $(".txtCantidad");
-    var tot = Elementos.length;
-    var elementoCorrecto;
-    for(var i = 0;i<=tot;i++)
+    var vloElementos = $(".txtCantidad");
+    var vlnTotElementos = vloElementos.length;
+    var vlnElementoCorrecto;
+    for(var vlnI = 0;vlnI<=vlnTotElementos;vlnI++)
     {
-        if(Elementos[i].id == vloIdProd)
+        if(vloElementos[vlnI].id == vloIdProd)
         {
-            elementoCorrecto = Elementos[i];
+            elementoCorrecto = vloElementos[vlnI];
             break;
         }
     }
-    return elementoCorrecto.value;
-    
+    return vlnElementoCorrecto.value;
 }
-

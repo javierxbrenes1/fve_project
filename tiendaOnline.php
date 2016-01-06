@@ -93,6 +93,26 @@
                          placeholder="&#xf095; Escribe tu teléfono secundario...">
               </div>
                 <div class="form-group">  
+                  <label for="cboZona">Zona de entrega: </label>
+                  <?php
+                    include 'model/Zonas.php';
+                    //crea instancia de Zonas
+                    $vloZonas = new Zonas();
+                    //Obtiene las zonas
+                    $vloZonasDeEntrega = $vloZonas->ObtenerZonas();
+                    $vlnTotReg = mysql_num_rows($vloZonasDeEntrega);
+                    if($vlnTotReg > 0)
+                    {
+                        echo "hay zonas";
+                    }else
+                    {
+                        echo "no hay zonas";
+                    }
+                    //crea el objeto 
+                  ?>
+                  
+              </div>
+                <div class="form-group">  
                   <label for="txtDir">Direccion Exacta</label>
                   <textarea name="textarea" class="form-control" 
                             rows="3" cols="50" required></textarea>
