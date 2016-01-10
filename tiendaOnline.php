@@ -52,17 +52,13 @@
                 </div>
             </div>
         </div>    
-        <button onclick="LimpiarCarrito()"> Limpiar Carrito </button>
-        <button onclick="OcultarCarrito()">Ocultar Carrito </button>
-       
-
         <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalLogin">
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalEnvio">
   Launch demo modal
 </button>
 
 <!-- Modal -->
-   <div class="modal fade" id="modalLogin">
+   <div class="modal fade" id="modalEnvio">
       <div class="modal-dialog modal-sm">
         <div class="modal-content">
           
@@ -71,29 +67,29 @@
           </div>
           
           <div class="modal-body">
-            <form method="POST" data-toggle="validator" role="form">
+              <form data-toggle="validator" role="form" id="FormPedido">
               <div class="form-group">
                 <!-- Ingrese su nombre-->
                 <label for="txtNomCli" class="control-label">Nombre</label>
-                <input type ="text" class="form-control" id="txtNomCli" placeholder= "&#xf007; Ingrese su nombre.." required/>
+                <input type ="text" class="form-control" id="txtNomCli" name="clienteNombre" placeholder= "&#xf007; Ingrese su nombre.." required oninvalid="this.setCustomValidity('Por Favor ingrese un nombre válido')" oninput="setCustomValidity('')" />
               </div>
               <div class="form-group"> 
                 <label for="txtEmail" required>Email</label>
-                <input type="email" class="form-control" id ="txtEmail"
-                placeholder="&#xf003; Escribe tu email..." required>
+                <input type="email" class="form-control" id ="txtEmail" name="Email"
+                placeholder="&#xf003; Escribe tu email..." required oninvalid="this.setCustomValidity('Por Favor ingrese un correo electronico válido')" oninput="setCustomValidity('')">
               </div>
               <div class="form-group">  
                   <label for="txtTel">Teléfono Principal</label>
-                  <input type="text" class="form-control" id="txtTel" 
-                         placeholder="&#xf095; Escribe tu teléfono principal..." required>
+                  <input type="text" class="form-control" id="txtTel" name="TelPrincipal"
+                         placeholder="&#xf095; Escribe tu teléfono principal..." required oninvalid="this.setCustomValidity('Por Favor ingrese un teléfono válido para comunicarnos con usted')" oninput="setCustomValidity('')">
               </div>
               <div class="form-group">  
                   <label for="txtTelAux">Teléfono Secundario</label>
-                  <input type="text" class="form-control" id="txtTel" 
+                  <input type="text" class="form-control" id="txtTelAux" name="TelSecundario"
                          placeholder="&#xf095; Escribe tu teléfono secundario...">
               </div>
-                <div class="form-group">  
-                  <label for="cboZona">Zona de entrega: </label>
+                <!--<div class="form-group">-->  
+                  <!--<label for="cboZona">Zona de entrega: </label>-->
                   <?php
                     include 'model/Zonas.php';
                     //crea instancia de Zonas
@@ -103,21 +99,34 @@
                     $vlnTotReg = mysql_num_rows($vloZonasDeEntrega);
                     if($vlnTotReg > 0)
                     {
-                        echo "hay zonas";
-                    }else
-                    {
-                        echo "no hay zonas";
-                    }
+                  ?>
+                  <div class="form-group">
+                      <label for="cboZona">Zona de entrega: </label>
+                      <select id="cboZona" name="Zona" required>
+                       <?php
+                        while($vloFila = mysql_fetch_array($vloZonasDeEntrega))
+                        {
+                            echo '<option value="'.$vloFila['zon_id'].'">'.$vloFila['zon_nom'].'</option>';
+                        }
+                       ?>
+                      </select>
+                  </div>
+                  <?php
+                  }
+//                    }else
+//                    {
+//                        echo "no hay zonas";
+//                    }
                     //crea el objeto 
                   ?>
                   
-              </div>
+              <!--</div> -->
                 <div class="form-group">  
-                  <label for="txtDir">Direccion Exacta</label>
-                  <textarea name="textarea" class="form-control" 
-                            rows="3" cols="50" required></textarea>
+                    <label for="txtDir">Direcci&oacute;n Exacta</label>
+                  <textarea id="txtDir" name="Direccion" class="form-control" 
+                            rows="3" cols="50" required oninvalid="this.setCustomValidity('Por Favor ingrese su dirección de forma correcta para hacer llegar su pedido.')" oninput="setCustomValidity('')"></textarea>
               </div>
-              <button type="submit" class="btn btn-success btn-block">Enviar Pedido</button>
+              <button type="submit" class="btn btn-success btn-block" id="btnEnviarPedido">Enviar Pedido</button>
            </div>
               <div class="modal-footer">
                   

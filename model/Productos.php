@@ -5,7 +5,7 @@ include 'AD.php';
     class Productos
     {
         //Constructor
-        function Productos(){}
+        function __construct(){}
         
         public function Catalogo($pvbActivos)
         {

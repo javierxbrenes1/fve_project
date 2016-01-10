@@ -9,7 +9,7 @@
         var $vcoConexion;
         var $vcoSelBD;
         //constructor
-       function AD(){
+       function __construct() {
            $server = "localhost";
            $username = "root";
            $pass = "";
@@ -18,6 +18,10 @@
            $vcoSelBD = mysql_select_db($database,$vcoConexion) or die ('Error al conectar a la bd');
        }
        
+       function __destruct()
+       {
+           mysql_close(); 
+       }
        //Funciones para ejecutar comandos sin esperar una respuesta 
        public function EjecutarComando($pvoComando)
        {
@@ -26,7 +30,8 @@
                //define el script q debe ejecutar
                 $vloScript = mysql_query($pvoComando);
                 //Returna el total del lineas afectadas
-                return mysql_affected_rows($vloScript);
+                //mysql_affected_rows($vloScript); 
+                //return mysql_affected_rows($vloScript);
            }catch(Exception $ex){
             
            }
@@ -42,7 +47,7 @@
                 {
                     die("Error running $vloScript: " . mysql_error());
                 }
-                mysql_close();
+                
                 //retorna un arreglo con el resultado
                 return $vloScript;
            }catch(Exception $ex)

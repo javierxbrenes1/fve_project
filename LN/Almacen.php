@@ -11,10 +11,10 @@
     $vloProd =  Array();
     //Crea Variable para el codigo html a devolver
     $vlcCodHtml  = "";
-    if($vloProdId==-1 && $vloProdCantidad==-1)
+    if($vlcProdId==-1 && $vlnProdCantidad==-1)
     {
         $vloCarrito->destroy();
-        echo "Carrito limpio";
+        echo 'Carrito destruido';
     }
     else
     {

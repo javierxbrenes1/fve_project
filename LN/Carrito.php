@@ -114,19 +114,13 @@ class Carrito
 	//método que retorna el precio total del carrito
 	public function precio_total()
 	{
-		//si no está definido el elemento precio_total o no existe el carrito
-		//el precio total será 0
-		if(!isset($this->carrito["precio_total"]) || $this->carrito === null)
-		{
-			return 0;
-		}
-		//si no es númerico lanzamos una excepción porque no es correcto
-		if(!is_numeric($this->carrito["precio_total"]))
-		{
-			throw new Exception("El precio total del carrito debe ser un número", 1);	
-		}
-		//en otro caso devolvemos el precio total del carrito
-		return $this->carrito["precio_total"] ? $this->carrito["precio_total"] : 0;
+            $vloCarrito = $this->carrito;
+            $vloMontoTotalCarrito = 0;
+            foreach ($vloCarrito as $vloProducto)
+            {
+                $vloMontoTotalCarrito +=($vloProducto['precio'] * $vloProducto['cantidad']);
+            }
+		return $vloMontoTotalCarrito;
 	}
  
 	//método que retorna el número de artículos del carrito
