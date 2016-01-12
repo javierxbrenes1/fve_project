@@ -1,0 +1,204 @@
+/* lg */
+
+@media (min-width: 1200px) {}
+/* md */
+
+@media (min-width: 992px) and (max-width: 1199px) {} @media (min-width: 991px) and (max-width: 1024px) {
+    .nav li a {
+        padding: 10px 7px;
+    }
+    .widget-product-thumb {
+        margin-right: 20px;
+    }
+    .shop-search {
+        width: 100%;
+    }
+}
+/* sm */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar {
+        padding: 34px 0;
+    }
+    .mobile {
+        display: block;
+    }
+    .single-nv-product,
+    .single-deals-product,
+    .single-fun-fact,
+    .single-testimonial,
+    .single-blog-post,
+    .single-widget {
+        margin-bottom: 30px;
+    }
+    .single-fun-fact,
+    .single-testimonial {
+        padding: 0 10px;
+    }
+    .footer-bottom-menu li {
+        margin-right: 38px;
+    }
+    .address-type,
+    .address-info {
+        float: none;
+        width: 100%;
+    }
+    .banner-text {
+        margin: 280px auto auto;
+    }
+    #main-header-slider .owl-prev,
+    #main-header-slider .owl-next {
+        top: 85%;
+    }
+    .home-v2-slider .banner-text {
+        padding-top: 400px;
+    }
+    .widget-product-thumb {
+        margin-right: 20px;
+    }
+    .product-thumb {
+        min-height: 170px;
+    }
+    .shop-search {
+        width: 100%;
+    }
+    .cart-thumb {
+        margin-right: 10px;
+    }
+    .cross-icon {
+        margin-top: 11px;
+    }
+    .info {
+        margin-bottom: 20px;
+    }
+}
+/* XS Portrait */
+
+@media only screen and (max-width: 767px) {
+    .navbar-toggle .icon-bar {
+        background: #fff none repeat scroll 0 0;
+    }
+    .mobile {
+        display: BLOCK;
+    }
+    .nav li a {
+        padding-bottom: 18px;
+    }
+    .banner-text {
+        margin: 110px auto auto;
+        padding: 15px;
+        width: 100%;
+    }
+    .banner-text > h2 {
+        font-size: 20px;
+    }
+    #main-header-slider .owl-next {
+        right: 10px;
+    }
+    #main-header-slider .owl-prev {
+        left: 10px;
+    }
+    .single-nv-product,
+    .single-deals-product,
+    .single-fun-fact,
+    .single-testimonial,
+    .single-blog-post,
+    .single-widget {
+        margin-bottom: 30px;
+    }
+    .see-all-product {
+        margin-top: 20px;
+        position: unset;
+    }
+    .btn.find-shop {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .sign-up .input-group {
+        display: block;
+    }
+    .sign-up .btn-theme {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .sign-up {
+        padding: 0;
+    }
+    .widget-title {
+        margin-bottom: 40px;
+    }
+    .footer-top {
+        margin-bottom: 45px;
+    }
+    .home-v2 .navbar {
+        padding: 15px 0;
+    }
+    .top-right-menu.navbar-right {
+        margin: 10px 0;
+        overflow: hidden;
+    }
+    .home-v2-slider .banner-text {
+        padding-top: 125px;
+    }
+    .product-tabs .tabs-head li a {
+        padding: 5px 13px;
+    }
+    .shop-search {
+        width: 100%;
+    }
+    .shop-header-right {
+        float: none;
+    }
+    .sorting-bar {
+        float: none;
+        margin: 15px 0;
+        text-align: center;
+        width: 100%;
+    }
+    .sorting-bar .input-group {
+        display: inline-block;
+    }
+    .tag {
+        float: none;
+    }
+    .share-title {
+        display: inline-block;
+        float: none;
+        margin-top: 15px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .share-post-container .social-links {
+        margin-right: 0;
+        margin-top: 12px;
+        padding-right: 0;
+    }
+    .you-should-read {
+        padding: 0 14px;
+    }
+    .you-should-read p {
+        padding: 50px 0 0;
+    }
+    .comment-date {
+        display: none !important;
+    }
+    #comments .commentlist .children {
+        margin: 0 0 0 40px;
+    }
+    #respond {
+        padding: 38px 0;
+    }
+    .you-should-read p {
+        padding: 60px 0 0;
+    }
+    .info {
+        margin-bottom: 20px;
+    }
+    .contact-info {
+        left: 17px;
+        padding: 21px;
+        width: 288px;
+    }
+}
+
