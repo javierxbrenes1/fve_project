@@ -163,7 +163,7 @@ img {
     max-width: 100%;
 }
 .home-v1 {
-    background: rgba(0, 0, 0, 0) url("../images/header-banner-1.jpg") no-repeat scroll 0 0 / cover;
+    background: rgba(0, 0, 0, 0) url("../images/header-banner-1.jpg") no-repeat fixed 0 0 / cover;
     height: 100vh;
 }
 .navbar {
@@ -623,7 +623,7 @@ img {
 ==================================*/
 
 .funfact {
-    background: rgba(0, 0, 0, 0) url("../images/fun.jpg") no-repeat scroll 0 0 / cover;
+    background: rgba(0, 0, 0, 0) url("../images/fun.jpg") no-repeat fixed 0 0 / cover;
 }
 .funfact .overlay {
     background: rgba(181, 135, 104, 0.75) none repeat scroll 0 0;
@@ -1923,3 +1923,95 @@ textarea {
     margin-bottom: 35px;
 }
 
+/************Estilos Javier Brenes*********/
+
+
+#mision, #vision
+{
+    width: 200px;
+    height: 180px;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    margin-top: 20px;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.75;
+}
+#vision
+{
+    background-image: url("../images/vision.jpg");
+}
+
+#mision
+{
+    background-image: url("../images/Mision_000.jpg");
+}
+
+#textNosotros p
+{
+    padding-top: 10px;
+    padding-bottom: 10px; 
+}
+.Nosotros h2
+{
+    text-decoration: underline;
+    color: #4b3842;
+    font-size: 30px;
+    
+}
+
+#TituloNosotros{
+    color: #4b3842;
+}
+
+.Nosotros *
+{
+    padding-top:  20px;
+}
+
+.fve-borde-beneficios{
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px #ccc;
+}
+
+.fve-beneficio{
+    padding: 5%;
+}
+
+.fve-comentario-beneficio h4
+
+{
+    padding: 0px 5%;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size:1.5em;
+    color: #000;
+}
+
+.fve-comentario-beneficio h5
+{
+    padding: 0px 5%;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size:1.3em;
+    color: #000;
+}
+
+.fve-comentario-beneficio p
+{
+    padding: 5%;
+    height: 125px;
+}
+
+.fve-beneficios-header{
+    background-color: #6A5854;
+    border-radius: 0 0 50% 50%;
+}

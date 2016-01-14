@@ -54,9 +54,9 @@
 						<div class="col-md-6 col-sm-6">
 							<nav class="collapse navbar-collapse">
 								<ul class="nav navbar-nav">                                                                     
-									<li><a href="#bienvenida">Bienvenida</a></li>
-									<li><a href="#">Nosotros</a></li>
-									<li><a href="#">Beneficios</a></li>
+									<!--<li><a href="#bienvenida">Bienvenida</a></li>-->
+									<li><a href="#nosotros">Nosotros</a></li>
+									<li><a href="#beneficios">Beneficios</a></li>
 									<li><a href="blog.html">Formas de pago</a></li>  
 									<li><a href="#">Horarios</a></li>
 								</ul>
@@ -72,9 +72,9 @@
 						<a class="logo" href="index.html"><img src="assets/images/logo.png" alt=""></a>
 						<nav class="mobile-menu">
 							<ul>
-							        <li><a href="#bienvenida">Bienvenida</a></li>
-								<li><a href="#">Nosotros</a></li>
-								<li><a href="#">Beneficios</a></li>
+<!--							        <li><a href="#bienvenida">Bienvenida</a></li>-->
+								<li><a href="#nosotros">Nosotros</a></li>
+								<li><a href="#beneficios">Beneficios</a></li>
 								<li><a href="blog.html">Formas de pago</a></li>  
 								<li><a href="#">Horarios</a></li>
                                                                 <li><a href="tiendaOnline.php">vistar tienda</a></li>
@@ -104,62 +104,51 @@
 			</div>	
 		</div>
 	</header><!--/.header-area -->
-	<section class="vital-shop-area" id="bienvenida">
+	<section class="vital-shop-area" id="nosotros">
 		<div class="container">
 			<div class="section-heading">
-				<h2>New on Vital Shop</h2>
+                            <h1 id="TituloNosotros">Somos Frutas y verduras express</h1>
 				<div class="border-green"></div>
 			</div><!--/.section-heading -->
-			<div class="new-vital-product">
-				<div class="row">
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="single-nv-product">
-							<div class="snv-product-img">
-								<img src="assets/images/product/1.png" alt="" />						
-								<a href="" class="hover-cart"><img src="assets/images/cart-icon.png" alt="" /></a>							
-							</div><!--/.snv-product-img -->
-							<h2><a href="">Cherry Tomatoes</a></h2>
-							<p>Amazing red tomatoes that will melt in your mouth.</p>
-							<div class="snv-price">$4.99</div><!--/.snv-price -->
-						</div><!--/.single-nv-product -->
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="single-nv-product">
-							<div class="snv-product-img">
-								<img src="assets/images/product/2.png" alt="" />
-								<a href="" class="hover-cart"><img src="assets/images/cart-icon.png" alt="" /></a>					
-							</div><!--/.snv-product-img -->
-							<h2><a href="">Sweet Potatos</a></h2>
-							<p>Our eco homegrown potatos with amazing sweet taste.</p>
-							<div class="snv-price">$6.49</div><!--/.snv-price -->
-						</div><!--/.single-nv-product -->
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="single-nv-product">
-							<div class="snv-product-img">
-								<img src="assets/images/product/3.png" alt="" />
-								<a href="" class="hover-cart"><img src="assets/images/cart-icon.png" alt="" /></a>						
-							</div><!--/.snv-product-img -->
-							<h2><a href="">True Spinach</a></h2>
-							<p>There are multiple types of nach, but only one is the true one. </p>
-							<div class="snv-price">$6.00</div><!--/.snv-price -->
-						</div><!--/.single-nv-product -->
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="single-nv-product">
-							<div class="snv-product-img">
-								<img src="assets/images/product/4.png" alt="" />
-								<a href="" class="hover-cart"><img src="assets/images/cart-icon.png" alt="" /></a>					
-							</div>
-							<h2><a href="">Shiitake Mushrooms </a></h2>
-							<p>There is nothing better than tasty shiitake mushrooms.</p>
-							<div class="snv-price">$4.99</div>
-						</div><!--/.single-nv-product -->
-					</div>
-				</div>
-			</div><!--/.new-vital-product -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12" id="textNosotros">
+                                    <p>
+                                        It is a long established fact that a reader will be distracted by 
+                                        the readable content of a page when looking at its layout. 
+                                    </p>
+                                    <p>
+                                        The point of using Lorem Ipsum is that it has a more-or-less normal 
+                                        distribution of letters, as opposed to using 'Content here, content here', 
+                                        making it look like readable English. Many desktop publishing packages and 
+                                        web page editors now use Lorem Ipsum as their default model text, and a search 
+                                        for 'lorem ipsum' will uncover many web sites still in their infancy.
+                                    </p>
+                                    <p>
+                                        Various versions have evolved over the years, sometimes by accident, sometimes on purpose 
+                                        (injected humour and the like).
+                                    </p>
+                                </div>
+                                <!-- MISION -->
+                                <div class="col-md-6 text-center Nosotros">
+                                    <div id="mision"></div>
+                                    <h2>Misión</h2>   
+                                    <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+                                        took a galley of type and scrambled it to make a type specimen book.</p>
+                                </div>
+                                <!-- Vision -->
+                                <div class="col-md-6 text-center Nosotros">
+                                    <div id="vision"></div>
+                                    <h2>Visión</h2>
+                                    <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+                                        took a galley of type and scrambled it to make a type specimen book.</p>
+                                </div>
+                                
+                            </div>    
+                        </div>
 		</div>
 	</section><!--/.vital-shop-area -->
+        
 	<section class="funfact">
 		<div class="overlay">
 			<div class="container">
@@ -167,26 +156,26 @@
 					<div class="row">
 						<div class="col-md-4 col-sm-4 col-xs-12">
 							<div class="single-fun-fact">
-								<h2 class="counter">1650</h2>
+								<h2 class="counter">50</h2>
 								<div class="border-green"></div>
-								<h3>Homes supplied</h3>
-								<p>We have established home delivery to more than 2500 homes.</p>
+								<h3>Productos disponibles</h3>
+								<p>Cada dia agregamos mas productos a nuestro stock.</p>
 							</div><!--/.single-fun-fact -->
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-12">
 							<div class="single-fun-fact">
-								<h2 class="counter">5900</h2>
+								<h2 class="counter">16</h2>
 								<div class="border-green"></div>								
-								<h3>Sweet potatos grown</h3>
-								<p>Annual crop of our main speciality, eco sweet potatos.</p>
+								<h3>Zonas de entrega</h3>
+								<p>Continuamos abarcando mas zonas de entrega en la provincia de Cartago.</p>
 							</div><!--/.single-fun-fact -->
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-12">
 							<div class="single-fun-fact">
-								<h2 class="counter">8490</h2>
+								<h2 class="counter">100</h2>
 								<div class="border-green"></div>								
-								<h3>Farmers engaged</h3>
-								<p>We are not only selling our crops, but also engaging other famers.</p>
+								<h3>Porcentaje de calidad</h3>
+								<p>Todos nuestros productos son de una calidad innegable.</p>
 							</div><!--/.single-fun-fact -->
 						</div>
 					</div>
@@ -194,45 +183,63 @@
 			</div>
 		</div>
 	</section><!--/.funfact -->
-	<section class="testimonial-area">
-		<div class="container">
-			<div class="section-heading">
-				<h2>Client Testimonials</h2>
+        
+        <section class="testimonial-area" id="beneficios">
+		<div class="container-fluid">
+			<div class="section-heading fve-beneficios-header">
+                            <h2 style="color:#fff;">Beneficios de comprar a trávez de nuestra tienda</h2>
 				<div class="border-green"></div>
 			</div><!--/.section-heading -->
 			<div class="testimonials">
 				<div class="row">
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="single-testimonial">
-							<div class="client-image">
-								<img src="assets/images/testimonial/1.png" alt="" />
-							</div><!--/.client-image -->
-							<h2>Quality products</h2>
-							<p>I am giving a lot of attention to consuming healthy food, and I cannot thank Vital enough for what they are doing.</p>
-							<a href="" class="btn testimonial-read-more">Read more</a>
-						</div><!--/.single-testimonial -->
+					<div class="col-md-6 fve-beneficio">
+                                            <div class="fve-borde-beneficios">
+                                                <div class="fve-comentario-beneficio">
+                                                    <h4>Precios de feria</h4>
+					            <p>I am giving a lot of attention to consuming healthy food, and I cannot thank Vital enough for what they are doing.</p>
+                                                </div> 
+                                                <div class="fve-Img-beneficio">
+                                                    <img src="assets/images/bg2.jpg" alt="" />
+                                                </div>
+                                            </div>
 					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="single-testimonial">
-							<div class="client-image">
-								<img src="assets/images/testimonial/2.png" alt="" />
-							</div><!--/.client-image -->
-							<h2>Super reliable staff</h2>
-							<p>Our school has been in program for Vital food delivery for almost five years now and the staff have always been super reliable.</p>
-							<a href="" class="btn testimonial-read-more">Read more</a>
-						</div><!--/.single-testimonial -->
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="single-testimonial">
-							<div class="client-image">
-								<img src="assets/images/testimonial/3.png" alt="" />
-							</div><!--/.client-image -->
-							<h2>Amazing partners</h2>
-							<p>Our farm has been working closely with Vital for some time and they have always been one of our favourite clients.</p>
-							<a href="" class="btn testimonial-read-more">Read more</a>
-						</div><!--/.single-testimonial -->
-					</div>
-				</div>
+                                    
+                                        <div class="col-md-6 fve-beneficio">
+                                            <div class="fve-borde-beneficios">
+                                                <div class="fve-comentario-beneficio">
+                                                    <h4>Calidad y frescura</h4>
+                                                    <p>I am giving a lot of attention to consuming healthy food, and I cannot thank Vital enough for what they are doing.</p>
+                                                </div> 
+                                                <div class="fve-Img-beneficio">
+                                                    <img src="assets/images/bg2.jpg" alt="" />
+                                                </div>
+                                            </div>
+                                        </div>
+					
+                                        <div class="col-md-6 fve-beneficio">
+                                            <div class="fve-borde-beneficios">
+                                                <div class="fve-comentario-beneficio">
+                                                    <h4>Entrega en la puerta de su casa</h4>
+                                                    <p>I am giving a lot of attention to consuming healthy food, and I cannot thank Vital enough for what they are doing.</p>
+                                                </div> 
+                                                <div class="fve-Img-beneficio">
+                                                    <img src="assets/images/bg2.jpg" alt="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+					<div class="col-md-6 fve-beneficio">
+                                            <div class="fve-borde-beneficios">
+                                                <div class="fve-comentario-beneficio">
+                                                    <h5>Productos mas bajos que en el supermercado.</h5>
+                                                    <p>I am giving a lot of attention to consuming healthy food, and I cannot thank Vital enough for what they are doing.</p>
+                                                </div> 
+                                                <div class="fve-Img-beneficio">
+                                                    <img src="assets/images/bg2.jpg" alt="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
 			</div>
 		</div>
 	</section><!--/.testimonial-area -->
@@ -335,6 +342,7 @@
 			</div>
 		</div>		
 	</section><!--/.blog-area -->
+        
 	<footer class="footer-main">
 		<div class="overlay">
 			<div class="footer-top">

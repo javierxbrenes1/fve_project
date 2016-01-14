@@ -1,11 +1,12 @@
 jQuery(function () {
 	"use strict";
         $("#main-header-slider").find(".banner-slider").owlCarousel({        
-            slideSpeed : 1000,
-            paginationSpeed : 1100,
+            slideSpeed : 200,
+            paginationSpeed : 800,
+            rewindSpeed: 1000,
             pagination: false,
             singleItem:true,
-			navigation : true,
+			navigation : false,
 			navigationText: [
 			"<img src='assets/images/left-arrow.png' />",
 			"<img src='assets/images/right-arrow.png' />"
