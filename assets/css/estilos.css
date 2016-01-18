@@ -6,8 +6,8 @@
 
 .imgProd
 {
-    width: 150px; 
-    height:150px;
+    width: 175px; 
+    height:175px;
 }
 .AgregarCarrito
 {
@@ -41,3 +41,108 @@ input { font-family: 'FontAwesome', arial; }
     bottom: 0px;
 }
 
+
+#pnlPagina 
+{
+    position: absolute;
+    
+    
+    /*top:0;*/
+    left: 0;
+    background-color:#eee;
+    width: 100%;
+}
+#pnlCarrito
+{
+    position: absolute;
+/*    top:0;*/
+    right: -300px;
+    background-color: #4d4d4d;
+    color:White;
+    width: 300px;
+}
+
+#pnlCarrito .btnCarrito {
+	color:White;
+	cursor: pointer;
+}
+
+.btnCarrito { outline: none; }
+.btnCarrito:active { outline: none; }
+.btnCarrito:linked { outline: none; }
+.btnCarrito:hover { outline: none; }
+
+
+/*************** Tienda online **************/
+
+.barra-superior
+{
+    background-color: #449D44;/*#B58768;*/
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+/*    position: fixed;*/
+    /*display: inline-block;*/
+    /*z-index: 1;*/
+    
+}
+
+#TituloTienda h2 {
+    font-family: "Roboto Slab",serif;
+    margin: 0;
+    font-size: 18px;
+    padding: 10px 0 10px 0;
+}
+
+.lstEncabezado li{
+    display: inline-block;
+    padding: 5px 15px 0 0;
+    cursor: pointer;
+}
+
+#lstCat li
+{
+    padding: 5px 20px 0 0;
+    cursor: pointer;
+}
+
+.lstEncabezado li:hover
+{
+    text-decoration: underline;
+}
+#lstCat li:hover{
+    text-decoration: underline;
+}
+
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+.mnuCategoria{margin-bottom: 0px;}
+.imgLogo{ margin: 20px 0 20px 0; }
+.imgLogo img{border-radius: 5px;}
+
+.Productos{
+    background: #449D44 none repeat scroll 0px; 
+/*    #449D44 */
+    height: 100%;
+    }
+.Productos h3,.Productos h1
+{
+    color:#fff;
+    
+}
+
+.pnlMarco{background: #fff; height: 330px;  }

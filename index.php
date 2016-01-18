@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Frutas y verduras express</title>
+	<title>Verfruta Express</title>
 	
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">	
@@ -107,7 +107,7 @@
 	<section class="vital-shop-area" id="nosotros">
 		<div class="container">
 			<div class="section-heading">
-                            <h1 id="TituloNosotros">Somos Frutas y verduras express</h1>
+                            <h1 id="TituloNosotros">Somos Verfruta Express</h1>
 				<div class="border-green"></div>
 			</div><!--/.section-heading -->
                         <div class="container">

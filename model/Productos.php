@@ -26,6 +26,45 @@ include 'AD.php';
             
         }
         
+        public function ProductosEnPromocion(){
+            try{
+                $AccesoAdatos = new AD();
+                $vlcScript = "SELECT * "
+                        . "     FROM fve_prod "
+                        . "    WHERE prod_prm = 1 "
+                        . "      AND prod_sts = 1 ";
+                 return $AccesoAdatos->RetornarResultado($vlcScript) ;
+            } catch (Exception $ex) {
+
+            }
+        }
+        
+        public function ObtenerCategorias()
+        {
+            try{
+                $AccesoAdatos = new AD();
+                $vlcScript = "SELECT * "
+                        . "     FROM fve_tip_prod ";
+                 return $AccesoAdatos->RetornarResultado($vlcScript) ;
+            } catch (Exception $ex) {
+
+            }
+        }
+        
+        public function ProductosPorCategoria($pvnCategoria)
+        {
+             try{
+                $AccesoAdatos = new AD();
+                $vlcScript = "SELECT * "
+                        . "     FROM fve_prod "
+                        . "    WHERE prod_sts = 1"
+                        . "      AND tip_prod_id= '".$pvnCategoria."';";
+                 return $AccesoAdatos->RetornarResultado($vlcScript) ;
+            } catch (Exception $ex) {
+
+            }
+        }
+        
         public function ObtenerDetallesArt($pvcID)
         {
             try{
