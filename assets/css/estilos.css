@@ -28,7 +28,7 @@
     position: relative;
 }
 
-input { font-family: 'FontAwesome', arial; }
+txtCantidad { font-family: 'FontAwesome', arial; }
 
 #carrito
 {
@@ -146,3 +146,86 @@ input { font-family: 'FontAwesome', arial; }
 }
 
 .pnlMarco{background: #fff; height: 330px;  }
+
+
+/*  TIENDA NUEVA */
+
+
+.prueba{
+    height: 800px;
+    width: 100%;
+    background-color: red;
+    position: relative;
+    display:inline-block;
+    margin-top: 50px;
+}
+
+
+.BarraCategorias
+{
+    padding-top: 50px;
+    width: 100%;
+    min-height: 70px;
+    margin:0;
+}
+
+.navbar-default .navbar-nav > li > a
+{
+    font-size: 15px;
+    font-family: "Roboto Slab",serif;
+    cursor: pointer;
+}
+
+.Fondo{
+    background-image: url('../images/VEGETALES-Y-FRUTAS.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 350px;
+}
+.footer
+{
+    padding: 20px;
+    color:white;
+    background-image: url('../images/bg3.jpg');
+    display: block;
+    font-family: "Roboto Slab",serif;
+    font-size:15px;
+   
+}
+
+#lblCatProd{
+    
+}
+
+.frmBuscarArticulo{
+    margin: 20px 0 10px 0;
+}
+
+.Productos2{
+    z-index: 1;
+    position: relative;
+}
+
+
+.Productos2 div
+{
+    background-color: red;
+    height: 30px;
+}
+ #TobBar
+ {
+     width: 100%; 
+     height: 50px;  
+     position: fixed; 
+     z-index: 1; 
+     background-color: #6A5854;
+ }
+ #TobBar ul {
+     color: #fff;
+     padding-top: 10px;
+     padding-right: 30px; 
+     font-family: "Roboto Slab",serif;
+     cursor: pointer;
+ }

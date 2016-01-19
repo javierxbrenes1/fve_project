@@ -64,7 +64,7 @@
 						</div>
 						<div class="col-md-3 col-sm-3">	
 							<div class="cart-display">
-								<li class="cart"><a href="tiendaOnline.php">vistar tienda</a></li>
+								<li class="cart"><a href="tiendaOnline.php">visitar tienda</a></li>
 							</div>
 						</div>
 					</div> 
@@ -77,7 +77,7 @@
 								<li><a href="#beneficios">Beneficios</a></li>
 								<li><a href="blog.html">Formas de pago</a></li>  
 								<li><a href="#">Horarios</a></li>
-                                                                <li><a href="tiendaOnline.php">vistar tienda</a></li>
+                                                                <li><a href="tiendaOnline.php">visitar tienda</a></li>
 							</ul>
 						</nav>							
 					</div>				

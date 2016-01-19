@@ -42,7 +42,25 @@ $("document").ready(function(){
     
     $("#lstCat").on("click","li",function(){
        var id = $(this).val();
+       switch(id){
+           case 0:
+               $("#lblCatProd").text("Ofertas");
+               break;
+           case 1:
+               $("#lblCatProd").text("Vegetales");
+               break;
+           case 3:
+               $("#lblCatProd").text("Mini-Vegetales");
+               break;
+           case 2:
+               $("#lblCatProd").text("Frutas");
+               break;
+           case 4:
+               $("#lblCatProd").text("Otros Productos");
+               break;
+       }
        $("#pnlProdCategoria").load("LN/Categoria.php?id="+id);
+       
     });
     
 });
