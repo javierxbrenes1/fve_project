@@ -33,7 +33,7 @@
                     <div class="col-md-6 pull-right">
                         <ul class="pull-right lstEncabezado">
                             <li  class="btnCarrito"><i class="fa fa-shopping-cart"></i> Carrito (X)</li>
-                            <li><i class="fa fa-check"></i> Aceptar Pedido</li>
+                            <li data-toggle="modal" data-target="#modalEnvio"><i class="fa fa-check"></i> Aceptar Pedido</li>
                         </ul>
                     </div>
                 </div>

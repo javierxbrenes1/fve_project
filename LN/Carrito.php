@@ -86,32 +86,7 @@ class Carrito
  
 	}
  
-	//método que actualiza el precio total y la cantidad
-	//de productos total del carrito
-//	private function update_precio_cantidad()
-//	{
-//		//seteamos las variables precio y artículos a 0
-//		$precio = 0;
-//		$articulos = 0;
-// 
-//		//recorrecmos el contenido del carrito para actualizar
-//		//el precio total y el número de artículos
-//		foreach ($this->carrito as $row) 
-//		{
-//			$precio += ($row['precio'] * $row['cantidad']);
-//			$articulos += $row['cantidad'];
-//		}
-// 
-//		//asignamos a articulos_total el número de artículos actual
-//		//y al precio el precio actual
-//		$_SESSION['carrito']["articulos_total"] = $articulos;
-//		$_SESSION['carrito']["precio_total"] = $precio;
-// 
-//		//refrescamos él contenido del carrito para que quedé actualizado
-//		$this->update_carrito();
-//	}
- 
-	//método que retorna el precio total del carrito
+        //método que retorna el precio total del carrito
 	public function precio_total()
 	{
             $vloCarrito = $this->carrito;
@@ -172,7 +147,7 @@ class Carrito
 		//el precio y cantidad totales del carrito
 		unset($_SESSION["carrito"][$unique_id]);
 		$this->update_carrito();
-		$this->update_precio_cantidad();
+		
 		return true;
 	}
  

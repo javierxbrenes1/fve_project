@@ -26,7 +26,8 @@ if($vloCantRegistros>0){
 while($vloResultado = mysql_fetch_array($resultado))
 {
     $lblUnidMed = ' '.$vloResultado['prod_unit_med'].' ';
-    $ResultadoConsulta = $ResultadoConsulta.'<div class="col-md-3 col-sm-4 col-xs-6 text-center Producto">';
+    $ResultadoConsulta = $ResultadoConsulta.'<div class="col-md-3 col-sm-4 col-xs-12 text-center Producto">';
+    $ResultadoConsulta = $ResultadoConsulta.'<div class="fve-borde-beneficios">';
     $ResultadoConsulta = $ResultadoConsulta.'<div class="pnlMarco">';    
     $ResultadoConsulta = $ResultadoConsulta.'<div>';
     $ResultadoConsulta = $ResultadoConsulta.'<img class="img-responsive center-block imgProd"  src="assets/img/'.$vloResultado['prod_rut_img'].'"/>';
@@ -35,7 +36,7 @@ while($vloResultado = mysql_fetch_array($resultado))
     $ResultadoConsulta = $ResultadoConsulta.'<p class="ProdNom">'.$vloResultado['prod_nom'].'</p>';
     $ResultadoConsulta = $ResultadoConsulta.'</div>';
     $ResultadoConsulta = $ResultadoConsulta.'<div>';
-    $ResultadoConsulta = $ResultadoConsulta.'<input type="text" class="form-control txtCantidad" id="'.$vloResultado['prod_id'].'"/>';
+    $ResultadoConsulta = $ResultadoConsulta.'<input type="text" class="form-control txtCantidad decimal" id="'.$vloResultado['prod_id'].'"/>';
     $ResultadoConsulta = $ResultadoConsulta.' <label class="lblKilo">'.$lblUnidMed.'</label>';
     $ResultadoConsulta = $ResultadoConsulta.'<p> <p><p class="PrecioArticulo">Precio: ₡ '.$vloResultado['prod_prc_act'].'</p>';
     $ResultadoConsulta = $ResultadoConsulta.'</div>';
@@ -43,6 +44,7 @@ while($vloResultado = mysql_fetch_array($resultado))
     $ResultadoConsulta = $ResultadoConsulta.'<button type="button" class="btn btn-success btnComprar" onclick="pAgregarProd('.$vloResultado['prod_id'].')" value="'.$vloResultado['prod_id'].'">';
     $ResultadoConsulta = $ResultadoConsulta.'<i class="fa fa-cart-plus"></i> Agregar';
     $ResultadoConsulta = $ResultadoConsulta.'</button>';
+    $ResultadoConsulta = $ResultadoConsulta.'</div>';
     $ResultadoConsulta = $ResultadoConsulta.'</div>';
     $ResultadoConsulta = $ResultadoConsulta.'</div>';
     $ResultadoConsulta = $ResultadoConsulta.'</div>';

@@ -27,8 +27,12 @@
     display: inline-block;
     position: relative;
 }
+#btn-Checkout-carrito{ margin-bottom: 20px;}
+#modalEnvio { font-family: 'FontAwesome', arial; }
 
-txtCantidad { font-family: 'FontAwesome', arial; }
+#TablaCarrito table th, #TablaCarrito table td{
+    text-align: center;
+}
 
 #carrito
 {
@@ -55,7 +59,7 @@ txtCantidad { font-family: 'FontAwesome', arial; }
 #pnlCarrito
 {
     position: absolute;
-/*    top:0;*/
+    top:60px;
     right: -300px;
     background-color: #4d4d4d;
     color:White;
@@ -184,20 +188,15 @@ txtCantidad { font-family: 'FontAwesome', arial; }
     width: 100%;
     height: 350px;
 }
-.footer
-{
-    padding: 20px;
-    color:white;
-    background-image: url('../images/bg3.jpg');
-    display: block;
-    font-family: "Roboto Slab",serif;
-    font-size:15px;
-   
+
+.table-remove {
+  color: #700;
+  cursor: pointer;
 }
 
-#lblCatProd{
-    
-}
+.table-remove:hover {
+    color: #f00;
+  }
 
 .frmBuscarArticulo{
     margin: 20px 0 10px 0;
@@ -214,18 +213,69 @@ txtCantidad { font-family: 'FontAwesome', arial; }
     background-color: red;
     height: 30px;
 }
- #TobBar
+ #TopBar
  {
      width: 100%; 
      height: 50px;  
      position: fixed; 
-     z-index: 1; 
+     z-index: 100; 
      background-color: #6A5854;
  }
- #TobBar ul {
+ #TopBar ul {
      color: #fff;
      padding-top: 10px;
      padding-right: 30px; 
      font-family: "Roboto Slab",serif;
      cursor: pointer;
  }
+
+ #TopBar ul li:hover{
+     text-decoration: underline;
+ }
+  
+/*    PRUEBAAAAAAA */
+ * {     
+            margin: 0; 
+   } 
+    html, body{     
+        height: 100%; 
+    } 
+    
+    #wrapper{    
+        min-height: 100%;     
+        height: auto !important;     
+        height: 100%;     
+        margin: 0 auto -150px; /* el magin-bottom es el valor negativo de     
+        la altura del footer */ 
+    } 
+
+    #footer, #push {     
+        height: 150px; /* la altura del push es la misma que la altura     
+        del footer */ 
+    }
+
+    #footer {
+         
+        color:white;
+        background-image: url('../images/bg3.jpg');
+        font-family: "Roboto Slab",serif;
+        font-size:18px;
+        
+    }
+    
+    #footer div p{ padding-top: 40px;}
+    
+    .border-green {
+	border-bottom: 3px solid #99B568;
+	margin: 15px auto 0px;
+	width: 120px;
+}
+
+.fve-borde-beneficios {
+	padding: 5px;
+	border: 1px solid #CCC;
+	background-color: #FFF;
+	box-shadow: 0px 0px 5px #CCC;
+        margin-bottom: 30px;
+}
+

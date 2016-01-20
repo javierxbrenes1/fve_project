@@ -11,10 +11,11 @@
     $vloProd =  Array();
     //Crea Variable para el codigo html a devolver
     $vlcCodHtml  = "";
+if($vlcProdId!="" && $vlnProdCantidad!=""){
     if($vlcProdId==-1 && $vlnProdCantidad==-1)
     {
         $vloCarrito->destroy();
-        echo 'Carrito destruido';
+        echo '<i class="fa fa-shopping-cart"></i>  Carrito';
     }
     else
     {
@@ -43,28 +44,7 @@
         
         // Obtiene el total de productos en el carrito
         $vlntotal = $vloCarrito->articulos_total();
-        //Si hay mas de un articulo
-         if($vlntotal > 0)
-         {
-            //Crear el codigo html que se muestra en el carrito 
-            $Productos = $vloCarrito->get_content();
-            $vlcCodHtml = "<div>";
-            $vlcCodHtml = $vlcCodHtml.'<table class="table table-striped"';
-            foreach($Productos as $vloFila)
-            {
-                $Subtotal = $vloFila['cantidad']*$vloFila['precio'];
-                $vlcCodHtml = $vlcCodHtml."<tr>";
-                $vlcCodHtml = $vlcCodHtml."<td>".'<img class="img-circle" width="50" height="50" src="Assets/img/'.$vloFila['img'].'">'."</td>";
-                $vlcCodHtml = $vlcCodHtml."<td>"."<p>".$vloFila['nombre']."</p>"."</td>";
-                $vlcCodHtml = $vlcCodHtml."<td>"."<p>".$vloFila['cantidad']."</p>"."</td>";
-                $vlcCodHtml = $vlcCodHtml."<td>"."<p>".$Subtotal."</p>"."</td>";
-                $vlcCodHtml = $vlcCodHtml."</tr>";
-            }
-            $vlcCodHtml = $vlcCodHtml.'</table>';
-            $vlcCodHtml = $vlcCodHtml."</div>";
-         }
-        echo $vlcCodHtml;
-        
+        echo '<i class="fa fa-shopping-cart"></i>  Carrito'.' ('.$vlntotal.')';
     }
-  
+}
     

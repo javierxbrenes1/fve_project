@@ -11,6 +11,7 @@
         <link href="assets/css/estilos.css" rel="stylesheet" type="text/css"/>
         <script src="assets/js/jquery.min.js" type="text/javascript"></script>
         <script src="assets/js/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.numeric.js" type="text/javascript"></script>
         <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="assets/js/funciones.js" type="text/javascript"></script>
         <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
@@ -18,12 +19,23 @@
 	<link href='https://fonts.googleapis.com/css?family=Crete+Round:400,400italic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
-    <body>
-        <div id="TobBar">
+        <body>
+     <div id="wrapper">   
+        <div id="TopBar">
             <img src="#" class="pull-left"/>
             <ul class="list-inline pull-right">
-                <li><i class="fa fa-shopping-cart"></i>  Carrito</li>
-                <li><i class="fa fa-check"></i>  Checkout</li>
+                <?php 
+                    if(!class_exists('Carrito')){ 
+                        include 'LN/Carrito.php';
+                    }
+                    
+                    $vloCarrito = new Carrito();
+                    $vlnTotalArt = $vloCarrito->articulos_total();
+                    $vlnConc = "";
+                    if($vlnTotalArt > 0) { $vlnConc = " (".$vlnTotalArt.")";}
+                ?>
+                <li class="btnCarrito"><i class="fa fa-shopping-cart"></i>  Carrito <?php echo $vlnConc;?></li>
+                <li data-toggle="modal" data-target="#modalEnvio"><i class="fa fa-check"></i>  Checkout</li>
             </ul>
         </div>
         <nav class="navbar navbar-default BarraCategorias">
@@ -82,11 +94,13 @@
               </div>
             </div>
         </div>  
+         <div id="content"> 
         <section>
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <h2 id="lblCatProd">Ofertas</h2>
+                        <div class="border-green"></div>
                     </div>
                 </div>
                 <hr />
@@ -113,7 +127,7 @@
                                 <p class="ProdNom"><?php echo $vloResultado['prod_nom']?></p>
                             </div>
                             <div>
-                                <input type="text" class="form-control txtCantidad" id="<?php echo $vloResultado['prod_id']; ?>"/>
+                                <input type="text" class="form-control txtCantidad decimal" id="<?php echo $vloResultado['prod_id']; ?>"/>
                                 <label class="lblKilo">. <?php echo $vloResultado['prod_unit_med'] ?></label>
                                 <p class="PrecioArticulo">Precio: ₡ <?php echo $vloResultado['prod_prc_act']?></p>
                             </div>
@@ -137,10 +151,91 @@
                 </div>
             </div>
         </section>
-        <footer class="footer">
-            <div class="container-fluid text-right">
-                <p>Tienda Online  Verfruta-Express &copy; 2016 | Trabajamos para usted con <i class="fa fa-heart"></i></p>
-            </div>
-        </footer>
+                 
+        </div>
+         <div id="push"></div>     
+    </div>
+    <div id="footer">
+        <div class="container-fluid text-right">
+            <p>Tienda Online  Verfruta-Express &copy; 2016 | Trabajamos para usted con <i class="fa fa-heart"></i></p>
+        </div>
+    </div>
+    <div class="modal fade" id="modalEnvio">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          
+            <div class="modal-header" style="background-color: #3e8f3e;">
+              <h4>Frutas y verduras Express</h4> 
+          </div>
+          
+          <div class="modal-body">
+              <form data-toggle="validator" role="form" id="FormPedido">
+              <div class="form-group">
+                <!-- Ingrese su nombre-->
+                <label for="txtNomCli" class="control-label">Nombre</label>
+                <input type ="text" class="form-control" id="txtNomCli" name="clienteNombre" placeholder= "&#xf007; Ingrese su nombre.." required oninvalid="this.setCustomValidity('Por Favor ingrese un nombre válido')" oninput="setCustomValidity('')" />
+              </div>
+              <div class="form-group"> 
+                <label for="txtEmail" required>Email</label>
+                <input type="email" class="form-control" id ="txtEmail" name="Email"
+                placeholder="&#xf003; Escribe tu email..." required oninvalid="this.setCustomValidity('Por Favor ingrese un correo electronico válido')" oninput="setCustomValidity('')">
+              </div>
+              <div class="form-group">  
+                  <label for="txtTel">Teléfono Principal</label>
+                  <input type="text" class="form-control" id="txtTel" name="TelPrincipal"
+                         placeholder="&#xf095; Escribe tu teléfono principal..." required oninvalid="this.setCustomValidity('Por Favor ingrese un teléfono válido para comunicarnos con usted')" oninput="setCustomValidity('')">
+              </div>
+              <div class="form-group">  
+                  <label for="txtTelAux">Teléfono Secundario</label>
+                  <input type="text" class="form-control" id="txtTelAux" name="TelSecundario"
+                         placeholder="&#xf095; Escribe tu teléfono secundario...">
+              </div>
+                <!--<div class="form-group">-->  
+                  <!--<label for="cboZona">Zona de entrega: </label>-->
+                  <?php
+                    include 'model/Zonas.php';
+                    //crea instancia de Zonas
+                    $vloZonas = new Zonas();
+                    //Obtiene las zonas
+                    $vloZonasDeEntrega = $vloZonas->ObtenerZonas();
+                    $vlnTotReg = mysql_num_rows($vloZonasDeEntrega);
+                    if($vlnTotReg > 0)
+                    {
+                  ?>
+                  <div class="form-group">
+                      <label for="cboZona">Zona de entrega: </label>
+                      <select id="cboZona" name="Zona" required>
+                       <?php
+                        while($vloFila = mysql_fetch_array($vloZonasDeEntrega))
+                        {
+                            echo '<option value="'.$vloFila['zon_id'].'">'.$vloFila['zon_nom'].'</option>';
+                        }
+                       ?>
+                      </select>
+                  </div>
+                  <?php
+                  }
+//                    }else
+//                    {
+//                        echo "no hay zonas";
+//                    }
+                    //crea el objeto 
+                  ?>
+                  
+              <!--</div> -->
+                <div class="form-group">  
+                    <label for="txtDir">Direcci&oacute;n Exacta</label>
+                  <textarea id="txtDir" name="Direccion" class="form-control" 
+                            rows="3" cols="50" required oninvalid="this.setCustomValidity('Por Favor ingrese su dirección de forma correcta para hacer llegar su pedido.')" oninput="setCustomValidity('')"></textarea>
+              </div>
+              <button type="submit" class="btn btn-success btn-block" id="btnEnviarPedido">Enviar Pedido</button>
+           </div>
+              <div class="modal-footer">
+                  
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>        
     </body>
 </html>
