@@ -84,7 +84,7 @@ if($vlnCantTotalArt > 0){
             $vlnSubtotal = $vloFila['cantidad'] * $vloFila['precio'];
             $vlnFormatoSubTotal =  number_format ( $vlnSubtotal, 2 , "." , ",");
             $vlcBody= $vlcBody.'<tr>';
-            $vlcBody= $vlcBody.'<td style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">'.$vloFila['cantidad'].'.KG</td>';
+            $vlcBody= $vlcBody.'<td style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">'.$vloFila['cantidad'].' '.$vloFila['unidad'].'</td>';
             $vlcBody= $vlcBody.'<td style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">'.$vloFila['nombre'].'</td>';
             $vlcBody= $vlcBody.'<td style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;"> '.$vlnFormatoSubTotal.'</td>';
             $vlcBody= $vlcBody.'</tr>';
@@ -108,7 +108,7 @@ if($vlnCantTotalArt > 0){
         //crea clase de notificacion 
         $vloNotificacion = new Notificacion();
         //Obtiene el resultado de la notificacion
-       $vlbSeNotifico =  $vloNotificacion->NotificarPedidoPorCorreo($vlcBody, $vlcEmail, 'javier.brenes@atscr.net', $vlcIDPedido);
+       $vlbSeNotifico =  $vloNotificacion->NotificarPedidoPorCorreo($vlcBody, $vlcEmail, 'pedidos@verfrutaexpress.com', $vlcIDPedido);
 
        if($vlbSeNotifico)
        {

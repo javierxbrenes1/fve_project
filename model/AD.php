@@ -10,10 +10,10 @@
         var $vcoSelBD;
         //constructor
        function __construct() {
-           $server = "localhost";
-           $username = "root";
-           $pass = "";
-           $database = "DB_FVE";
+           $server = "verfrutaexpress.com";
+           $username = "verfruta_AppUser";
+           $pass = "Pfgh%3209.790VerFruOn12";
+           $database = "verfruta_Application";
            $vcoConexion = mysql_connect($server,$username,$pass) or die('Error en la conexion');
            $vcoSelBD = mysql_select_db($database,$vcoConexion) or die ('Error al conectar a la bd');
        }

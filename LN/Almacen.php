@@ -36,7 +36,8 @@ if($vlcProdId!="" && $vlnProdCantidad!=""){
                                  "cantidad" => $vlnProdCantidad,
                                  "precio" => $vloFila['prod_prc_act'],
                                  "nombre" => $vloFila['prod_nom'],
-                                 "img" => $vloFila['prod_rut_img'] );
+                                 "img" => $vloFila['prod_rut_img'],
+                                 "unidad" => $vloFila['prod_unit_med']);
             }
             //Agrega el carrito    
             $vloCarrito->add($vloProd);

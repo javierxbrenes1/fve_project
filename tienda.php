@@ -22,7 +22,7 @@
         <body>
      <div id="wrapper">   
         <div id="TopBar">
-            <img src="#" class="pull-left"/>
+            <img src="assets/img/index.jpg" height="40" width="40" class="img-circle pull-left img-logo"/>
             <ul class="list-inline pull-right">
                 <?php 
                     if(!class_exists('Carrito')){ 
@@ -118,23 +118,28 @@
                     while($vloResultado = mysql_fetch_array($resultado))
                     {
                     ?>
-                    <div class="col-md-3 col-sm-4 col-xs-6 text-center Producto">
-                        <div class="pnlMarco">    
-                            <div>
-                                <img class="img-responsive center-block imgProd"  src="assets/img/<?php echo $vloResultado['prod_rut_img']; ?>"/>
+                    <div class="col-md-3 col-sm-4 col-xs-12 text-center Producto">
+                        <div class="fve-borde-beneficios">
+                            <div class="pnlMarco">    
+                                <div>
+                                    <img class="img-responsive center-block imgProd"  src="assets/img/<?php echo $vloResultado['prod_rut_img']; ?>"/>
+                                </div>
+                                <div >
+                                    <p class="ProdNom"><strong><?php echo $vloResultado['prod_nom']?></strong></p>
+                                </div>
+                                <div>
+                                    <input type="text" class="form-control txtCantidad decimal" id="<?php echo $vloResultado['prod_id']; ?>"/>
+                                    <label class="lblKilo"> <?php echo $vloResultado['prod_unit_med'] ?></label>
+                                    <p class="PrecioArticulo">Precio: ₡ <?php echo $vloResultado['prod_prc_act']?></p>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-success btnComprar" onclick="pAgregarProd(<?php echo $vloResultado['prod_id'];?>)"value="<?php echo $vloResultado['prod_id'];?>" />
+                                        <i class="fa fa-cart-plus"></i> Agregar
+                                    </button>
+                                </div>
+                                <div class="EnOferta">
+                                <p>oferta</p>
                             </div>
-                            <div >
-                                <p class="ProdNom"><?php echo $vloResultado['prod_nom']?></p>
-                            </div>
-                            <div>
-                                <input type="text" class="form-control txtCantidad decimal" id="<?php echo $vloResultado['prod_id']; ?>"/>
-                                <label class="lblKilo">. <?php echo $vloResultado['prod_unit_med'] ?></label>
-                                <p class="PrecioArticulo">Precio: ₡ <?php echo $vloResultado['prod_prc_act']?></p>
-                            </div>
-                            <div>
-                                <button type="button" class="btn btn-success btnComprar" value="<?php echo $vloResultado['prod_id'];?>" />
-                                    <i class="fa fa-cart-plus"></i> Agregar
-                                </button>
                             </div>
                         </div>
                     </div>
@@ -182,12 +187,12 @@
               </div>
               <div class="form-group">  
                   <label for="txtTel">Teléfono Principal</label>
-                  <input type="text" class="form-control" id="txtTel" name="TelPrincipal"
+                  <input type="text" pattern="^[2|8|7|6]\d{7}$" class="form-control" id="txtTel" name="TelPrincipal"
                          placeholder="&#xf095; Escribe tu teléfono principal..." required oninvalid="this.setCustomValidity('Por Favor ingrese un teléfono válido para comunicarnos con usted')" oninput="setCustomValidity('')">
               </div>
               <div class="form-group">  
                   <label for="txtTelAux">Teléfono Secundario</label>
-                  <input type="text" class="form-control" id="txtTelAux" name="TelSecundario"
+                  <input type="text" pattern="^[2|8|7|6]\d{7}$" class="form-control" id="txtTelAux" name="TelSecundario"
                          placeholder="&#xf095; Escribe tu teléfono secundario...">
               </div>
                 <!--<div class="form-group">-->  

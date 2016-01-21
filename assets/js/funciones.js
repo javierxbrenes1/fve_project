@@ -3,7 +3,6 @@ $("document").ready(function(){
      
      document.oncontextmenu = function() {return false;} 
     $("#FormPedido").submit(function(e){
-        $("body").css("cursor", "progress");
         $.ajax({
                     type: "POST",
                     url: "LN/Pedidos.php",
@@ -20,6 +19,7 @@ $("document").ready(function(){
                 });
         e.preventDefault();
     });
+    
     
     $("#lstCat").on("click","li",function(){
        var id = $(this).val();
@@ -40,8 +40,9 @@ $("document").ready(function(){
                $("#lblCatProd").text("Otros Productos");
                break;
        }
-       $("#pnlProdCategoria").load("LN/Categoria.php?id="+id);
-      
+       $("#pnlProdCategoria").load("LN/Categoria.php?id="+id,function(){  $('.decimal').numeric();    // números
+                                                                          $('.decimal').numeric('.'); // números con separador decimal
+                                                                          });
     });
     
     $(".btnCarrito").click(function(){
@@ -54,6 +55,10 @@ $("document").ready(function(){
             $(".navbar-header .navbar-toggle").trigger( "click" );
         }
     });
+    
+    $('.decimal').numeric();    // números
+    $('.decimal').numeric('.');
+    
 });
 
 function PLimpiarCampos()
@@ -67,14 +72,15 @@ function PLimpiarCampos()
 
 function pAgregarProd(pvnID)
 {
-    var vlntxtCant = ObtenerCant(pvnID);
+    var vlotxtCant = ObtenerCant(pvnID);
    
-    if(vlntxtCant.value.length > 0)
+    if(vlotxtCant.value.length > 0)
     {
-        $(".btnCarrito").load("LN/Almacen.php?id="+pvnID+"&cant="+vlntxtCant.value);
+        $(".btnCarrito").load("LN/Almacen.php?id="+pvnID+"&cant="+vlotxtCant.value);
+        vlotxtCant.value = "";
     }else
     {
-        vlntxtCant.focus();
+        vlotxtCant.focus();
     }
 }
 
@@ -102,27 +108,24 @@ function ObtenerCant(vloIdProd)
 function ElimProd(vloIdProd,e)
 {
     $.ajax({
-                    type: "POST",
-                    url: "LN/MantCarrito.php",
-                    data: {id: vloIdProd},
-                    success: function(data)
-                    {
-                        //alert(data);
-                        var array = data.split("|");
-                            //alert(array[1]);
-                            $("#pnlProdCategoria").html(array[0]);
-                            var vlnTexto = '<i class="fa fa-shopping-cart"></i>  Carrito';
-                            if(array[1] != "0"){
-                               vlnTexto = vlnTexto + " (" + array[1] + ")"; 
-                            }
-                            
-                            $(".btnCarrito").html(vlnTexto);
-                        
-                        
-                        
-                    }
-                    
-                });
-                e.preventDefault();
+        type: "POST",
+        url: "LN/MantCarrito.php",
+        data: {id: vloIdProd},
+        success: function(data)
+        {
+            //alert(data);
+            var array = data.split("|");
+                //alert(array[1]);
+                $("#pnlProdCategoria").html(array[0]);
+                var vlnTexto = '<i class="fa fa-shopping-cart"></i>  Carrito';
+                if(array[1] != "0"){
+                   vlnTexto = vlnTexto + " (" + array[1] + ")"; 
+                }
+
+                $(".btnCarrito").html(vlnTexto);
+        }
+
+    });
+    e.preventDefault();
     //$("#pnlProdCategoria").load("LN/MantCarrito.php?id="+vloIdProd);
 }

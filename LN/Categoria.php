@@ -33,7 +33,7 @@ while($vloResultado = mysql_fetch_array($resultado))
     $ResultadoConsulta = $ResultadoConsulta.'<img class="img-responsive center-block imgProd"  src="assets/img/'.$vloResultado['prod_rut_img'].'"/>';
     $ResultadoConsulta = $ResultadoConsulta.'</div>';
     $ResultadoConsulta = $ResultadoConsulta.'<div >';
-    $ResultadoConsulta = $ResultadoConsulta.'<p class="ProdNom">'.$vloResultado['prod_nom'].'</p>';
+    $ResultadoConsulta = $ResultadoConsulta.'<p class="ProdNom"><strong>'.$vloResultado['prod_nom'].'</strong></p>';
     $ResultadoConsulta = $ResultadoConsulta.'</div>';
     $ResultadoConsulta = $ResultadoConsulta.'<div>';
     $ResultadoConsulta = $ResultadoConsulta.'<input type="text" class="form-control txtCantidad decimal" id="'.$vloResultado['prod_id'].'"/>';
@@ -46,6 +46,11 @@ while($vloResultado = mysql_fetch_array($resultado))
     $ResultadoConsulta = $ResultadoConsulta.'</button>';
     $ResultadoConsulta = $ResultadoConsulta.'</div>';
     $ResultadoConsulta = $ResultadoConsulta.'</div>';
+    
+    if($vloResultado['prod_prm'] == 1)
+    {
+        $ResultadoConsulta = $ResultadoConsulta.'<div class="EnOferta"><p>oferta</p></div>';
+    }
     $ResultadoConsulta = $ResultadoConsulta.'</div>';
     $ResultadoConsulta = $ResultadoConsulta.'</div>';
 } 
