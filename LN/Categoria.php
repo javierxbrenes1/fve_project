@@ -5,18 +5,24 @@ if(!class_exists('Productos')){
 //String para contatenar el html
 $ResultadoConsulta = '';
 //Obtiene el id de la categoria
-$vlnId = $_GET['id'];
+$vloParametro = $_GET['id'];
 //Instancia de productos
 $vloProductos = new Productos();
 //Si el id es 0 devuelve todos los articulos con oferta
-if($vlnId == 0){
-    //Articulso con oferta
-    $resultado = $vloProductos->ProductosEnPromocion();
-   
+if(is_numeric($vloParametro)){
+    if($vloParametro == 0){
+        //Articulso con oferta
+        $resultado = $vloProductos->ProductosEnPromocion();
+
+    }else
+    {
+       //Articulos de la seccion definida
+       $resultado = $vloProductos->ProductosPorCategoria($vloParametro);
+    }
 }else
 {
-   //Articulos de la seccion definida
-   $resultado = $vloProductos->ProductosPorCategoria($vlnId);
+    
+    $resultado = $vloProductos->BuscarProductos($vloParametro);
 }
 //etiqueta para la unidad de medida
 $lblUnidMed = ' ';

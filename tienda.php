@@ -1,8 +1,10 @@
+<?php ob_start();?>
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
         <title>Tienda verfruta express</title>
     </head>
     <!-- Links de css -->
@@ -38,7 +40,10 @@
                 <li data-toggle="modal" data-target="#modalEnvio"><i class="fa fa-check"></i>  Checkout</li>
             </ul>
         </div>
-        <nav class="navbar navbar-default BarraCategorias">
+         <div class="pull-right Back">
+             <a href="#Menu"> <i class="fa fa-arrow-up"></i> </a>
+         </div> 
+         <nav class="navbar navbar-default BarraCategorias" id="Menu">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -57,9 +62,9 @@
                         <li value="4"><a>Otros productos</a></li>
                     </ul>
                      <div class="col-sm-3 col-md-3 pull-right">
-                        <form class="navbar-form" role="search">
+                         <form class="navbar-form" role="form" id="BuscarProd">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Buscar Producto" name="q">
+                                <input type="text" class="form-control" placeholder="Buscar Producto" id="txtParam">
                                 <div class="input-group-btn">
                                     <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
                                 </div>
@@ -169,8 +174,9 @@
       <div class="modal-dialog modal-sm">
         <div class="modal-content">
           
-            <div class="modal-header" style="background-color: #3e8f3e;">
-              <h4>Frutas y verduras Express</h4> 
+            <div class="modal-header" style="background-color: #6A5854; color:#fff; text-align: center; border-radius: 2px;">
+                <p class="pull-right CerrarModal">X</p>  
+              <h4>Verfruta Express.</h4> 
           </div>
           
           <div class="modal-body">
@@ -209,7 +215,7 @@
                   ?>
                   <div class="form-group">
                       <label for="cboZona">Zona de entrega: </label>
-                      <select id="cboZona" name="Zona" required>
+                      <select id="cboZona" name="Zona" class="form-control"required>
                        <?php
                         while($vloFila = mysql_fetch_array($vloZonasDeEntrega))
                         {
@@ -244,3 +250,4 @@
       </div>        
     </body>
 </html>
+<?php ob_end_flush();

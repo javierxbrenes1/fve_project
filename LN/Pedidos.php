@@ -77,7 +77,8 @@ if($vlnCantTotalArt > 0){
         $vlcBody= $vlcBody.'<table align="center" style="border-collapse: collapse;">';
         $vlcBody= $vlcBody.'<th style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">Cant.</th>';
         $vlcBody= $vlcBody.'<th style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">Producto</th>';
-        $vlcBody= $vlcBody.'<th style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">Precio</th>';
+        $vlcBody= $vlcBody.'<th style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">Precio unit.</th>';
+        $vlcBody= $vlcBody.'<th style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">Subtotal</th>';
 
         foreach($VloArticulosComprados as $vloFila)
         {
@@ -86,6 +87,7 @@ if($vlnCantTotalArt > 0){
             $vlcBody= $vlcBody.'<tr>';
             $vlcBody= $vlcBody.'<td style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">'.$vloFila['cantidad'].' '.$vloFila['unidad'].'</td>';
             $vlcBody= $vlcBody.'<td style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">'.$vloFila['nombre'].'</td>';
+            $vlcBody= $vlcBody.'<td style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">'.number_format ($vloFila['precio'], 2 , "." , ",").'</td>';
             $vlcBody= $vlcBody.'<td style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;"> '.$vlnFormatoSubTotal.'</td>';
             $vlcBody= $vlcBody.'</tr>';
         }

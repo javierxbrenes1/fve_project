@@ -4,6 +4,7 @@ include 'AD.php';
 
     class Productos
     {
+        var $ERROR_MESSAGE   = "Ocurrio un error, lo lamentamos.!,favor noticarlo al siguiente correo electronico: soporte@verfrutaexpress.com";
         //Constructor
         function __construct(){}
         
@@ -21,9 +22,28 @@ include 'AD.php';
                 
                 return $AccesoAdatos->RetornarResultado($vlcScript) ;
             } catch (Exception $ex) {
-
+            
+                echo $ERROR_MESSAGE;      
+                  
             }
             
+        }
+        
+        
+        public function BuscarProductos($pvcbuscar)
+        {
+            try {
+               
+                $param = mysql_escape_string($pvcbuscar);
+                $AD = new AD();
+                $vlcScript = "SELECT * "
+                        . "     FROM fve_prod "
+                        . "    WHERE prod_nom like '%".$param."%'";
+                return $AD->RetornarResultado($vlcScript);
+                
+            } catch (Exception $exc) {
+                echo $ERROR_MESSAGE;
+            }
         }
         
         public function ProductosEnPromocion(){
@@ -31,11 +51,11 @@ include 'AD.php';
                 $AccesoAdatos = new AD();
                 $vlcScript = "SELECT * "
                         . "     FROM fve_prod "
-                        . "    WHERE prod_prm = 1 "
-                        . "      AND prod_sts = 1 ";
+                        . "    WHERE prod_prm = '1' "
+                        . "      AND prod_sts = '1' ";
                  return $AccesoAdatos->RetornarResultado($vlcScript) ;
             } catch (Exception $ex) {
-
+                 echo $ERROR_MESSAGE; 
             }
         }
         
@@ -47,7 +67,7 @@ include 'AD.php';
                         . "     FROM fve_tip_prod ";
                  return $AccesoAdatos->RetornarResultado($vlcScript) ;
             } catch (Exception $ex) {
-
+                 echo $ERROR_MESSAGE;  
             }
         }
         
@@ -61,7 +81,7 @@ include 'AD.php';
                         . "      AND tip_prod_id= '".$pvnCategoria."';";
                  return $AccesoAdatos->RetornarResultado($vlcScript) ;
             } catch (Exception $ex) {
-
+                 echo $ERROR_MESSAGE;   
             }
         }
         
@@ -71,6 +91,6 @@ include 'AD.php';
                 $AccesoDatos = new AD();
                 $vlcScript = "SELECT * FROM fve_prod WHERE prod_id ="."'".$pvcID."'";
                 return $AccesoDatos->RetornarResultado($vlcScript);
-            }catch(Exception $e){}
+            }catch(Exception $e){echo $ERROR_MESSAGE; }
         }
     }

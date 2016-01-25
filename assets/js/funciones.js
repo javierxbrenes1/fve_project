@@ -1,7 +1,12 @@
 
 $("document").ready(function(){
-     
-     document.oncontextmenu = function() {return false;} 
+    
+     $(".Back").hide();
+    
+    MostrarMenu();
+    
+    document.oncontextmenu = function() {return false;} 
+    
     $("#FormPedido").submit(function(e){
         $.ajax({
                     type: "POST",
@@ -20,6 +25,13 @@ $("document").ready(function(){
         e.preventDefault();
     });
     
+    $("#BuscarProd").submit(function(e)
+    {
+        var vlcParametro = $("#txtParam").val();
+        $("#pnlProdCategoria").load("LN/Categoria.php?id="+vlcParametro);
+        $("#lblCatProd").text("Resultado de la búsqueda");
+        e.preventDefault();
+    });
     
     $("#lstCat").on("click","li",function(){
        var id = $(this).val();
@@ -59,6 +71,14 @@ $("document").ready(function(){
     $('.decimal').numeric();    // números
     $('.decimal').numeric('.');
     
+     // Define manejador de scroll para mostrar la barra de menú
+    $(window).scroll(function () {
+        MostrarMenu();
+    });
+    
+    $(".CerrarModal").click(function(){
+        $('#modalEnvio').modal('hide');
+    });
 });
 
 function PLimpiarCampos()
@@ -129,3 +149,16 @@ function ElimProd(vloIdProd,e)
     e.preventDefault();
     //$("#pnlProdCategoria").load("LN/MantCarrito.php?id="+vloIdProd);
 }
+
+function MostrarMenu()
+        {
+            // Obtiene el alto del scroll
+            var vlnScroll = $(this).scrollTop();
+            // Si el scroll es mayor a 100
+            if (vlnScroll > 100)
+            // Muestra barra de menú
+                $(".Back").fadeIn();
+            else
+            // Oculta la barra de menú
+                $(".Back").fadeOut();
+        }

@@ -291,5 +291,45 @@ body{ font-family: "Roboto Slab",serif;}
     background-color: #6A5854;
     border-radius: 5px ;    
 }
-
 .img-logo{padding-top: 5px;padding-left:5px; }
+
+.Back{
+    font-size:30px;
+    color:#FFF;
+    background-color: #6A5854;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    top:55px;
+    right: 10px;
+    text-align: center;
+    z-index:2;
+    -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.75);
+    box-shadow: 00px 2px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 2px;
+    
+}
+
+.Back a:hover
+{
+   padding-top: 0;
+   font-size: 35px;
+   outline: none;
+}
+
+.Back a{
+    padding-top: 10px;
+    color:#FFF;
+    outline: none;
+}
+
+.CerrarModal{
+   cursor: pointer; 
+   font-size: 20px;
+}
+
+.CerrarModal:hover{
+    font-weight: bold;
+    
+}
