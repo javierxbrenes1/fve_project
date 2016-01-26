@@ -42,7 +42,7 @@ while($vloResultado = mysql_fetch_array($resultado))
     $ResultadoConsulta = $ResultadoConsulta.'<p class="ProdNom"><strong>'.$vloResultado['prod_nom'].'</strong></p>';
     $ResultadoConsulta = $ResultadoConsulta.'</div>';
     $ResultadoConsulta = $ResultadoConsulta.'<div>';
-    $ResultadoConsulta = $ResultadoConsulta.'<input type="text" class="form-control txtCantidad decimal" id="'.$vloResultado['prod_id'].'"/>';
+    $ResultadoConsulta = $ResultadoConsulta.'<input type="text" class="form-control txtCantidad decimal" maxlength="5" id="'.$vloResultado['prod_id'].'"/>';
     $ResultadoConsulta = $ResultadoConsulta.' <label class="lblKilo">'.$lblUnidMed.'</label>';
     $ResultadoConsulta = $ResultadoConsulta.'<p> <p><p class="PrecioArticulo">Precio: ₡ '.$vloResultado['prod_prc_act'].'</p>';
     $ResultadoConsulta = $ResultadoConsulta.'</div>';

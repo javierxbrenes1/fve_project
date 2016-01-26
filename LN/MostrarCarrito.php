@@ -64,10 +64,11 @@ if(!class_exists('Carrito')){
             
             //Al final se agrega un boton para desplegar el formulario de envio 
             $vlcCodHtml = $vlcCodHtml.'<button type="button" class="btn btn-success btn-lg pull-right" data-toggle="modal" data-target="#modalEnvio" style="margin-bottom:20px;">
-            <i class="fa fa-check"></i>  Checkout </button>';
+            <i class="fa fa-check"></i>  Aceptar pedido </button>';
             
          }
          else{
+             
              $vlcCodHtml = '<h1 class="text-center"> El carrito se encuentra vacio.</h1>';
          }
          echo $vlcCodHtml;

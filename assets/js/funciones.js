@@ -8,17 +8,25 @@ $("document").ready(function(){
     document.oncontextmenu = function() {return false;} 
     
     $("#FormPedido").submit(function(e){
+        $('#modalEnvio').modal('hide');
+        BloquearPantalla();
         $.ajax({
                     type: "POST",
                     url: "LN/Pedidos.php",
                     data: $("#FormPedido").serialize(),
+                    error: function(error){
+                        DesbloquearPantalla();
+                        Mensaje("Error.!","","Error al enviar el pedido: "+error,"ok");
+                    },
                     success: function(data)
                     {
-                        $("body").css("cursor", "default");
-                        $('#modalEnvio').modal('hide');
+                        DesbloquearPantalla();
                         PLimpiarCampos();
-                        alert(data);
-                        location.reload();
+                        Mensaje("Pedido enviado satisfactoriamente",
+                        "Puedes revisar tú correo electronico, allí encontraras un mensaje de nuestra parte.",
+                        "success","ok");
+                        
+                        setTimeout(function(){location.reload();},3500);
                     }
                     
                 });
@@ -34,6 +42,7 @@ $("document").ready(function(){
     });
     
     $("#lstCat").on("click","li",function(){
+       BloquearPantalla();
        var id = $(this).val();
        switch(id){
            case 0:
@@ -55,6 +64,12 @@ $("document").ready(function(){
        $("#pnlProdCategoria").load("LN/Categoria.php?id="+id,function(){  $('.decimal').numeric();    // números
                                                                           $('.decimal').numeric('.'); // números con separador decimal
                                                                           });
+                                                                          
+           setTimeout(function(){
+               var pnlbloqueo = $(".block-loading");
+               pnlbloqueo.remove();
+           },2200);  
+       
     });
     
     $(".btnCarrito").click(function(){
@@ -94,7 +109,7 @@ function pAgregarProd(pvnID)
 {
     var vlotxtCant = ObtenerCant(pvnID);
    
-    if(vlotxtCant.value.length > 0)
+    if(vlotxtCant.value.length > 0 && parseInt(vlotxtCant.value) != 0)
     {
         $(".btnCarrito").load("LN/Almacen.php?id="+pvnID+"&cant="+vlotxtCant.value);
         vlotxtCant.value = "";
@@ -102,6 +117,28 @@ function pAgregarProd(pvnID)
     {
         vlotxtCant.focus();
     }
+}
+
+function Mensaje(pvcTitulo,pvcTexto,pvcTipo,pvcBoton){
+    swal({
+        title: pvcTitulo,
+        text:pvcTexto,
+        type: pvcTipo,
+        confirmButtonText: pvcBoton
+    });
+}
+
+function BloquearPantalla()
+{
+    var form = $("#wrapper");
+    var block = $('<div class="block-loading"/>');
+    form.append(block);
+}
+
+function DesbloquearPantalla()
+{
+    var pnlbloqueo = $(".block-loading");
+    pnlbloqueo.remove();
 }
 
 function pMostrarCarrito()
@@ -135,8 +172,8 @@ function ElimProd(vloIdProd,e)
         {
             //alert(data);
             var array = data.split("|");
-                //alert(array[1]);
-                $("#pnlProdCategoria").html(array[0]);
+                //alert(array[0].substring(0,(array[0].length)-1));
+                $("#pnlProdCategoria").html(array[0].substring(0,(array[0].length)-1));
                 var vlnTexto = '<i class="fa fa-shopping-cart"></i>  Carrito';
                 if(array[1] != "0"){
                    vlnTexto = vlnTexto + " (" + array[1] + ")"; 

@@ -8,13 +8,17 @@
         <title>Tienda verfruta express</title>
     </head>
     <!-- Links de css -->
+        <script src="assets/lib/sweetalerts/sweetalert.min.js" type="text/javascript"></script>
+        <link href="assets/lib/sweetalerts/sweetalert.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/estilos.css" rel="stylesheet" type="text/css"/>
+        
         <script src="assets/js/jquery.min.js" type="text/javascript"></script>
         <script src="assets/js/jquery-ui.min.js" type="text/javascript"></script>
         <script src="assets/js/jquery.numeric.js" type="text/javascript"></script>
         <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+        
         <script src="assets/js/funciones.js" type="text/javascript"></script>
         <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
         <!-- Google fonts -->	
@@ -37,7 +41,7 @@
                     if($vlnTotalArt > 0) { $vlnConc = " (".$vlnTotalArt.")";}
                 ?>
                 <li class="btnCarrito"><i class="fa fa-shopping-cart"></i>  Carrito <?php echo $vlnConc;?></li>
-                <li data-toggle="modal" data-target="#modalEnvio"><i class="fa fa-check"></i>  Checkout</li>
+                <li data-toggle="modal" data-target="#modalEnvio"><i class="fa fa-check"></i>  Aceptar pedido</li>
             </ul>
         </div>
          <div class="pull-right Back">
@@ -80,23 +84,23 @@
               <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
               <li data-target="#carousel-example-generic" data-slide-to="1"></li>
               <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="3"></li>
             </ol>
 
              
             <div class="carousel-inner" style='height: auto'>
                 <div class="item active">
-                    <img  src="assets/images/slider3.jpg" height="150" alt="...">
-              </div>
-              <div class="item">
+                  <img  class="img-responsive" src="assets/images/slider3.jpg" height="150" alt="...">
+                </div>
+                <div class="item">
                   <img class="img-responsive" src="assets/images/slider1.jpg" height="150" alt="...">
-              </div>
-              <div class="item">
+                </div>
+                <div class="item">
                   <img class="img-responsive" src="assets/images/slider2.jpg" height="150" alt="...">
-              </div>
+                </div>
                 <div class="item">
                   <img class="img-responsive" src="assets/images/slider4.jpg" height="150" alt="...">
-              </div>
+                </div>
             </div>
         </div>  
          <div id="content"> 
@@ -133,7 +137,7 @@
                                     <p class="ProdNom"><strong><?php echo $vloResultado['prod_nom']?></strong></p>
                                 </div>
                                 <div>
-                                    <input type="text" class="form-control txtCantidad decimal" id="<?php echo $vloResultado['prod_id']; ?>"/>
+                                    <input type="text" class="form-control txtCantidad decimal" maxlength="5" id="<?php echo $vloResultado['prod_id']; ?>"/>
                                     <label class="lblKilo"> <?php echo $vloResultado['prod_unit_med'] ?></label>
                                     <p class="PrecioArticulo">Precio: ₡ <?php echo $vloResultado['prod_prc_act']?></p>
                                 </div>
@@ -194,12 +198,12 @@
               <div class="form-group">  
                   <label for="txtTel">Teléfono Principal</label>
                   <input type="text" pattern="^[2|8|7|6]\d{7}$" class="form-control" id="txtTel" name="TelPrincipal"
-                         placeholder="&#xf095; Escribe tu teléfono principal..." required oninvalid="this.setCustomValidity('Por Favor ingrese un teléfono válido para comunicarnos con usted')" oninput="setCustomValidity('')">
+                         placeholder="&#xf095; Tel. Principal. Ejm:(88888888)" required oninvalid="this.setCustomValidity('Por Favor ingrese un teléfono válido para comunicarnos con usted, en formato (88888888).')" oninput="setCustomValidity('')">
               </div>
               <div class="form-group">  
                   <label for="txtTelAux">Teléfono Secundario</label>
                   <input type="text" pattern="^[2|8|7|6]\d{7}$" class="form-control" id="txtTelAux" name="TelSecundario"
-                         placeholder="&#xf095; Escribe tu teléfono secundario...">
+                         placeholder="&#xf095; Tel. Secundario.">
               </div>
                 <!--<div class="form-group">-->  
                   <!--<label for="cboZona">Zona de entrega: </label>-->
