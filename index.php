@@ -11,7 +11,7 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">	
 	
     <!-- Fontawesome -->
-    <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">	
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">	
 	
     <!-- Owl Carousel Assets -->
     <link href="assets/lib/owl-carousel/owl.carousel.css" rel="stylesheet">
@@ -35,7 +35,7 @@
 	
   </head>
 <body>
-	<header class="header-area home-v1">		
+    <header class="header-area home-v1" id="header">		
 		<div class="overlay">
 			<div class="navbar">
 				<div class="container">
@@ -47,7 +47,7 @@
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
-								</button>
+                                                                </button>
 								<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt=""></a>
 							</div>
 						</div>
@@ -57,8 +57,8 @@
 									<!--<li><a href="#bienvenida">Bienvenida</a></li>-->
 									<li><a href="#nosotros">Nosotros</a></li>
 									<li><a href="#beneficios">Beneficios</a></li>
-									<li><a href="blog.html">Formas de pago</a></li>  
-									<li><a href="#">Horarios</a></li>
+									<li><a href="#FormasDePago">Formas de pago</a></li>  
+									<li><a href="#Horarios">Horarios</a></li>
 								</ul>
 							</nav>						
 						</div>
@@ -75,8 +75,8 @@
 <!--							        <li><a href="#bienvenida">Bienvenida</a></li>-->
 								<li><a href="#nosotros">Nosotros</a></li>
 								<li><a href="#beneficios">Beneficios</a></li>
-								<li><a href="blog.html">Formas de pago</a></li>  
-								<li><a href="#">Horarios</a></li>
+								<li><a href="#FormasDePago">Formas de pago</a></li>  
+								<li><a href="#Horarios">Horarios</a></li>
                                                                 <li><a href="tienda.php">visitar tienda</a></li>
 							</ul>
 						</nav>							
@@ -104,6 +104,9 @@
 			</div>	
 		</div>
 	</header><!--/.header-area -->
+        <div class="pull-right Back">
+             <a href="#header"> <i class="fa fa-arrow-up"></i> </a>
+        </div>
 	<section class="vital-shop-area" id="nosotros">
 		<div class="container">
 			<div class="section-heading">
@@ -156,7 +159,7 @@
 					<div class="row">
 						<div class="col-md-4 col-sm-4 col-xs-12">
 							<div class="single-fun-fact">
-								<h2 class="counter">50</h2>
+								<h2 class="counter">101</h2>
 								<div class="border-green"></div>
 								<h3>Productos disponibles</h3>
 								<p>Cada dia agregamos mas productos a nuestro stock.</p>
@@ -244,98 +247,58 @@
 		</div>
 	</section><!--/.testimonial-area -->
 	
-	<section class="deal-ofthe-day">
+        <section class="formas-de-pago" id="FormasDePago">
 		<div class="container">
 			<div class="section-heading">
-				<h2>Deals of the Day</h2>
+				<h2>Medios de pago</h2>
 				<div class="border-white"></div>
-				<div class="see-all-product">
-					<a href="">See all Products</a>
-				</div>				
 			</div><!--/.section-heading -->
-			<div class="deals-product">
-				<div class="row">
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="single-deals-product">
-							<div class="sd-product-image">
-								<img src="assets/images/deal/1.jpg" alt="" />
-							</div><!--/.sd-product-image -->
-							<h2><a href="">Green Peas</a></h2>
-							<p>Green peas is one of the most nutritious vegetables</p>
-							<div class="sdp-price">$1.49</div>
-						</div><!--/.single-deals-product -->
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="single-deals-product">
-							<div class="sd-product-image">
-								<img src="assets/images/deal/2.jpg" alt="" />
-							</div><!--/.sd-product-image -->
-							<h2><a href="">Mongolian Onions</a></h2>
-							<p>Onions that originate in asia, but grow even better in England.</p>
-							<div class="sdp-price"><span>$2.93</span> $1.90</div>
-						</div><!--/.single-deals-product -->
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="single-deals-product">
-							<div class="sd-product-image">
-								<img src="assets/images/deal/3.jpg" alt="" />
-							</div><!--/.sd-product-image -->
-							<h2><a href="">True Spinach</a></h2>
-							<p>There are multiple types of nach, but only one is the true one.</p>
-							<div class="sdp-price">$4.49</div>
-						</div><!--/.single-deals-product -->
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="single-deals-product">
-							<div class="sd-product-image">
-								<img src="assets/images/deal/4.jpg" alt="" />
-							</div><!--/.sd-product-image -->
-							<h2><a href="">Sweet Potatos</a></h2>
-							<p>Our eco homegrown potatos with amazing sweet taste.</p>
-							<div class="sdp-price">$6.00</div>
-						</div><!--/.single-deals-product -->
-					</div>
-				</div>
-			</div>
+                        
+                        <div class="col-md-6 descripcion-medio-pago text-center">
+                            <h2>Efectivo</h2>
+                            <hr/>
+                            <p>Many desktop publishing packages and 
+                                web page editors now use Lorem Ipsum as their default model text.
+                            </p>   
+                            <img src="assets/images/Colones-archivo.jpeg" height="180" width="180" class="img-circle img-medio-pago" alt="" />
+                       </div>
+                        
+                        <div class="col-md-6 descripcion-medio-pago text-center">
+                            <h2>Tarjetas</h2>
+                            <hr/>
+                            <p>It is a long established fact that a reader will be 
+                                distracted by the readable content of a page when looking at its layout. 
+                                The point of using Lorem Ipsum is that it has a more-or-less normal 
+                                distribution of letters, as opposed to using 'Content here, content here', 
+                                making it look like readable English. Many desktop publishing packages and 
+                                web page editors now use Lorem Ipsum as their default model text.
+                            </p>
+                            <img src="assets/images/tarjetas.jpg" height="180" width="180" class="img-circle img-medio-pago" alt="" />
+                        </div>
 		</div>		
 	</section><!--/.deal-ofthe-day -->
 	
-	<section class="blog-area">
+        <section class="blog-area" id="Horarios">
 		<div class="container">
 			<div class="section-heading">
-				<h2>Latest Vital News</h2>
+				<h2>Horarios de entrega</h2>
 				<div class="border-green"></div>
 			</div><!--/.section-heading -->	
 			<div class="blog-post">
 				<div class="row">
 					<div class="col-md-4 col-sm-4 col-sx-12">
 						<div class="single-blog-post">
-							<div class="post-image">
-								<img src="assets/images/blog/1.jpg" alt="" />
-							</div><!--/.post-image -->
-							<h2>Make a Shopping List</h2>
-							<p>You no longer need to worry about forgetting what to buy. With our new smart app, you can simply save your list and share it with your family.</p>
-							<a href="" class="btn blog-read-more">Read more</a>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas elit vel arcu aliquet, vel congue arcu lobortis. Duis bibendum hendrerit mollis. Phasellus vitae metus porttitor, sollicitudin risus non, porta urna. Donec ornare mi non enim rutrum, quis vestibulum felis tempor. Nullam ac sapien congue ante maximus euismod. Aenean convallis non ante nec molestie. Duis tincidunt lectus ultrices imperdiet facilisis. Quisque tellus tortor, pharetra quis diam imperdiet, vestibulum consequat elit. Aliquam nec iaculis massa, nec volutpat dolor. Proin tincidunt erat tellus, nec varius sapien cursus sit amet. Phasellus aliquet velit et ex lacinia facilisis. Praesent scelerisque porttitor justo vel condimentum. In vel facilisis tortor. Aenean vel finibus magna. </p>
 						</div><!--/.single-blog-post -->
 					</div>
 					<div class="col-md-4 col-sm-4 col-sx-12">
 						<div class="single-blog-post">
-							<div class="post-image">
-								<img src="assets/images/blog/2.jpg" alt="" />
-							</div><!--/.post-image -->
-							<h2>Make a Shopping List</h2>
-							<p>You no longer need to worry about forgetting what to buy. With our new smart app, you can simply save your list and share it with your family.</p>
-							<a href="" class="btn blog-read-more">Read more</a>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas elit vel arcu aliquet, vel congue arcu lobortis. Duis bibendum hendrerit mollis. Phasellus vitae metus porttitor, sollicitudin risus non, porta urna. Donec ornare mi non enim rutrum, quis vestibulum felis tempor. Nullam ac sapien congue ante maximus euismod. Aenean convallis non ante nec molestie. Duis tincidunt lectus ultrices imperdiet facilisis. Quisque tellus tortor, pharetra quis diam imperdiet, vestibulum consequat elit. Aliquam nec iaculis massa, nec volutpat dolor. Proin tincidunt erat tellus, nec varius sapien cursus sit amet. Phasellus aliquet velit et ex lacinia facilisis. Praesent scelerisque porttitor justo vel condimentum. In vel facilisis tortor. Aenean vel finibus magna. </p>
 						</div><!--/.single-blog-post -->
 					</div>
 					<div class="col-md-4 col-sm-4 col-sx-12">
 						<div class="single-blog-post">
-							<div class="post-image">
-								<img src="assets/images/blog/3.jpg" alt="" />
-							</div><!--/.post-image -->
-							<h2>Make a Shopping List</h2>
-							<p>You no longer need to worry about forgetting what to buy. With our new smart app, you can simply save your list and share it with your family.</p>
-							<a href="" class="btn blog-read-more">Read more</a>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas elit vel arcu aliquet, vel congue arcu lobortis. Duis bibendum hendrerit mollis. Phasellus vitae metus porttitor, sollicitudin risus non, porta urna. Donec ornare mi non enim rutrum, quis vestibulum felis tempor. Nullam ac sapien congue ante maximus euismod. Aenean convallis non ante nec molestie. Duis tincidunt lectus ultrices imperdiet facilisis. Quisque tellus tortor, pharetra quis diam imperdiet, vestibulum consequat elit. Aliquam nec iaculis massa, nec volutpat dolor. Proin tincidunt erat tellus, nec varius sapien cursus sit amet. Phasellus aliquet velit et ex lacinia facilisis. Praesent scelerisque porttitor justo vel condimentum. In vel facilisis tortor. Aenean vel finibus magna. </p>
 						</div><!--/.single-blog-post -->
 					</div>
 				</div>
@@ -345,81 +308,67 @@
         
 	<footer class="footer-main">
 		<div class="overlay">
-			<div class="footer-top">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8 col-sm-6">
-							<a href="" class="btn find-shop">Find a shop near you</a>
-						</div>
-						<div class="col-md-4 col-sm-6">
-							<form class="sign-up">
-								<div class="input-group">
-									<input type="email" class="form-control" placeholder="Enter Your Email">
-									<div class="input-group-addon">
-										<input type="submit" class="btn btn-theme" value="Subscribe">
-									</div>
-								</div>
-							</form>						
-						</div>
-					</div>
-				</div>
-			</div>
 			<div class="footer-widget">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-4 col-sm-4 col-xs-12">
 							<div class="single-widget">
 								<a href="" class="footer-logo"><img src="assets/images/logo.png" alt="" /></a>
-								<p>Vital is more than just a web ecommerce shop. We are working closely with local farmers and schools to provide amazing experience and make the future generation healthier and stronger with proper food.</p>
+								<p>VerFruta Express es mas que una tienda online, estamos comprometidos a llevarle la mejor calidad de productos para que usted
+                                                                y su familia disfruten de una experiencia &uacute;nica.</p>
 								<ul class="social-icons">
 									<li>
-										<a href="" target="_blank"><i class="fa fa-dribbble"></i></a>
+										<a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
 									</li>
 									<li>
-										<a href="" target="_blank"><i class="fa fa-instagram"></i></a>
+										<a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i> Instragram</a>
 									</li>
 									<li>
-										<a href="" target="_blank"><i class="fa fa-facebook"></i></a>
+										<a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-square"></i> Facebook</a>
 									</li>
 								</ul>								
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-12">
 							<div class="single-widget">
-								<h2 class="widget-title">Social Media</h2>
+								<h2 class="widget-title">Nuestros Tweets</h2>
 								<div id="twitterFetcher"></div>								
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-12">
 							<div class="single-widget">
-								<h2 class="widget-title">Find our Shop</h2>
+								<h2 class="widget-title">Encuentra nuestra tienda</h2>
 								<div class="footer-address">
 									<ul>
 										<li>
 											<div class="address-type">
 												<i class="fa fa-compass"></i>
-												<span>Address</span>
+												<span>Direcci&oacute;n</span>
 											</div>
 											<div class="address-info">
-												<p>Farmers Square, 9000 Manchester, United Kingdom</p>
+												<p>Tejar del guarco, Cartago</p>
 											</div>
 										</li>
 										<li>
 											<div class="address-type">
 												<i class="fa fa-envelope-o"></i>
-												<span>Email</span>
+												<span>Correos Electr&oacute;nicos</span>
 											</div>
 											<div class="address-info">
-												<p>nfo@vitalecommerce.co.uk public@vitalecommerce.co.uk</p>
+												<p>info@verfrutaexpress.com</p>
+                                                                                                <p>pedidos@verfrutaexpress.com</p>
+                                                                                                <p>pedidos@verfrutaexpress.com</p>
 											</div>
 										</li>
 										<li>
 											<div class="address-type">
 												<i class="fa fa-phone"></i>
-												<span>Phone</span>
+												<span>Tel&eacute;fonos</span>
 											</div>
 											<div class="address-info">
-												<p>hone	1-234-567-8900</p>
+												<p>2522-3322</p>
+                                                                                                <p>2522-3322</p>
+                                                                                                <p>2522-3322</p>
 											</div>
 										</li>
 									</ul>
@@ -435,16 +384,7 @@
 						<div class="col-md-8 col-sm-6 col-xs-12">
 							<p class="copywrite">&copy; Copyright 2015, All Rights Reserved, Vital</p>
 						</div>
-						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="footer-bottom-menu">
-								<ul>
-									<li><a href="">Home</a></li>
-									<li><a href="">Public Relations</a></li>
-									<li><a href="">About</a></li>
-									<li><a href="">Contact</a></li>
-								</ul>
-							</div>
-						</div>
+						
 					</div>
 				</div>
 			</div>

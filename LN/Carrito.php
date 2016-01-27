@@ -29,7 +29,7 @@ class Carrito
 				
 		}else{
                     //debemos crear un identificador único para cada producto
-                    $unique_id = md5($articulo["id"]);
+                    $unique_id = $articulo["id"];
 
                     //creamos la id única para el producto
                     $articulo["unique_id"] = $unique_id;

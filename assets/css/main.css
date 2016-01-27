@@ -699,14 +699,20 @@ img {
 	DEALS OF THE DAY
 ==================================*/
 
-.deal-ofthe-day {
-    background: #6a5854 none repeat scroll 0 0;
+.formas-de-pago {
+    /*background: none repeat scroll 0 0;/*#6a5854 none repeat scroll 0 0;*/
+    background-image: url("../images/bg1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment:fixed;
     padding-bottom: 80px;
+    opacity: 1.99;
 }
-.deal-ofthe-day .section-heading {
+.formas-de-pago .section-heading {
     position: relative;
 }
-.deal-ofthe-day .section-heading > h2 {
+.formas-de-pago .section-heading > h2 {
     color: #fff;
 }
 .border-white {
@@ -837,7 +843,7 @@ img {
     width: 70px;
 }
 .social-icons {
-    margin: 40px 0 0;
+    margin: 25px 0 0;
     overflow: hidden;
 }
 .social-icons > li {
@@ -846,8 +852,8 @@ img {
 .social-icons a {
     color: #d3ccc7;
     display: block;
-    font-size: 18px;
-    margin: 0 30px 0 0;
+    font-size: 15px;
+    margin: 0 15px 0 0;
 }
 .address-type {
     color: #d3ccc7;
@@ -2016,3 +2022,58 @@ textarea {
     border-radius: 0 0 50% 50%;
 }
 
+
+
+.descripcion-medio-pago{
+    background-color: rgba(106, 88, 84, 0.5);
+   
+    margin-top: 10px;
+    
+}
+.descripcion-medio-pago p 
+{
+    height: 120px;
+    display: inline-block;
+}
+.descripcion-medio-pago h2, .descripcion-medio-pago p {
+    color:#fff;
+    margin-top: 10px;
+}
+
+
+.img-medio-pago{
+    margin: 10px 0 10px 0;
+}
+
+.Back{
+    font-size:30px;
+    color:#FFF;
+    background-color: #6A5854;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    top:55px;
+    right: 10px;
+    text-align: center;
+    z-index:2;
+    -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.75);
+    box-shadow: 00px 2px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 2px;
+    
+}
+
+.Back a:hover
+{
+   padding-top: 18px;
+   font-size: 35px;
+   outline: none;
+}
+.Back a i {
+    padding-top: 10px;
+}
+.Back a{
+    
+    color:#FFF;
+    outline: none;
+}

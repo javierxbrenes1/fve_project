@@ -1,4 +1,12 @@
 jQuery(function () {
+        $(".Back").hide();
+        
+        $(window).scroll(function () {
+            MostrarMenu();
+        });
+        
+        document.oncontextmenu = function() {return false;} 
+        
 	"use strict";
         $("#main-header-slider").find(".banner-slider").owlCarousel({        
             slideSpeed : 200,
@@ -110,3 +118,15 @@ jQuery(function () {
 			
 }());
 
+function MostrarMenu()
+{
+    // Obtiene el alto del scroll
+    var vlnScroll = $(this).scrollTop();
+    // Si el scroll es mayor a 100
+    if (vlnScroll > 100)
+    // Muestra barra de menú
+        $(".Back").fadeIn();
+    else
+    // Oculta la barra de menú
+        $(".Back").fadeOut();
+}

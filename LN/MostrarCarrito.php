@@ -35,7 +35,7 @@ if(!class_exists('Carrito')){
                 $vlnMontoTotal += $vlnSubtotal;
                 $vlnFormatoSubTotal =  number_format ( $vlnSubtotal, 2 , "." , ",");
                 $vlnPrecioUnitario = number_format ( $vloFila['precio'], 2 , "." , ",");
-                $vlcCodArticulo = md5($vloFila['id']);
+                $vlcCodArticulo = $vloFila['id'];
                 $vlcCodHtml = $vlcCodHtml."<tr>";
                 $vlcCodHtml = $vlcCodHtml."<td>"."<p>".number_format ($vlnTotalProductos, 0 , "." , ",")."</p>"."</td>";
                 $vlcCodHtml = $vlcCodHtml."<td>".'<img class="img-circle" width="50" height="50" src="assets/img/'.$vloFila['img'].'">'."</td>";
@@ -63,6 +63,10 @@ if(!class_exists('Carrito')){
             $vlcCodHtml = $vlcCodHtml."</div>";
             
             //Al final se agrega un boton para desplegar el formulario de envio 
+            
+            $vlcCodHtml = $vlcCodHtml.'<button type="button" class="btn btn-success btn-lg pull-right" style="margin-bottom:20px; margin-left:20px;" onclick="VerOfertas();">
+            <i class="fa fa-arrow-circle-left"></i>  Volver a comprar </button>';
+            
             $vlcCodHtml = $vlcCodHtml.'<button type="button" class="btn btn-success btn-lg pull-right" data-toggle="modal" data-target="#modalEnvio" style="margin-bottom:20px;">
             <i class="fa fa-check"></i>  Aceptar pedido </button>';
             
