@@ -1,6 +1,6 @@
 
 $("document").ready(function(){
-    
+     $(this).scrollTop(0); 
      $(".Back").hide();
     
     MostrarMenu();
@@ -74,6 +74,8 @@ $("document").ready(function(){
                var pnlbloqueo = $(".block-loading");
                pnlbloqueo.remove();
            },2200);  
+            
+          $(this).scrollTop(0);  
        
     });
     
@@ -215,6 +217,8 @@ function VerOfertas()
     setTimeout(function(){
                var pnlbloqueo = $(".block-loading");
                pnlbloqueo.remove();
-           },2200);                                                                  
+           },2200);       
+           
+    $(this).scrollTop(0);         
 }
         
