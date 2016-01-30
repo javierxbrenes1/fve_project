@@ -168,7 +168,7 @@
     </div>
     <div id="footer">
         <div class="container-fluid text-right">
-            <p>Tienda Online  Verfruta-Express &copy; 2016 | Trabajamos para usted con <i class="fa fa-heart"></i></p>
+            <p>Tienda Online  Verfruta-Express &copy; <?php echo date ("Y");?> | Trabajamos para usted con <i class="fa fa-heart"></i></p>
         </div>
     </div>
     <div class="modal fade" id="modalEnvio">

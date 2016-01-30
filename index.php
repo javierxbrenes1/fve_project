@@ -48,7 +48,7 @@
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
                                                                 </button>
-								<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt=""></a>
+								<!--<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt=""></a>-->
 							</div>
 						</div>
 						<div class="col-md-6 col-sm-6">
@@ -69,7 +69,7 @@
 						</div>
 					</div> 
 					<div class="mobile">
-						<a class="logo" href="index.html"><img src="assets/images/logo.png" alt=""></a>
+						<!--<a class="logo" href="index.html"><img src="assets/images/logo.png" alt=""></a>-->
 						<nav class="mobile-menu">
 							<ul>
 <!--							        <li><a href="#bienvenida">Bienvenida</a></li>-->
@@ -382,7 +382,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-8 col-sm-6 col-xs-12">
-							<p class="copywrite">&copy; Copyright 2015, All Rights Reserved, Vital</p>
+							<p class="copywrite">&copy; Copyright <?php echo date ("Y");?>, Todos los derechos reservados Verfruta Express</p>
 						</div>
 						
 					</div>
