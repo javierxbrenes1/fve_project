@@ -73,7 +73,7 @@ $("document").ready(function(){
            setTimeout(function(){
                var pnlbloqueo = $(".block-loading");
                pnlbloqueo.remove();
-           },2200);  
+           },2500);  
             
           $(this).scrollTop(0);  
        

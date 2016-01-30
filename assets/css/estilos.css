@@ -22,7 +22,7 @@ body{ font-family: "Roboto Slab",serif;}
 .txtCantidad
 {
     appearance: none;
-    width: 55px;
+    width: 65px;
     height: 30px;
     margin: 0 auto;
     display: inline-block;
