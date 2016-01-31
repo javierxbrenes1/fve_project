@@ -2001,7 +2001,8 @@ textarea {
     font-size:1.5em;
     color: #000;
 }
-
+.fve-comentario-beneficio{height: auto;/*min-height: 230px;*/
+}
 .fve-comentario-beneficio h5
 {
     padding: 0px 5%;
@@ -2011,10 +2012,27 @@ textarea {
     color: #000;
 }
 
+
+@media only screen and (max-width: 480px) {
+    .fve-comentario-beneficio p
+    {
+        font-size: 12px;
+        
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .fve-comentario-beneficio p
+    {
+       margin-bottom: 30px !important;
+    }
+}
+
+
 .fve-comentario-beneficio p
 {
     padding: 5%;
-    height: 125px;
+    height: 150px;
 }
 
 .fve-beneficios-header{
@@ -2077,3 +2095,18 @@ textarea {
     color:#FFF;
     outline: none;
 }
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+

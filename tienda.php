@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+        <link rel="shortcut icon" href="assets/images/favicon.JPG">
         <title>Tienda verfruta express</title>
     </head>
     <!-- Links de css -->
@@ -28,7 +29,7 @@
         <body>
      <div id="wrapper">   
         <div id="TopBar">
-            <img src="assets/img/index.jpg" height="40" width="40" class="img-circle pull-left img-logo"/>
+            <img src="assets/img/index.jpg" height="40" width="40" class="img-circle pull-left img-logo" id="logo"/>
             <ul class="list-inline pull-right">
                 <?php 
                     if(!class_exists('Carrito')){ 

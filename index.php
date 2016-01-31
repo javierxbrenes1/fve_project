@@ -4,9 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title>Verfruta Express</title>
-	
+    <link rel="shortcut icon" href="assets/images/favicon.JPG">
+    <title>Verfruta Express</title>
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">	
 	
@@ -54,17 +53,17 @@
 						<div class="col-md-6 col-sm-6">
 							<nav class="collapse navbar-collapse">
 								<ul class="nav navbar-nav">                                                                     
-									<!--<li><a href="#bienvenida">Bienvenida</a></li>-->
 									<li><a href="#nosotros">Nosotros</a></li>
 									<li><a href="#beneficios">Beneficios</a></li>
 									<li><a href="#FormasDePago">Formas de pago</a></li>  
-									<li><a href="#Horarios">Horarios</a></li>
+									<!--<li><a href="#Horarios">Horarios</a></li>-->
+                                                                        <li><a href="#Direccion">Encu&eacute;ntranos</a></li>
 								</ul>
 							</nav>						
 						</div>
 						<div class="col-md-3 col-sm-3">	
 							<div class="cart-display">
-								<li class="cart"><a href="tienda.php">visitar tienda</a></li>
+								<li class="cart"><a href="tienda.php"><i class="fa fa-shopping-basket"></i>  Iniciar Compra</a></li>
 							</div>
 						</div>
 					</div> 
@@ -72,12 +71,12 @@
 						<!--<a class="logo" href="index.html"><img src="assets/images/logo.png" alt=""></a>-->
 						<nav class="mobile-menu">
 							<ul>
-<!--							        <li><a href="#bienvenida">Bienvenida</a></li>-->
 								<li><a href="#nosotros">Nosotros</a></li>
 								<li><a href="#beneficios">Beneficios</a></li>
 								<li><a href="#FormasDePago">Formas de pago</a></li>  
-								<li><a href="#Horarios">Horarios</a></li>
-                                                                <li><a href="tienda.php">visitar tienda</a></li>
+<!--								<li><a href="#Horarios">Horarios</a></li>-->
+                                                                <li><a href="#Direccion">Encu&eacute;ntranos</a></li>
+                                                                <li><a href="tienda.php"><i class="fa fa-shopping-basket"></i>  Iniciar Compra</a></li>
 							</ul>
 						</nav>							
 					</div>				
@@ -199,10 +198,13 @@
                                             <div class="fve-borde-beneficios">
                                                 <div class="fve-comentario-beneficio">
                                                     <h4>Precios de feria</h4>
-					            <p>I am giving a lot of attention to consuming healthy food, and I cannot thank Vital enough for what they are doing.</p>
+                                                    <p>
+                                                        Es tener una Feria del agricultor al alcance de sus manos, de una manera simple usted desde su computadora, Laptop, Tablet, 
+                                                        puede realizar sus pedidos desde la comodidad de su hogar, o su trabajo. 
+                                                    </p>
                                                 </div> 
                                                 <div class="fve-Img-beneficio">
-                                                    <img src="assets/images/bg2.jpg" alt="" />
+                                                    <img src="assets/images/feria.jpg" alt="" />
                                                 </div>
                                             </div>
 					</div>
@@ -211,10 +213,13 @@
                                             <div class="fve-borde-beneficios">
                                                 <div class="fve-comentario-beneficio">
                                                     <h4>Calidad y frescura</h4>
-                                                    <p>I am giving a lot of attention to consuming healthy food, and I cannot thank Vital enough for what they are doing.</p>
+                                                    <p>
+                                                        Estamos comprometidos con nuestros clientes de llevar a su hogar la mejor calidad en productos y 100% frescos garantizando, 
+                                                        así nuestro principal objetivo su satisfacción. 
+                                                    </p>
                                                 </div> 
                                                 <div class="fve-Img-beneficio">
-                                                    <img src="assets/images/bg2.jpg" alt="" />
+                                                    <img src="assets/images/calidad.jpg" alt="" />
                                                 </div>
                                             </div>
                                         </div>
@@ -223,10 +228,13 @@
                                             <div class="fve-borde-beneficios">
                                                 <div class="fve-comentario-beneficio">
                                                     <h4>Entrega en la puerta de su casa</h4>
-                                                    <p>I am giving a lot of attention to consuming healthy food, and I cannot thank Vital enough for what they are doing.</p>
+                                                    <p>
+                                                        Nuestra intención es facilitar su vida para que no tenga que movilizarse al momento 
+                                                        de realizar su mercado y se olvide de las presas y los tumultos, llegando hasta su hogar con los mejores productos.  
+                                                    </p>
                                                 </div> 
                                                 <div class="fve-Img-beneficio">
-                                                    <img src="assets/images/bg2.jpg" alt="" />
+                                                    <img src="assets/images/entregasDomicilio.jpg" alt="" />
                                                 </div>
                                             </div>
                                         </div>
@@ -235,7 +243,10 @@
                                             <div class="fve-borde-beneficios">
                                                 <div class="fve-comentario-beneficio">
                                                     <h5>Productos mas bajos que en el supermercado.</h5>
-                                                    <p>I am giving a lot of attention to consuming healthy food, and I cannot thank Vital enough for what they are doing.</p>
+                                                    <p>
+                                                        Nuestros productos van a estar con un precio igual al de las feria del agricultor, 
+                                                        pero llegando hasta la puerta de su casa, lo cual le ahorrara gasolina y lo más importante su tiempo.
+                                                    </p>
                                                 </div> 
                                                 <div class="fve-Img-beneficio">
                                                     <img src="assets/images/bg2.jpg" alt="" />
@@ -257,8 +268,9 @@
                         <div class="col-md-6 descripcion-medio-pago text-center">
                             <h2>Efectivo</h2>
                             <hr/>
-                            <p>Many desktop publishing packages and 
-                                web page editors now use Lorem Ipsum as their default model text.
+                            <p>
+                                Damos la posbilidad que usted pague sus productos en efectivo 
+                                cuando el pedido llegue a la puerta de su casa.
                             </p>   
                             <img src="assets/images/Colones-archivo.jpeg" height="180" width="180" class="img-circle img-medio-pago" alt="" />
                        </div>
@@ -266,47 +278,28 @@
                         <div class="col-md-6 descripcion-medio-pago text-center">
                             <h2>Tarjetas</h2>
                             <hr/>
-                            <p>It is a long established fact that a reader will be 
-                                distracted by the readable content of a page when looking at its layout. 
-                                The point of using Lorem Ipsum is that it has a more-or-less normal 
-                                distribution of letters, as opposed to using 'Content here, content here', 
-                                making it look like readable English. Many desktop publishing packages and 
-                                web page editors now use Lorem Ipsum as their default model text.
+                            <p>
+                                Está opción es para las personas que no les gusta cargar efectivo y para un mejor 
+                                control pagan con sus tarjetas de debito o credito,  nosotros les facilitamos llevando hasta su casa este método de pago.  
                             </p>
                             <img src="assets/images/tarjetas.jpg" height="180" width="180" class="img-circle img-medio-pago" alt="" />
                         </div>
 		</div>		
 	</section><!--/.deal-ofthe-day -->
-	
-        <section class="blog-area" id="Horarios">
-		<div class="container">
-			<div class="section-heading">
-				<h2>Horarios de entrega</h2>
-				<div class="border-green"></div>
-			</div><!--/.section-heading -->	
-			<div class="blog-post">
-				<div class="row">
-					<div class="col-md-4 col-sm-4 col-sx-12">
-						<div class="single-blog-post">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas elit vel arcu aliquet, vel congue arcu lobortis. Duis bibendum hendrerit mollis. Phasellus vitae metus porttitor, sollicitudin risus non, porta urna. Donec ornare mi non enim rutrum, quis vestibulum felis tempor. Nullam ac sapien congue ante maximus euismod. Aenean convallis non ante nec molestie. Duis tincidunt lectus ultrices imperdiet facilisis. Quisque tellus tortor, pharetra quis diam imperdiet, vestibulum consequat elit. Aliquam nec iaculis massa, nec volutpat dolor. Proin tincidunt erat tellus, nec varius sapien cursus sit amet. Phasellus aliquet velit et ex lacinia facilisis. Praesent scelerisque porttitor justo vel condimentum. In vel facilisis tortor. Aenean vel finibus magna. </p>
-						</div><!--/.single-blog-post -->
-					</div>
-					<div class="col-md-4 col-sm-4 col-sx-12">
-						<div class="single-blog-post">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas elit vel arcu aliquet, vel congue arcu lobortis. Duis bibendum hendrerit mollis. Phasellus vitae metus porttitor, sollicitudin risus non, porta urna. Donec ornare mi non enim rutrum, quis vestibulum felis tempor. Nullam ac sapien congue ante maximus euismod. Aenean convallis non ante nec molestie. Duis tincidunt lectus ultrices imperdiet facilisis. Quisque tellus tortor, pharetra quis diam imperdiet, vestibulum consequat elit. Aliquam nec iaculis massa, nec volutpat dolor. Proin tincidunt erat tellus, nec varius sapien cursus sit amet. Phasellus aliquet velit et ex lacinia facilisis. Praesent scelerisque porttitor justo vel condimentum. In vel facilisis tortor. Aenean vel finibus magna. </p>
-						</div><!--/.single-blog-post -->
-					</div>
-					<div class="col-md-4 col-sm-4 col-sx-12">
-						<div class="single-blog-post">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas elit vel arcu aliquet, vel congue arcu lobortis. Duis bibendum hendrerit mollis. Phasellus vitae metus porttitor, sollicitudin risus non, porta urna. Donec ornare mi non enim rutrum, quis vestibulum felis tempor. Nullam ac sapien congue ante maximus euismod. Aenean convallis non ante nec molestie. Duis tincidunt lectus ultrices imperdiet facilisis. Quisque tellus tortor, pharetra quis diam imperdiet, vestibulum consequat elit. Aliquam nec iaculis massa, nec volutpat dolor. Proin tincidunt erat tellus, nec varius sapien cursus sit amet. Phasellus aliquet velit et ex lacinia facilisis. Praesent scelerisque porttitor justo vel condimentum. In vel facilisis tortor. Aenean vel finibus magna. </p>
-						</div><!--/.single-blog-post -->
-					</div>
-				</div>
-			</div>
-		</div>		
-	</section><!--/.blog-area -->
-        
-	<footer class="footer-main">
+        <section class="blog-area" id="Direccion">
+            <div class="container">
+		<div class="section-heading">
+		    <h2>Encuentra nuestro local</h2>
+		    <div class="border-green"></div>
+	        </div>
+                <h5 class="text-center">Aca puedes ver nuestra direcci&oacute;n, sigue el marcador rojo.</h5>
+                <hr>
+                <div class="map-responsive">
+                    <iframe src="https://www.google.com/maps/d/embed?mid=zSvjO4cbvDwU.kY19O_NNkNu8" width="640" height="480"></iframe>
+                </div>
+            </div>		
+        </section>
+        <footer class="footer-main">
 		<div class="overlay">
 			<div class="footer-widget">
 				<div class="container">
@@ -337,18 +330,10 @@
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-12">
 							<div class="single-widget">
-								<h2 class="widget-title">Encuentra nuestra tienda</h2>
+								<h2 class="widget-title">Ponte en contacto con nosotros.</h2>
 								<div class="footer-address">
 									<ul>
-										<li>
-											<div class="address-type">
-												<i class="fa fa-compass"></i>
-												<span>Direcci&oacute;n</span>
-											</div>
-											<div class="address-info">
-												<p>Tejar del guarco, Cartago</p>
-											</div>
-										</li>
+										
 										<li>
 											<div class="address-type">
 												<i class="fa fa-envelope-o"></i>
@@ -357,8 +342,7 @@
 											<div class="address-info">
 												<p>info@verfrutaexpress.com</p>
                                                                                                 <p>pedidos@verfrutaexpress.com</p>
-                                                                                                <p>pedidos@verfrutaexpress.com</p>
-											</div>
+                                                                                        </div>
 										</li>
 										<li>
 											<div class="address-type">
@@ -366,12 +350,15 @@
 												<span>Tel&eacute;fonos</span>
 											</div>
 											<div class="address-info">
-												<p>2522-3322</p>
-                                                                                                <p>2522-3322</p>
-                                                                                                <p>2522-3322</p>
+												<p>(+506) 2734-0606</p>
+                                                                                                <p>(+506) 2734-0404</p>
+                                                                                                <p>(+506) 8362-8787</p>
+                                                                                                <p>(+506) 8545-3174</p>
+                                                                                                <p>(+506) 8561-7840</p>
 											</div>
 										</li>
 									</ul>
+                                                                    
 								</div>							
 							</div>
 						</div>
