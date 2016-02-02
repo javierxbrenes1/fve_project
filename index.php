@@ -47,8 +47,7 @@
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
                                                                 </button>
-								<!--<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt=""></a>-->
-							</div>
+                                                        </div>
 						</div>
 						<div class="col-md-6 col-sm-6">
 							<nav class="collapse navbar-collapse">
@@ -109,41 +108,33 @@
 	<section class="vital-shop-area" id="nosotros">
 		<div class="container">
 			<div class="section-heading">
-                            <h1 id="TituloNosotros">Somos Verfruta Express</h1>
-				<div class="border-green"></div>
+                            <h1 id="TituloNosotros">Somos</h1>
+			    <div class="border-green"></div>
+                            <img class="img-responsive" style="margin: 0 auto;" src="assets/images/logo.JPG" alt="" height="250" width="350"/>    
 			</div><!--/.section-heading -->
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12" id="textNosotros">
                                     <p>
-                                        It is a long established fact that a reader will be distracted by 
-                                        the readable content of a page when looking at its layout. 
-                                    </p>
-                                    <p>
-                                        The point of using Lorem Ipsum is that it has a more-or-less normal 
-                                        distribution of letters, as opposed to using 'Content here, content here', 
-                                        making it look like readable English. Many desktop publishing packages and 
-                                        web page editors now use Lorem Ipsum as their default model text, and a search 
-                                        for 'lorem ipsum' will uncover many web sites still in their infancy.
-                                    </p>
-                                    <p>
-                                        Various versions have evolved over the years, sometimes by accident, sometimes on purpose 
-                                        (injected humour and the like).
                                     </p>
                                 </div>
                                 <!-- MISION -->
                                 <div class="col-md-6 text-center Nosotros">
                                     <div id="mision"></div>
                                     <h2>Misión</h2>   
-                                    <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
-                                        took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <p class="text-justify">
+                                        Ser una empresa líder en la venta de frutas y verduras a domicilio satisfaciendo las 
+                                        necesidades de nuestros clientes, brindándoles productos de buena calidad y con un excelente  servicio y a precios accesibles.
+                                    </p>
                                 </div>
                                 <!-- Vision -->
                                 <div class="col-md-6 text-center Nosotros">
                                     <div id="vision"></div>
                                     <h2>Visión</h2>
-                                    <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
-                                        took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <p class="text-justify">
+                                        Ser una empresa en constante crecimiento por nuestra innovación en la venta de frutas y verduras, reconocida por los valores humanos de nuestra gente y por la 
+                                        contribución que brindamos a la comunidad.
+                                    </p>
                                 </div>
                                 
                             </div>    
@@ -269,7 +260,7 @@
                             <h2>Efectivo</h2>
                             <hr/>
                             <p>
-                                Damos la posbilidad que usted pague sus productos en efectivo 
+                                Damos la posibilidad que usted pague sus productos en efectivo 
                                 cuando el pedido llegue a la puerta de su casa.
                             </p>   
                             <img src="assets/images/Colones-archivo.jpeg" height="180" width="180" class="img-circle img-medio-pago" alt="" />
