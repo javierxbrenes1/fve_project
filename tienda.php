@@ -137,10 +137,10 @@
                                 <div>
                                     <input type="text" class="form-control txtCantidad decimal" maxlength="5" id="<?php echo $vloResultado['prod_id']; ?>"/>
                                     <label class="lblKilo"> <?php echo $vloResultado['prod_unit_med'] ?></label>
-                                    <p> <p><p class="PrecioArticulo">Precio:  ₡ <?php echo  number_format ( $vloResultado['prod_prc_act'], 2 , "." , ",");?></p>
+                                    <!--<p> <p><p class="PrecioArticulo">Precio:  ₡ /<?php //echo  number_format ( $vloResultado['prod_prc_act'], 2 , "." , ",");?></p>-->
                                 </div>
                                 <div>
-                                    <button type="button" class="btn btn-success btnComprar" onclick="pAgregarProd(<?php echo $vloResultado['prod_id'];?>)"value="<?php echo $vloResultado['prod_id'];?>" />
+                                    <button type="button" class="btn-lg btn-success btnComprar" onclick="pAgregarProd(<?php echo $vloResultado['prod_id'];?>)"value="<?php echo $vloResultado['prod_id'];?>" />
                                         <i class="fa fa-cart-plus"></i> Agregar
                                     </button>
                                 </div>
@@ -169,7 +169,7 @@
     </div>
     <div id="footer">
         <div class="container-fluid text-right">
-            <p>Tienda Online  Verfruta-Express &copy; <?php echo date ("Y");?> | Trabajamos para usted con <i class="fa fa-heart"></i></p>
+            <p>Tienda Online  Verfruta-Express &copy; <?php echo date ("Y");?> | Trabajamos para usted con <i class="fa fa-heart"></i>.  Tel&eacute;fono: (+506) 2734-0606</p>
         </div>
     </div>
     <div class="modal fade" id="modalEnvio">

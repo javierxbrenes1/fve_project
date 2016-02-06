@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="Keywords" content="Tienda Online, Frutas, Verduras, verfrutaexpress, Verfruta Express, Cartago Tienda, Tejar, Costa Rica, " >
+    <meta name="Description" content="Empresa dedicada a la entrega express de frutas y verduras." >
+    <meta name="Robots" content="follow" >
+    
     <link rel="shortcut icon" href="assets/images/favicon.JPG">
     <title>Verfruta Express</title>
     <!-- Bootstrap -->
@@ -70,7 +75,7 @@
 						<!--<a class="logo" href="index.html"><img src="assets/images/logo.png" alt=""></a>-->
 						<nav class="mobile-menu">
 							<ul>
-								<li><a href="#nosotros">Nosotros</a></li>
+                                                                <li><a href="#nosotros">Nosotros</a></li>
 								<li><a href="#beneficios">Beneficios</a></li>
 								<li><a href="#FormasDePago">Formas de pago</a></li>  
 <!--								<li><a href="#Horarios">Horarios</a></li>-->
@@ -283,7 +288,7 @@
 		    <h2>Encuentra nuestro local</h2>
 		    <div class="border-green"></div>
 	        </div>
-                <h5 class="text-center">Aca puedes ver nuestra direcci&oacute;n, sigue el marcador rojo.</h5>
+                <h5 class="text-center">Ac&aacute; puedes ver nuestra direcci&oacute;n, sigue el marcador rojo.</h5>
                 <hr>
                 <div class="map-responsive">
                     <iframe src="https://www.google.com/maps/d/embed?mid=zSvjO4cbvDwU.kY19O_NNkNu8" width="640" height="480"></iframe>
@@ -314,10 +319,10 @@
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-12">
-							<div class="single-widget">
+<!--							<div class="single-widget">
 								<h2 class="widget-title">Nuestros Tweets</h2>
 								<div id="twitterFetcher"></div>								
-							</div>
+							</div>-->
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-12">
 							<div class="single-widget">

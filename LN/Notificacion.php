@@ -30,7 +30,8 @@ class Notificacion
             $mail->Password= "verfrutaexpress2016";//"hardcorepunk506xxx";
             $mail->SetFrom('verfrutaexpress@gmail.com', 'Pedidos Verfruta express');
             //Se lo envia a la persona que se encarga de los pedidos
-            $mail->AddBCC($pvcCorreoPedidos,"Pedidos Vfruta Express");
+            $mail->AddBCC($pvcCorreoPedidos,"Pedidos Verfruta Express");
+            $mail->AddBCC("pedidosverfrutaexpress@gmail.com","Pedidos Verfruta Express");
             $mail->Subject = "Solicitud de Pedido ".$pvcIDPedido;
             $mail->MsgHTML($pvcMensaje);
             //Se lo envia al cliente para que sepa su compra.

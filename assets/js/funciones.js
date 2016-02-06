@@ -1,9 +1,10 @@
 
 $("document").ready(function(){
-     $(this).scrollTop(0); 
+     
+   
      $(".Back").hide();
     
-    MostrarMenu();
+     MostrarMenu();
     
     document.oncontextmenu = function() {return false;} 
     
@@ -20,13 +21,25 @@ $("document").ready(function(){
                     },
                     success: function(data)
                     {
-                        DesbloquearPantalla();
-                        PLimpiarCampos();
-                        Mensaje("Pedido enviado satisfactoriamente",
-                        "Puedes revisar tú correo electronico, allí encontraras un mensaje de nuestra parte.",
-                        "success","ok");
-                        
-                        setTimeout(function(){location.reload();},3500);
+                        if(data == "0")
+                        {
+                            
+                            PLimpiarCampos();
+                            Mensaje("Pedido enviado satisfactoriamente",
+                            "Puedes revisar tú correo electronico, allí encontraras un mensaje de nuestra parte.",
+                            "success","ok");
+                            setTimeout(function(){location.reload();},3000);
+                       }
+                       else if(data == "1" || data == "2")
+                       {
+                            Mensaje("Error.!","Hubo un error mientras se intentaba enviar el pedido, intenta nuevamente o ponte en contacto con nosotros.","error","ok");
+                       }
+                       else if(data="3")
+                       {
+                           Mensaje("Alerta","Debes agregar al menos un producto, una vez lo hayas seleccionado puedes enviar el pedido.",
+                                   "warning","ok");
+                       }
+                       DesbloquearPantalla();
                     }
                     
                 });
@@ -102,6 +115,10 @@ $("document").ready(function(){
         $('#modalEnvio').modal('hide');
     });
  });
+
+$(window).on('beforeunload', function(){
+  $(window).scrollTop(0);
+});
 
 function PLimpiarCampos()
 {

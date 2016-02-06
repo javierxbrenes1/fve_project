@@ -7,6 +7,7 @@ jQuery(function () {
         
         document.oncontextmenu = function() {return false;} 
         
+       
 	"use strict";
         $("#main-header-slider").find(".banner-slider").owlCarousel({        
             slideSpeed : 200,
@@ -22,16 +23,16 @@ jQuery(function () {
             transitionStyle : "fade",
 			autoPlay: true,
         });
-		twitterFetcher.fetch({
-			id: "686757641092087808", // YOUR_WIDGET_ID
-			domId: "twitterFetcher",
-			maxTweets: 2,
-			enableLinks: true,
-			showUser: false,
-			showTime: true,
-			showRetweet: false,
-			showInteraction: false,
-		});			
+//		twitterFetcher.fetch({
+//			id: "686757641092087808", // YOUR_WIDGET_ID
+//			domId: "twitterFetcher",
+//			maxTweets: 2,
+//			enableLinks: true,
+//			showUser: false,
+//			showTime: true,
+//			showRetweet: false,
+//			showInteraction: false,
+//		});			
 		            
 	$(document).ready(function(){
 		/* =================================
@@ -42,8 +43,10 @@ jQuery(function () {
             time: 1000
         });
 		
+                
 		$('.mobile-menu').meanmenu();
-
+                
+                
 	
 		$(".different_shipping_true").hide();
 		$("#cc_different_shipping").on('click', function() {
@@ -117,6 +120,10 @@ jQuery(function () {
 	});
 			
 }());
+
+$(window).on('beforeunload', function(){
+  $(window).scrollTop(0);
+});
 
 function MostrarMenu()
 {

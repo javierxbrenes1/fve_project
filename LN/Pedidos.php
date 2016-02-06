@@ -30,7 +30,7 @@ $vloADPedidos = new ADPedidos();
 //Obtener el total de articulos
 $vlnCantTotalArt = $vloCarrito->articulos_total();
 //Obtener el monto total a pagar
-$vlnMontoTotalCarrito = $vloCarrito->precio_total();
+$vlnMontoTotalCarrito = 0;//$vloCarrito->precio_total();
 //Obtiene los articulos almacenados
 $VloArticulosComprados = $vloCarrito->get_content();
 
@@ -77,25 +77,25 @@ if($vlnCantTotalArt > 0){
         $vlcBody= $vlcBody.'<table align="center" style="border-collapse: collapse;">';
         $vlcBody= $vlcBody.'<th style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">Cant.</th>';
         $vlcBody= $vlcBody.'<th style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">Producto</th>';
-        $vlcBody= $vlcBody.'<th style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">Precio unit.</th>';
-        $vlcBody= $vlcBody.'<th style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">Subtotal</th>';
+        //$vlcBody= $vlcBody.'<th style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">Precio unit.</th>';
+        //$vlcBody= $vlcBody.'<th style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">Subtotal</th>';
 
         foreach($VloArticulosComprados as $vloFila)
         {
-            $vlnSubtotal = $vloFila['cantidad'] * $vloFila['precio'];
-            $vlnFormatoSubTotal =  number_format ( $vlnSubtotal, 2 , "." , ",");
+           // $vlnSubtotal = $vloFila['cantidad'] * $vloFila['precio'];
+           //$vlnFormatoSubTotal =  number_format ( $vlnSubtotal, 2 , "." , ",");
             $vlcBody= $vlcBody.'<tr>';
             $vlcBody= $vlcBody.'<td style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">'.$vloFila['cantidad'].' '.$vloFila['unidad'].'</td>';
             $vlcBody= $vlcBody.'<td style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">'.$vloFila['nombre'].'</td>';
-            $vlcBody= $vlcBody.'<td style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">'.number_format ($vloFila['precio'], 2 , "." , ",").'</td>';
-            $vlcBody= $vlcBody.'<td style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;"> '.$vlnFormatoSubTotal.'</td>';
+            //$vlcBody= $vlcBody.'<td style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">'.number_format ($vloFila['precio'], 2 , "." , ",").'</td>';
+            //$vlcBody= $vlcBody.'<td style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;"> '.$vlnFormatoSubTotal.'</td>';
             $vlcBody= $vlcBody.'</tr>';
         }
         $vlcBody= $vlcBody.'</table>';
         $vlcBody= $vlcBody.'</div>';
         $vlcBody= $vlcBody.'<div style="text-align: right;">';
         $vlcBody= $vlcBody.'<p style="margin-right: 50px; font-size: 20px;">';
-        $vlcBody= $vlcBody.'<strong>Total: </strong> '.number_format ( $vlnMontoTotalCarrito, 2 , "." , ",");;
+        //$vlcBody= $vlcBody.'<strong>Total: </strong> '.number_format ( $vlnMontoTotalCarrito, 2 , "." , ",");;
         $vlcBody= $vlcBody.'</p>';
         $vlcBody= $vlcBody.'</div>';
         $vlcBody= $vlcBody.'<hr align="center" width="99%">';
@@ -114,18 +114,18 @@ if($vlnCantTotalArt > 0){
 
        if($vlbSeNotifico)
        {
-           echo 'El pedido fue enviado de forma correcta';
            $vloCarrito->destroy();
+           echo '0';
        }else
        {
-           echo 'El pedido no pudo ser enviado por correo electronico';
+           echo '1';
        }
     }else 
     {
-        echo 'El pedido no se almaceno en la Base de datos';
+        echo '2';
     }
 }else
 {
-    echo 'Debe agregar al menos un producto al carrito de compras, el pedido no ha sido enviado.';
+    echo '3';
 }    
   
