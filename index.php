@@ -302,8 +302,7 @@
 					<div class="row">
 						<div class="col-md-4 col-sm-4 col-xs-12">
 							<div class="single-widget">
-								<a href="" class="footer-logo"><img src="assets/images/logo.png" alt="" /></a>
-								<p>VerFruta Express es mas que una tienda online, estamos comprometidos a llevarle la mejor calidad de productos para que usted
+                                                              <p>VerFruta Express es mas que una tienda online, estamos comprometidos a llevarle la mejor calidad de productos para que usted
                                                                 y su familia disfruten de una experiencia &uacute;nica.</p>
 								<ul class="social-icons">
 									<li>

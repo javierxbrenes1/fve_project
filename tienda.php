@@ -137,7 +137,7 @@
                                 <div>
                                     <input type="text" class="form-control txtCantidad decimal" maxlength="5" id="<?php echo $vloResultado['prod_id']; ?>"/>
                                     <label class="lblKilo"> <?php echo $vloResultado['prod_unit_med'] ?></label>
-                                    <!--<p> <p><p class="PrecioArticulo">Precio:  ₡ /<?php //echo  number_format ( $vloResultado['prod_prc_act'], 2 , "." , ",");?></p>-->
+                                    <p> <p><p class="PrecioArticulo">Precio:  ₡ /<?php //echo  number_format ( $vloResultado['prod_prc_act'], 2 , "." , ",");?></p>
                                 </div>
                                 <div>
                                     <button type="button" class="btn-lg btn-success btnComprar" onclick="pAgregarProd(<?php echo $vloResultado['prod_id'];?>)"value="<?php echo $vloResultado['prod_id'];?>" />

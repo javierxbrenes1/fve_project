@@ -1,0 +1,8 @@
+[11-Feb-2016 11:04:30 America/Chicago] PHP Warning:  mysql_connect(): Access denied for user 'verfruta_AppUser'@'192.185.239.239' (using password: YES) in /home3/verfrutadmin/public_html/model/AD.php on line 17
+[11-Feb-2016 11:04:30 America/Chicago] PHP Warning:  mysql_close(): no MySQL-Link resource supplied in /home3/verfrutadmin/public_html/model/AD.php on line 23
+[12-Feb-2016 11:02:47 America/Chicago] PHP Warning:  mysql_connect(): Access denied for user 'verfruta_AppUser'@'192.185.239.220' (using password: YES) in /home3/verfrutadmin/public_html/model/AD.php on line 17
+[12-Feb-2016 11:02:47 America/Chicago] PHP Warning:  mysql_close(): no MySQL-Link resource supplied in /home3/verfrutadmin/public_html/model/AD.php on line 23
+[12-Feb-2016 21:28:00 America/Chicago] PHP Warning:  mysql_connect(): Access denied for user 'verfruta_AppUser'@'192.185.239.220' (using password: YES) in /home3/verfrutadmin/public_html/model/AD.php on line 17
+[12-Feb-2016 21:28:00 America/Chicago] PHP Warning:  mysql_close(): no MySQL-Link resource supplied in /home3/verfrutadmin/public_html/model/AD.php on line 23
+[12-Feb-2016 21:31:59 America/Chicago] PHP Warning:  mysql_connect(): Access denied for user 'verfruta_AppUser'@'192.185.239.220' (using password: YES) in /home3/verfrutadmin/public_html/model/AD.php on line 17
+[12-Feb-2016 21:31:59 America/Chicago] PHP Warning:  mysql_close(): no MySQL-Link resource supplied in /home3/verfrutadmin/public_html/model/AD.php on line 23
