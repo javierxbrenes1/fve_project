@@ -20,8 +20,8 @@ if(!class_exists('Carrito')){
             $vlcCodHtml = $vlcCodHtml.'<th align="center"></th>';
             $vlcCodHtml = $vlcCodHtml.'<th align="center">Producto</th>';
             $vlcCodHtml = $vlcCodHtml.'<th align="center">Cantidad</th>';
-           // $vlcCodHtml = $vlcCodHtml.'<th align="center">Precio unitario</th>';
-            //$vlcCodHtml = $vlcCodHtml.'<th align="center">Subtotal</th>';
+            $vlcCodHtml = $vlcCodHtml.'<th align="center">Precio unitario</th>';
+            $vlcCodHtml = $vlcCodHtml.'<th align="center">Subtotal</th>';
             $vlcCodHtml = $vlcCodHtml.'<th align="center"></th>';
             $vlcCodHtml = $vlcCodHtml.'</thead>';
             $vlcCodHtml = $vlcCodHtml.'</tbody>';
@@ -31,18 +31,18 @@ if(!class_exists('Carrito')){
             foreach($Productos as $vloFila)
             {
                 $vlnTotalProductos +=1;
-                //$vlnSubtotal = $vloFila['cantidad']*$vloFila['precio'];
-                //$vlnMontoTotal += $vlnSubtotal;
-                //$vlnFormatoSubTotal =  number_format ( $vlnSubtotal, 2 , "." , ",");
-                //$vlnPrecioUnitario = number_format ( $vloFila['precio'], 2 , "." , ",");
+                $vlnSubtotal = $vloFila['cantidad']*$vloFila['precio'];
+                $vlnMontoTotal += $vlnSubtotal;
+                $vlnFormatoSubTotal =  number_format ( $vlnSubtotal, 2 , "." , ",");
+                $vlnPrecioUnitario = number_format ( $vloFila['precio'], 2 , "." , ",");
                 $vlcCodArticulo = $vloFila['id'];
                 $vlcCodHtml = $vlcCodHtml."<tr>";
                 $vlcCodHtml = $vlcCodHtml."<td>"."<p>".number_format ($vlnTotalProductos, 0 , "." , ",")."</p>"."</td>";
                 $vlcCodHtml = $vlcCodHtml."<td>".'<img class="img-circle" width="50" height="50" src="assets/img/'.$vloFila['img'].'">'."</td>";
                 $vlcCodHtml = $vlcCodHtml."<td>"."<p>".$vloFila['nombre']."</p>"."</td>";
                 $vlcCodHtml = $vlcCodHtml."<td>"."<p>".$vloFila['cantidad'].' '.$vloFila['unidad']."</p>"."</td>";
-                //$vlcCodHtml = $vlcCodHtml."<td>"."<p>".$vlnPrecioUnitario."</p>"."</td>";
-                //$vlcCodHtml = $vlcCodHtml."<td>"."<p>".$vlnFormatoSubTotal."</p>"."</td>";
+                $vlcCodHtml = $vlcCodHtml."<td>"."<p>".$vlnPrecioUnitario."</p>"."</td>";
+                $vlcCodHtml = $vlcCodHtml."<td>"."<p>".$vlnFormatoSubTotal."</p>"."</td>";
                 $vlcCodHtml = $vlcCodHtml."<td><span class=";
                 $vlcCodHtml = $vlcCodHtml.'"table-remove glyphicon glyphicon-remove lblEliminarArt"';
                 $vlcCodHtml = $vlcCodHtml."onclick=";
@@ -50,14 +50,14 @@ if(!class_exists('Carrito')){
                 $vlcCodHtml = $vlcCodHtml.';></span></td>';
                 $vlcCodHtml = $vlcCodHtml."</tr>";
             }
-//            $vlcCodHtml = $vlcCodHtml.'<tr>';
-//            $vlcCodHtml = $vlcCodHtml.'<td> <h4> Total: </h4> </td>';
-//            $vlcCodHtml = $vlcCodHtml.'<td></td>';
-//            $vlcCodHtml = $vlcCodHtml.'<td></td>';
-//            $vlcCodHtml = $vlcCodHtml.'<td></td>';
-//            $vlcCodHtml = $vlcCodHtml.'<td><h4>'.number_format ( $vlnMontoTotal, 2, "." , ",").' COL.</h4> </td>';
-//            $vlcCodHtml = $vlcCodHtml.'<td><td>';
-//            $vlcCodHtml = $vlcCodHtml.'</tr>';
+            $vlcCodHtml = $vlcCodHtml.'<tr>';
+            $vlcCodHtml = $vlcCodHtml.'<td> <h4> Total: </h4> </td>';
+            $vlcCodHtml = $vlcCodHtml.'<td></td>';
+            $vlcCodHtml = $vlcCodHtml.'<td></td>';
+            $vlcCodHtml = $vlcCodHtml.'<td></td>';
+            $vlcCodHtml = $vlcCodHtml.'<td><h4>'.number_format ( $vlnMontoTotal, 2, "." , ",").' COL.</h4> </td>';
+            $vlcCodHtml = $vlcCodHtml.'<td><td>';
+            $vlcCodHtml = $vlcCodHtml.'</tr>';
             $vlcCodHtml = $vlcCodHtml.'</tbody>';
             $vlcCodHtml = $vlcCodHtml.'</table>';
             $vlcCodHtml = $vlcCodHtml."</div>";

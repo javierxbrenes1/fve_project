@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
         <link rel="shortcut icon" href="assets/images/favicon.JPG">
         <title>Tienda verfruta express</title>
-    </head>
+    
     <!-- Links de css -->
         <script src="assets/lib/sweetalerts/sweetalert.min.js" type="text/javascript"></script>
         <link href="assets/lib/sweetalerts/sweetalert.css" rel="stylesheet" type="text/css"/>
@@ -26,7 +26,8 @@
 	<link href='https://fonts.googleapis.com/css?family=Crete+Round:400,400italic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
-        <body>
+    </head>
+    <body>
      <div id="wrapper">   
         <div id="TopBar">
             <img src="assets/images/logo.JPG" height="40" width="40" class=" pull-left img-logo" id="logo"/>
@@ -137,7 +138,7 @@
                                 <div>
                                     <input type="text" class="form-control txtCantidad decimal" maxlength="5" id="<?php echo $vloResultado['prod_id']; ?>"/>
                                     <label class="lblKilo"> <?php echo $vloResultado['prod_unit_med'] ?></label>
-                                    <p> <p><p class="PrecioArticulo">Precio:  ₡ /<?php //echo  number_format ( $vloResultado['prod_prc_act'], 2 , "." , ",");?></p>
+                                    <p> <p><p class="PrecioArticulo">Precio:  ₡ <?php echo  number_format ( $vloResultado['prod_prc_act'], 2 , "." , ",");?></p>
                                 </div>
                                 <div>
                                     <button type="button" class="btn-lg btn-success btnComprar" onclick="pAgregarProd(<?php echo $vloResultado['prod_id'];?>)"value="<?php echo $vloResultado['prod_id'];?>" />

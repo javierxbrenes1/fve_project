@@ -31,7 +31,7 @@ $vloCantRegistros = mysql_num_rows($resultado);
 if($vloCantRegistros>0){
 while($vloResultado = mysql_fetch_array($resultado))
 {
-    //$vlcPrecio =number_format( $vloResultado['prod_prc_act'], 2 , "." , ",");
+    $vlcPrecio =number_format( $vloResultado['prod_prc_act'], 2 , "." , ",");
     $lblUnidMed = ' '.$vloResultado['prod_unit_med'].' ';
     $ResultadoConsulta = $ResultadoConsulta.'<div class="col-md-3 col-sm-4 col-xs-12 text-center Producto">';
     $ResultadoConsulta = $ResultadoConsulta.'<div class="fve-borde-beneficios">';
@@ -45,7 +45,7 @@ while($vloResultado = mysql_fetch_array($resultado))
     $ResultadoConsulta = $ResultadoConsulta.'<div>';
     $ResultadoConsulta = $ResultadoConsulta.'<input type="text" class="form-control txtCantidad decimal" maxlength="5" id="'.$vloResultado['prod_id'].'"/>';
     $ResultadoConsulta = $ResultadoConsulta.' <label class="lblKilo">'.$lblUnidMed.'</label>';
-    //$ResultadoConsulta = $ResultadoConsulta.'<p> <p><p class="PrecioArticulo">Precio: ₡ '.$vlcPrecio.'</p>';
+    $ResultadoConsulta = $ResultadoConsulta.'<p> <p><p class="PrecioArticulo">Precio: ₡ '.$vlcPrecio.'</p>';
     $ResultadoConsulta = $ResultadoConsulta.'</div>';
     $ResultadoConsulta = $ResultadoConsulta.'<div>';
     $ResultadoConsulta = $ResultadoConsulta.'<button type="button" class="btn-lg btn-success btnComprar" onclick="pAgregarProd('.$vloResultado['prod_id'].')" value="'.$vloResultado['prod_id'].'">';

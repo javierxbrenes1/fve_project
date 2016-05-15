@@ -38,7 +38,8 @@ include 'AD.php';
                 $AD = new AD();
                 $vlcScript = "SELECT * "
                         . "     FROM fve_prod "
-                        . "    WHERE prod_nom like '%".$param."%'";
+                        . "    WHERE prod_nom like '%".$param."%'"
+                        . "      AND prod_sts = 1";
                 return $AD->RetornarResultado($vlcScript);
                 
             } catch (Exception $exc) {
