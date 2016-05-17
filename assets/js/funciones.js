@@ -6,7 +6,7 @@ $("document").ready(function(){
     
      MostrarMenu();
     
-    //document.oncontextmenu = function() {return false;} 
+    document.oncontextmenu = function() {return false;} 
     
     $("#FormPedido").submit(function(e){
         $('#modalEnvio').modal('hide');

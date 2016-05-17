@@ -1,9 +1,13 @@
 $(document).ready(function () {
+    document.oncontextmenu = function() {return false;} 
+    
     $("body").on('click', 'button', function () {
 
         // Si el boton no tiene el atributo ajax no hacemos nada
         if ($(this).data('ajax') == undefined) return;
 
+        
+        
         // El metodo .data identifica la entrada y la castea al valor más correcto
         if ($(this).data('ajax') != true) return;
 
