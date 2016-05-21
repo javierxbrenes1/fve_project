@@ -30,7 +30,7 @@
     <body>
      <div id="wrapper">   
         <div id="TopBar">
-            <img src="assets/images/logo.JPG" height="40" width="40" class=" pull-left img-logo" id="logo"/>
+            <!--<img src="assets/images/logo.png" height="60" width="60" class=" pull-left img-logo" id="logo"/>-->
             <ul class="list-inline pull-right">
                 <?php 
                     if(!class_exists('Carrito')){ 

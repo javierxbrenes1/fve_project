@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    document.oncontextmenu = function() {return false;} 
+
     
     $("body").on('click', 'button', function () {
 

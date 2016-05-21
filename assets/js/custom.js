@@ -13,7 +13,7 @@ jQuery(function () {
             slideSpeed : 200,
             paginationSpeed : 800,
             rewindSpeed: 1000,
-            pagination: false,
+            pagination: true,
             singleItem:true,
 			navigation : false,
 			navigationText: [
@@ -23,16 +23,7 @@ jQuery(function () {
             transitionStyle : "fade",
 			autoPlay: true,
         });
-//		twitterFetcher.fetch({
-//			id: "686757641092087808", // YOUR_WIDGET_ID
-//			domId: "twitterFetcher",
-//			maxTweets: 2,
-//			enableLinks: true,
-//			showUser: false,
-//			showTime: true,
-//			showRetweet: false,
-//			showInteraction: false,
-//		});			
+			
 		            
 	$(document).ready(function(){
 		/* =================================

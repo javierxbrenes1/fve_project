@@ -39,113 +39,88 @@
 	
   </head>
 <body>
-    <header class="header-area home-v1" id="header">		
-		<div class="overlay">
-			<div class="navbar">
-				<div class="container">
-					<div class="row hidden-xs hidden-sm">
-						<div class="col-md-3 col-sm-2 col-xs-6">
-							<div class="navbar-header">
-								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-									<span class="sr-only">Toggle navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-                                                                </button>
-                                                        </div>
-						</div>
-						<div class="col-md-6 col-sm-6">
-							<nav class="collapse navbar-collapse">
-								<ul class="nav navbar-nav">                                                                     
-									<li><a href="#nosotros">Nosotros</a></li>
-									<li><a href="#beneficios">Beneficios</a></li>
-									<li><a href="#FormasDePago">Formas de pago</a></li>  
-									<!--<li><a href="#Horarios">Horarios</a></li>-->
-                                                                        <li><a href="#Direccion">Encu&eacute;ntranos</a></li>
-								</ul>
-							</nav>						
-						</div>
-						<div class="col-md-3 col-sm-3">	
-							<div class="cart-display">
-								<li class="cart"><a href="tienda.php"><i class="fa fa-shopping-basket"></i>  Iniciar Compra</a></li>
-							</div>
-						</div>
-					</div> 
-					<div class="mobile">
-						<!--<a class="logo" href="index.html"><img src="assets/images/logo.png" alt=""></a>-->
-						<nav class="mobile-menu">
-							<ul>
-                                                                <li><a href="#nosotros">Nosotros</a></li>
-								<li><a href="#beneficios">Beneficios</a></li>
-								<li><a href="#FormasDePago">Formas de pago</a></li>  
-<!--								<li><a href="#Horarios">Horarios</a></li>-->
-                                                                <li><a href="#Direccion">Encu&eacute;ntranos</a></li>
-                                                                <li><a href="tienda.php"><i class="fa fa-shopping-basket"></i>  Iniciar Compra</a></li>
-							</ul>
-						</nav>							
-					</div>				
-				</div><!--/.container -->
-			</div><!--/.navbar -->
-			<div id="main-header-slider">		
-				<div class="banner-slider">		
-					<div class="item">
-						<div class="banner-text">
-							<h2>Nuestra tienda le brinda todo lo que necesita para comer saludablemente.</h2>
-						</div><!--/.banner-text -->
-					</div>		
-					<div class="item">
-						<div class="banner-text">
-							<h2>Como visitar la feria del agricultor desde la comodidad de su hogar.</h2>
-						</div><!--/.banner-text -->	
-					</div>	
-                                        <div class="item">
-						<div class="banner-text">
-							<h2>Un servicio responsable, comprometidos con usted para hacer de esta la mejor experiencia.</h2>
-						</div><!--/.banner-text -->	
-					</div>	
-				</div><!--/.owl-carousel-->			
-			</div>	
-		</div>
-	</header><!--/.header-area -->
-        <div class="pull-right Back">
-             <a href="#header"> <i class="fa fa-arrow-up"></i> </a>
-        </div>
-	<section class="vital-shop-area" id="nosotros">
-		<div class="container">
-			<div class="section-heading">
-                            <h1 id="TituloNosotros">Somos</h1>
-			    <div class="border-green"></div>
-                            <img class="img-responsive" style="margin: 0 auto;" src="assets/images/logo.JPG" alt="" height="250" width="350"/>    
-			</div><!--/.section-heading -->
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12" id="textNosotros">
-                                    <p>
-                                    </p>
-                                </div>
-                                <!-- MISION -->
-                                <div class="col-md-6 text-center Nosotros">
-                                    <div id="mision"></div>
-                                    <h2>Misión</h2>   
-                                    <p class="text-justify">
-                                        Ser una empresa líder en la venta de frutas y verduras a domicilio satisfaciendo las 
-                                        necesidades de nuestros clientes, brindándoles productos de buena calidad y con un excelente  servicio y a precios accesibles.
-                                    </p>
-                                </div>
-                                <!-- Vision -->
-                                <div class="col-md-6 text-center Nosotros">
-                                    <div id="vision"></div>
-                                    <h2>Visión</h2>
-                                    <p class="text-justify">
-                                        Ser una empresa en constante crecimiento por nuestra innovación en la venta de frutas y verduras, reconocida por los valores humanos de nuestra gente y por la 
-                                        contribución que brindamos a la comunidad.
-                                    </p>
-                                </div>
-                                
-                            </div>    
-                        </div>
-		</div>
-	</section><!--/.vital-shop-area -->
+    <header class="header-area home-v1" id="header">	
+        <div class="overlay">
+            <div class="navbar navbar-default Barra">
+                <div class="container-fluid">
+                    <div class="cart-display">
+                        <li class="cart"><a href="tienda.php"><i class="fa fa-shopping-basket"></i>  Iniciar Compra</a></li>
+                    </div>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span style="color:black;">Menú</span>
+                        </button>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <nav class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav" >                                                                     
+                                <li ><a href="#nosotros">Nosotros</a></li>
+                                <li><a href="#beneficios">Beneficios</a></li>
+                                <li><a href="#FormasDePago">Formas de pago</a></li>
+                            </ul>
+                        </nav>						
+                    </div>
+                </div><!--/.container -->
+            </div><!--/.navbar -->
+            <div class="row">
+            
+            <div id="main-header-slider" >		
+                <div class="banner-slider" >		
+                    <div class="item" >
+                        <div class="banner-text" >
+                                <h3>Nuestra tienda le brinda todo lo que necesita para comer saludablemente.</h2>
+                        </div><!--/.banner-text -->
+                    </div>		
+                    <div class="item">
+                        <div class="banner-text">
+                                <h3>Como visitar la feria del agricultor desde la comodidad de su hogar.</h2>
+                        </div><!--/.banner-text -->	
+                    </div>	
+                    <div class="item">
+                        <div class="banner-text">
+                                <h3>Un servicio responsable, comprometidos con usted para hacer de esta la mejor experiencia.</h2>
+                        </div><!--/.banner-text -->	
+                    </div>	
+                </div><!--/.owl-carousel-->			
+            </div>
+        
+                </div>
+	</div>
+    </header><!--/.header-area -->
+    <div class="pull-right Back">
+         <a href="#header"> <i class="fa fa-arrow-up"></i> </a>
+    </div>
+    <section class="vital-shop-area" id="nosotros">
+        <div class="container">
+        <div class="section-heading">
+            <h1 id="TituloNosotros">Somos</h1>
+            <div class="border-green"></div>
+            <img class="img-responsive" style="margin: 0 auto;" src="assets/images/logo.png" alt="" height="250" width="350"/>    
+        </div><!--/.section-heading -->
+            <div class="container">
+                <div class="row">
+                    <!-- MISION -->
+                    <div class="col-md-6 text-center Nosotros">
+                        <div id="mision"></div>
+                        <h2>Misión</h2>   
+                        <p class="text-justify">
+                            Ser una empresa líder en la venta de frutas y verduras a domicilio satisfaciendo las 
+                            necesidades de nuestros clientes, brindándoles productos de buena calidad y con un excelente  servicio y a precios accesibles.
+                        </p>
+                    </div>
+                    <!-- Vision -->
+                    <div class="col-md-6 text-center Nosotros">
+                        <div id="vision"></div>
+                        <h2>Visión</h2>
+                        <p class="text-justify">
+                            Ser una empresa en constante crecimiento por nuestra innovación en la venta de frutas y verduras, reconocida por los valores humanos de nuestra gente y por la 
+                            contribución que brindamos a la comunidad.
+                        </p>
+                    </div>
+                </div>    
+            </div>
+        </div>            
+    </section><!--/.vital-shop-area -->
         
 	<section class="funfact">
 		<div class="overlay">
@@ -282,19 +257,6 @@
                         </div>
 		</div>		
 	</section><!--/.deal-ofthe-day -->
-        <section class="blog-area" id="Direccion">
-            <div class="container">
-		<div class="section-heading">
-		    <h2>Encuentra nuestro local</h2>
-		    <div class="border-green"></div>
-	        </div>
-                <h5 class="text-center">Ac&aacute; puedes ver nuestra direcci&oacute;n, sigue el marcador rojo.</h5>
-                <hr>
-                <div class="map-responsive">
-                    <iframe src="https://www.google.com/maps/d/embed?mid=zSvjO4cbvDwU.kY19O_NNkNu8" width="640" height="480"></iframe>
-                </div>
-            </div>		
-        </section>
         <footer class="footer-main">
 		<div class="overlay">
 			<div class="footer-widget">
@@ -305,23 +267,11 @@
                                                               <p>VerFruta Express es mas que una tienda online, estamos comprometidos a llevarle la mejor calidad de productos para que usted
                                                                 y su familia disfruten de una experiencia &uacute;nica.</p>
 								<ul class="social-icons">
-									<li>
-										<a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
-									</li>
-									<li>
-										<a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i> Instragram</a>
-									</li>
-									<li>
-										<a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-square"></i> Facebook</a>
-									</li>
+								    <li>
+                                                                        <a href="https://www.facebook.com/verfrutaexpress" target="_blank"><i class="fa fa-facebook-square"></i> Facebook</a>
+                                                                    </li>
 								</ul>								
 							</div>
-						</div>
-						<div class="col-md-4 col-sm-4 col-xs-12">
-<!--							<div class="single-widget">
-								<h2 class="widget-title">Nuestros Tweets</h2>
-								<div id="twitterFetcher"></div>								
-							</div>-->
 						</div>
 						<div class="col-md-4 col-sm-4 col-xs-12">
 							<div class="single-widget">
@@ -345,11 +295,9 @@
 												<span>Tel&eacute;fonos</span>
 											</div>
 											<div class="address-info">
-												<p>(+506) 2734-0606</p>
-                                                                                                <p>(+506) 2734-0404</p>
-                                                                                                <p>(+506) 8362-8787</p>
-                                                                                                <p>(+506) 8545-3174</p>
-                                                                                                <p>(+506) 8561-7840</p>
+												<p>(+506) 8464-1520</p>
+                                                                                                <p>(+506) 8950-1057</p>
+                                                                                                <p>(+506) 6244-8174</p>
 											</div>
 										</li>
 									</ul>

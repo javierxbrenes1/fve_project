@@ -143,8 +143,9 @@ img {
     max-width: 100%;
 }
 .home-v1 {
-    background: rgba(0, 0, 0, 0) url("../images/header-banner-1.jpg") no-repeat fixed 0 0 / cover;
+    background: rgba(0, 0, 0, 1) url("../images/portada.jpg") no-repeat fixed 0 0 / cover;
     height: 100vh;
+    
 }
 .navbar {
     padding: 38px 0 0;
@@ -2090,3 +2091,18 @@ textarea {
     position:absolute;
 }
 
+/*Cambios del 21 de mayo 2016*/
+.banner-text{
+     background-color: white;
+    opacity: 0.7;
+    border-radius: 10px;
+    font-size: 50px;
+}
+.banner-text h3{color: black;}
+
+.navbar-nav li a{ color: black;}
+
+.Barra{
+    background-color: white; 
+    opacity: 0.9;
+}
