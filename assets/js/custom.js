@@ -7,6 +7,11 @@ jQuery(function () {
         
         document.oncontextmenu = function() {return false;} 
         
+        $('.navbar-nav').on('click', function(){ 
+        if($('.navbar-header .navbar-toggle').css('display') !='none'){
+            $(".navbar-header .navbar-toggle").trigger( "click" );
+        }
+        });
        
 	"use strict";
         $("#main-header-slider").find(".banner-slider").owlCarousel({        
