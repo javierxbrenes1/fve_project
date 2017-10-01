@@ -10,7 +10,7 @@ include 'AD.php';
         
         public function Catalogo($pvbActivos)
         {
-            
+            global $ERROR_MESSAGE;
             try{
                 $AccesoAdatos = new AD();
                 $vlcScript = "SELECT * "
@@ -32,6 +32,7 @@ include 'AD.php';
         
         public function BuscarProductos($pvcbuscar)
         {
+            global $ERROR_MESSAGE;
             try {
                
                 $param = mysql_escape_string($pvcbuscar);
@@ -48,6 +49,7 @@ include 'AD.php';
         }
         
         public function ProductosEnPromocion(){
+            global $ERROR_MESSAGE;
             try{
                 $AccesoAdatos = new AD();
                 $vlcScript = "SELECT * "
@@ -62,6 +64,7 @@ include 'AD.php';
         
         public function ObtenerCategorias()
         {
+            global $ERROR_MESSAGE;
             try{
                 $AccesoAdatos = new AD();
                 $vlcScript = "SELECT * "
@@ -74,6 +77,7 @@ include 'AD.php';
         
         public function ProductosPorCategoria($pvnCategoria)
         {
+            global $ERROR_MESSAGE;
              try{
                 $AccesoAdatos = new AD();
                 $vlcScript = "SELECT * "
@@ -88,6 +92,7 @@ include 'AD.php';
         
         public function ObtenerDetallesArt($pvcID)
         {
+            global $ERROR_MESSAGE;
             try{
                 $AccesoDatos = new AD();
                 $vlcScript = "SELECT * FROM fve_prod WHERE prod_id ="."'".$pvcID."'";

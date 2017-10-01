@@ -31,8 +31,8 @@ class Zonas {
             //Crea variable de retorno
             $vlcZonaNombre = '';
             
-            $vloResultado = mysql_query($vlcScript);
-            while($vloFila = mysql_fetch_array($vloResultado))
+            $vloResultado = $vloAD->RetornarResultado($vlcScript);
+            while($vloFila = mysqli_fetch_array($vloResultado))
             {
                 $vlcZonaNombre = $vloFila['zon_nom'];
             }

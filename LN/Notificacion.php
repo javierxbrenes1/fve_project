@@ -22,16 +22,17 @@ class Notificacion
             $mail->SMTPAuth = true;
             $mail->SMTPSecure= "ssl";
             //indico el servidor de Gmail para SMTP
-            $mail->Host = "smtp.gmail.com";
+            $mail->Host = "gator2022.hostgator.com";//"smtp.gmail.com";
             //indico el puerto que usa Gmail
             $mail->Port= 465;
             //indico un usuario / clave de un usuario de gmail
-            $mail->Username = "verfrutaexpress@gmail.com"; //"chory521@gmail.com";
-            $mail->Password= "verfrutaexpress2016";//"hardcorepunk506xxx";
-            $mail->SetFrom('verfrutaexpress@gmail.com', 'Pedidos Verfruta express');
+            $mail->Username = "no-reply@verfrutaexpress.com";//"verfrutaexpress@gmail.com"; //"chory521@gmail.com";
+            $mail->Password= "verfrutaexpress2017";//"hardcorepunk506xxx";
+            //$mail->SetFrom('verfrutaexpress@gmail.com', 'Pedidos Verfruta express');
+            $mail->SetFrom('no-reply@verfrutaexpress.com', 'Pedidos Verfruta express');
             //Se lo envia a la persona que se encarga de los pedidos
             $mail->AddBCC($pvcCorreoPedidos,"Pedidos Verfruta Express");
-            $mail->AddBCC("pedidosverfrutaexpress@gmail.com","Pedidos Verfruta Express");
+            //$mail->AddBCC("pedidosverfrutaexpress@gmail.com","Pedidos Verfruta Express");
             $mail->Subject = "Solicitud de Pedido ".$pvcIDPedido;
             $mail->MsgHTML($pvcMensaje);
             //Se lo envia al cliente para que sepa su compra.

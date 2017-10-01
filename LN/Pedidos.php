@@ -15,27 +15,31 @@
  * los pedidos a nivel de BD y de notificar al cliente su pedido asi como a la parte 
  * encargada de preparar el pedido
  */
+    
+   
 //Obtiene los valores enviados desde el post
-$vlcNombre = $_POST['clienteNombre'];
-$vlcEmail = $_POST['Email'];
-$vlnTelPrinc = $_POST['TelPrincipal'];
-$vlcTelSec = $_POST['TelSecundario'];
-$vlnZona = $_POST['Zona'];
-$vlcDireccion = $_POST['Direccion'];
+$vlcNombre = $_GET['clienteNombre'];
+$vlcEmail = $_GET['Email'];
+$vlnTelPrinc = $_GET['TelPrincipal'];
+$vlcTelSec = $_GET['TelSecundario'];
+$vlnZona = $_GET['Zona'];
+$vlcDireccion = $_GET['Direccion'];
 
+$vloObjeto = (object) array('codigo'=>'99', 'mensaje'=>'', 'Tipo' => '', 'Titulo' => '', 'Boton' => '');
+ 
+try{
 //Crea instancia del carrito 
 $vloCarrito = new Carrito();
 //Crea instancia de ADPedidos
 $vloADPedidos = new ADPedidos();
 //Obtener el total de articulos
 $vlnCantTotalArt = $vloCarrito->articulos_total();
-//Obtener el monto total a pagar
-$vlnMontoTotalCarrito = $vloCarrito->precio_total();
-//Obtiene los articulos almacenados
-$VloArticulosComprados = $vloCarrito->get_content();
-
 //Si al menos existe un articulo 
 if($vlnCantTotalArt > 0){
+    //Obtener el monto total a pagar
+    $vlnMontoTotalCarrito = $vloCarrito->precio_total();
+    //Obtiene los articulos almacenados
+    $VloArticulosComprados = $vloCarrito->get_content();
     /*********************** PRIMER PASO ALMACENAR EL PEDIDO *************************/
     //Obtiene el id del pedido 
     $vlcIDPedido = $vloADPedidos->InicializarPedido($vlcNombre, $vlcEmail, $vlnTelPrinc, 
@@ -114,18 +118,33 @@ if($vlnCantTotalArt > 0){
 
        if($vlbSeNotifico)
        {
-           $vloCarrito->destroy();
-           echo '0';
+            $vloCarrito->destroy();
+            $vloObjeto = (object) array('codigo'=>'0', 'mensaje'=>'Puedes revisar tú correo electronico, allí encontraras un mensaje de nuestra parte.', 
+                'Tipo' => 'success', 'Titulo' => 'Pedido enviado satisfactoriamente', 'Boton' => 'ok');
+            
        }else
        {
-           echo '1';
+           $vloObjeto = (object) array('codigo'=>'1', 'mensaje'=>'Hubo un error mientras se intentaba enviar el pedido, intenta nuevamente o ponte en contacto con nosotros.', 
+                'Tipo' => 'error', 'Titulo' => 'Error.!', 'Boton' => 'ok');
        }
     }else 
     {
-        echo '2';
+        $vloObjeto = (object) array('codigo'=>'2', 'mensaje'=>'Hubo un error mientras se intentaba enviar el pedido, intenta nuevamente o ponte en contacto con nosotros.', 
+                'Tipo' => 'error', 'Titulo' => 'Error.!', 'Boton' => 'ok');
     }
 }else
 {
-    echo '3';
+    $vloObjeto = (object) array('codigo'=>'3', 'mensaje'=>'Debes agregar al menos un producto, una vez lo hayas seleccionado puedes enviar el pedido.', 
+                'Tipo' => 'warning', 'Titulo' => 'Alerta', 'Boton' => 'ok');
+    
 }    
-  
+} catch (ErrorException $ex){
+    $vloObjeto = (object) array('codigo'=>'-2', 'mensaje'=>'Hubo un error, trata de enviar tu pedido nuevamente', 
+                'Tipo' => 'error', 'Titulo' => 'Error enviando el pedido', 'Boton' => 'ok');
+}
+
+echo json_encode($vloObjeto);
+
+
+
+

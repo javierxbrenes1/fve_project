@@ -22,7 +22,7 @@ class ADPedidos {
             $vloAD = new AD();
             $vloResultado = $vloAD->RetornarResultado($vlcScript);
             //Obtiene el codigo del pedido 
-            while($vloFila = mysql_fetch_array($vloResultado))
+            while($vloFila = mysqli_fetch_array($vloResultado))
             {
                 //Almacena el el id del pedido 
                 $vloCodigoPedido = $vloFila['ped_enc_id'];

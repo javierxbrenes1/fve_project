@@ -26,10 +26,10 @@ if($vlcProdId!="" && $vlnProdCantidad!=""){
         $ProductoSeleccionado = $vloProducto->ObtenerDetallesArt($vlcProdId);
         
         //Si el producto existe 
-        if(mysql_num_rows($ProductoSeleccionado) > 0)
+        if($ProductoSeleccionado->num_rows > 0)
         {
             //Ingresa el articulo al carrito
-            while($vloFila  = mysql_fetch_array($ProductoSeleccionado))
+            while($vloFila  = mysqli_fetch_array($ProductoSeleccionado))
             {
                 //Crea un array con los datos del carrito
                 $vloProd = array("id" => $vlcProdId,

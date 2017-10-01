@@ -27,9 +27,9 @@ if(is_numeric($vloParametro)){
 //etiqueta para la unidad de medida
 $lblUnidMed = ' ';
 //verificar si se devolvieron registros
-$vloCantRegistros = mysql_num_rows($resultado);
+$vloCantRegistros = $resultado->num_rows;
 if($vloCantRegistros>0){
-while($vloResultado = mysql_fetch_array($resultado))
+while($vloResultado = mysqli_fetch_array($resultado))
 {
     $vlcPrecio =number_format( $vloResultado['prod_prc_act'], 2 , "." , ",");
     $lblUnidMed = ' '.$vloResultado['prod_unit_med'].' ';

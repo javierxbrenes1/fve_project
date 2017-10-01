@@ -121,9 +121,9 @@
                     //Obtiene las filas devueltas.
                     $resultado = $vloProductos->ProductosEnPromocion();
                     //verificar si se devolvieron registros
-                    $vloCantRegistros = mysql_num_rows($resultado);
-                    if($vloCantRegistros>0){
-                    while($vloResultado = mysql_fetch_array($resultado))
+                    //$vloCantRegistros = mysql_num_rows($resultado);
+                    if($resultado->num_rows > 0){
+                    while($vloResultado = mysqli_fetch_array($resultado))
                     {
                     ?>
                     <div class="col-md-3 col-sm-4 col-xs-12 text-center Producto">
@@ -212,7 +212,7 @@
                     $vloZonas = new Zonas();
                     //Obtiene las zonas
                     $vloZonasDeEntrega = $vloZonas->ObtenerZonas();
-                    $vlnTotReg = mysql_num_rows($vloZonasDeEntrega);
+                    $vlnTotReg = $vloZonasDeEntrega->num_rows;
                     if($vlnTotReg > 0)
                     {
                   ?>
@@ -220,7 +220,7 @@
                       <label for="cboZona">Zona de entrega: </label>
                       <select id="cboZona" name="Zona" class="form-control"required>
                        <?php
-                        while($vloFila = mysql_fetch_array($vloZonasDeEntrega))
+                        while($vloFila = mysqli_fetch_array($vloZonasDeEntrega))
                         {
                             echo '<option value="'.$vloFila['zon_id'].'">'.$vloFila['zon_nom'].'</option>';
                         }

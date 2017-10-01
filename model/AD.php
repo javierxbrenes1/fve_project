@@ -1,53 +1,67 @@
 <?php
     class AD
     {
-        //Propiedades del objeto
-        var $server;
-	var $username;
-	var $pass;
-	var $database;
-        var $vcoConexion;
-        var $vcoSelBD;
+        
         //constructor
        function __construct() {
-           $server = "verfrutaexpress.com";
-           $username = "verfruta_AppUser";
-           $pass = "Pfgh%3209.790VerFruOn12";
-           $database = "verfruta_Application";
-           $vcoConexion = mysql_connect($server,$username,$pass) or die('Error en la conexion');
-           $vcoSelBD = mysql_select_db($database,$vcoConexion) or die ('Error al conectar a la bd');
+          
        }
        
        function __destruct()
        {
-           mysql_close(); 
+           
        }
        //Funciones para ejecutar comandos sin esperar una respuesta 
        public function EjecutarComando($pvoComando)
        {
            try{
                
-               //define el script q debe ejecutar
-                $vloScript = mysql_query($pvoComando);
-                //Returna el total del lineas afectadas
-                //mysql_affected_rows($vloScript); 
-                //return mysql_affected_rows($vloScript);
+               $vloConexion = $this->ObtenerConexion();
+               /* comprobar la conexión */
+               if(!$vloScript = $vloConexion->query($pvoComando))
+                {
+                   die("Falló la consulta: [" . $vloConexion->error . "]");
+                }
+                $vloConexion->close();
            }catch(Exception $ex){
             
+           }
+       }
+       
+       public function ObtenerConexion()
+       {
+           try
+           {
+               $Host = "verfrutaexpress.com";
+               $User = "verfruta_AppUser";//"verfruta_usuario";//"verfruta_AppUser";
+               $Pass = "Pfgh%3209.790VerFruOn12";//'^b!0ediS$fbN';//"Pfgh%3209.790VerFruOn12";//^b!0ediS$fbN
+                 $BD = "verfruta_Application";//"verfruta_Desarrollo"; //"verfruta_Application";
+                 
+            $vloConexion = new mysqli($Host,$User,$Pass, $BD);
+
+            if ($vloConexion->connect_errno > 0) {
+                     die("Falló la conexión: [". $vloConexion->connect_error . "]");
+            }
+
+            return $vloConexion;
+           
+           }catch(Exception $ex){
+               echo "Error con la conexión";
            }
        }
        
        public function RetornarResultado($pvoComando)
        {
            try{
-                //Define el query que ejecutara
-                $vloScript = mysql_query($pvoComando);
-                
-                if(!$vloScript)
+               
+               $vloConexion = $this->ObtenerConexion();
+               /* comprobar la conexión */
+               if(!$vloScript = $vloConexion->query($pvoComando))
                 {
-                    die("Error running $vloScript: " . mysql_error());
+                   die("Falló la consulta: [" . $vloConexion->error . "]");
                 }
-                
+                //Cierra la conexion
+                $vloConexion->close();
                 //retorna un arreglo con el resultado
                 return $vloScript;
            }catch(Exception $ex)

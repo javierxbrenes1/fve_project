@@ -12,7 +12,7 @@ $("document").ready(function(){
         $('#modalEnvio').modal('hide');
         BloquearPantalla();
         $.ajax({
-                    type: "POST",
+                    type: "GET",
                     url: "LN/Pedidos.php",
                     data: $("#FormPedido").serialize(),
                     error: function(error){
@@ -21,24 +21,21 @@ $("document").ready(function(){
                     },
                     success: function(data)
                     {
-                        if(data == "0")
+                        if(testJSON(data))
                         {
-                            
-                            PLimpiarCampos();
-                            Mensaje("Pedido enviado satisfactoriamente",
-                            "Puedes revisar tú correo electronico, allí encontraras un mensaje de nuestra parte.",
-                            "success","ok");
-                            setTimeout(function(){location.reload();},3000);
-                       }
-                       else if(data == "1" || data == "2")
-                       {
-                            Mensaje("Error.!","Hubo un error mientras se intentaba enviar el pedido, intenta nuevamente o ponte en contacto con nosotros.","error","ok");
-                       }
-                       else if(data="3")
-                       {
-                           Mensaje("Alerta","Debes agregar al menos un producto, una vez lo hayas seleccionado puedes enviar el pedido.",
-                                   "warning","ok");
-                       }
+                            vloObj = JSON.parse(data);
+                            if(vloObj.codigo === 0){
+                                PLimpiarCampos();
+                                Mensaje(vloObj.Titulo, vloObj.mensaje, vloObj.Tipo, vloObj.Boton);
+                                setTimeout(function(){location.reload();},4000);
+                            }else{
+                                Mensaje(vloObj.Titulo, vloObj.mensaje, vloObj.Tipo, vloObj.Boton);
+                            }
+                        }else{
+                            Mensaje("Error", 
+                            "Un error ocurrio durante el envio del pedido, vuelte a intentarlo o contacta con nosotros.",
+                            "error", "ok");
+                        }
                        DesbloquearPantalla();
                     }
                     
@@ -119,6 +116,16 @@ $("document").ready(function(){
 $(window).on('beforeunload', function(){
   $(window).scrollTop(0);
 });
+
+function testJSON(text){
+    try{
+        JSON.parse(text);
+        return true;
+    }
+    catch (error){
+        return false;
+    }
+}
 
 function PLimpiarCampos()
 {
