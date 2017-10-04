@@ -106,20 +106,20 @@ if($vlnCantTotalArt > 0){
         $vlcBody= $vlcBody.'<hr align="center" width="99%">';
         $vlcBody= $vlcBody.'<p>';
         $vlcBody= $vlcBody.'<H4>Gracias por su compra</H4>';
-        $vlcBody= $vlcBody.'Pronto uno de nuestros agentes se pondra en contacto para indicarle cuando se realizar&aacute; la entrega ';
-        $vlcBody= $vlcBody.'de su pedido.';
-        $vlcBody= $vlcBody.'</p>';
+        $vlcBody = $vlcBody.'Se le recuerda que los pedidos seran entregados los dias viernes,sabados y domingos, uno de nuestros agentes se pondra en contacto con usted.';
+        $vlcBody = $vlcBody.'</p>';        
         $vlcBody= $vlcBody.'</div>';
 
         //crea clase de notificacion 
         $vloNotificacion = new Notificacion();
         //Obtiene el resultado de la notificacion
-       $vlbSeNotifico =  $vloNotificacion->NotificarPedidoPorCorreo($vlcBody, $vlcEmail, 'pedidos@verfrutaexpress.com', $vlcIDPedido);
+        $vlcCorreoInterno = 'pedidos@verfrutaexpress.com';
+       $vlbSeNotifico =  $vloNotificacion->NotificarPedidoPorCorreo($vlcBody, $vlcEmail, $vlcCorreoInterno, $vlcIDPedido);
 
        if($vlbSeNotifico)
        {
             $vloCarrito->destroy();
-            $vloObjeto = (object) array('codigo'=>'0', 'mensaje'=>'Puedes revisar tú correo electronico, allí encontraras un mensaje de nuestra parte.', 
+            $vloObjeto = (object) array('codigo'=>'0', 'mensaje'=>'Puedes revisar tú correo electrónico, allí encontrarás un mensaje de nuestra parte.', 
                 'Tipo' => 'success', 'Titulo' => 'Pedido enviado satisfactoriamente', 'Boton' => 'ok');
             
        }else

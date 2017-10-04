@@ -24,10 +24,9 @@ $("document").ready(function(){
                         if(testJSON(data))
                         {
                             vloObj = JSON.parse(data);
-                            if(vloObj.codigo === 0){
+                            if(vloObj.codigo === "0"){
                                 PLimpiarCampos();
-                                Mensaje(vloObj.Titulo, vloObj.mensaje, vloObj.Tipo, vloObj.Boton);
-                                setTimeout(function(){location.reload();},4000);
+                                Mensaje(vloObj.Titulo, vloObj.mensaje, vloObj.Tipo, vloObj.Boton, function(){location.reload();});
                             }else{
                                 Mensaje(vloObj.Titulo, vloObj.mensaje, vloObj.Tipo, vloObj.Boton);
                             }
@@ -150,13 +149,13 @@ function pAgregarProd(pvnID)
     }
 }
 
-function Mensaje(pvcTitulo,pvcTexto,pvcTipo,pvcBoton){
+function Mensaje(pvcTitulo,pvcTexto,pvcTipo,pvcBoton, pvcFuncion = function(){}){
     swal({
         title: pvcTitulo,
         text:pvcTexto,
-        type: pvcTipo,
+        icon: pvcTipo,
         confirmButtonText: pvcBoton
-    });
+    }).then(pvcFuncion);
 }
 
 function BloquearPantalla()

@@ -12,7 +12,7 @@ class Zonas {
             //Crea instancia de Acceso a datos
             $AccesoDatos = new AD();
             //Crea el script a ejecutar
-            $vlcScript = "SELECT * FROM fve_zon";
+            $vlcScript = "SELECT * FROM fve_zon WHERE zon_act = 1";
             //retornar datos
             return $AccesoDatos->RetornarResultado($vlcScript);
         } catch (Exception $exc) {

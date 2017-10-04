@@ -295,11 +295,15 @@
 												<span>Tel&eacute;fonos</span>
 											</div>
 											<div class="address-info">
-												<p>(+506) 8464-1520</p>
-                                                                                                <p>(+506) 8950-1057</p>
-                                                                                                <p>(+506) 6244-8174</p>
-											</div>
+												<p>(+506) 6061-7047 - David Hernández</p>
+                                                                                                <p>(+506) 8828-2490 - Saúl Segura</p>
+                                                                                                <p>(+506) 8561-7840 - Geovany Pérez</p>
+                                                                                                <p>(+506) 6254-3417</p>
+                                                                                                <p>(+506) 2536-7786</p>
+                                                                                                <p>Fax: (+506) 2536-7756</p>
+                                                                                        </div>
 										</li>
+                                                                               
 									</ul>
                                                                     
 								</div>							

@@ -9,17 +9,16 @@
         <title>Tienda verfruta express</title>
     
     <!-- Links de css -->
-        <script src="assets/lib/sweetalerts/sweetalert.min.js" type="text/javascript"></script>
-        <link href="assets/lib/sweetalerts/sweetalert.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/lib/sweetalerts/sweetalert.css" rel="stylesheet" type="text/css"/>
         
         <script src="assets/js/jquery.min.js" type="text/javascript"></script>
         <script src="assets/js/jquery-ui.min.js" type="text/javascript"></script>
         <script src="assets/js/jquery.numeric.js" type="text/javascript"></script>
         <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-        
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script src="assets/js/funciones.js" type="text/javascript"></script>
         <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
         <!-- Google fonts -->	
@@ -242,6 +241,7 @@
                   <textarea id="txtDir" name="Direccion" class="form-control" 
                             rows="3" cols="50" required oninvalid="this.setCustomValidity('Por Favor ingrese su dirección de forma correcta para hacer llegar su pedido.')" oninput="setCustomValidity('')"></textarea>
               </div>
+              <p>Se le recuerda que los pedidos serán entregados los dias viernes,sabados y domingos</p>
               <button type="submit" class="btn btn-success btn-block" id="btnEnviarPedido">Enviar Pedido</button>
            </div>
               <div class="modal-footer">

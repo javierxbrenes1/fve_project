@@ -12,7 +12,8 @@ class Notificacion
     {
         try
         {
-            
+            $vlcCorreoSaliente = "no-reply@verfrutaexpress.com";
+            $vlcPWD = "verfrutaexpress2017";
             $mail = new PHPMailer();
             //indico a la clase que use SMTP
             $mail->IsSMTP();
@@ -26,10 +27,9 @@ class Notificacion
             //indico el puerto que usa Gmail
             $mail->Port= 465;
             //indico un usuario / clave de un usuario de gmail
-            $mail->Username = "no-reply@verfrutaexpress.com";//"verfrutaexpress@gmail.com"; //"chory521@gmail.com";
-            $mail->Password= "verfrutaexpress2017";//"hardcorepunk506xxx";
-            //$mail->SetFrom('verfrutaexpress@gmail.com', 'Pedidos Verfruta express');
-            $mail->SetFrom('no-reply@verfrutaexpress.com', 'Pedidos Verfruta express');
+            $mail->Username = $vlcCorreoSaliente;//
+            $mail->Password= $vlcPWD;//
+            $mail->SetFrom($vlcCorreoSaliente, 'Pedidos Verfruta express');
             //Se lo envia a la persona que se encarga de los pedidos
             $mail->AddBCC($pvcCorreoPedidos,"Pedidos Verfruta Express");
             //$mail->AddBCC("pedidosverfrutaexpress@gmail.com","Pedidos Verfruta Express");
