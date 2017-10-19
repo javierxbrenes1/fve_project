@@ -1,4 +1,8 @@
 <?php
+//Desarrador: Javier Brenes 
+//fecha: 18/10/2017 
+//Descripcion: se realizan mejoras al sistema para agregar mas funcionalidad al usuario.
+//TAGS: <JBR20171018></JBR20171018>
 if(!class_exists('Productos')){ 
     include '../model/Productos.php';
 }
@@ -33,7 +37,9 @@ while($vloResultado = mysqli_fetch_array($resultado))
 {
     $vlcPrecio =number_format( $vloResultado['prod_prc_act'], 2 , "." , ",");
     $lblUnidMed = ' '.$vloResultado['prod_unit_med'].' ';
-    $ResultadoConsulta = $ResultadoConsulta.'<div class="col-md-3 col-sm-4 col-xs-12 text-center Producto">';
+    //<JBR20171018>
+    $ResultadoConsulta = $ResultadoConsulta.'<div class="col-md-3 col-sm-4 col-xs-12 text-center Producto" id="'.$vloResultado['prod_id'].'">';
+    //</JBR20171018>
     $ResultadoConsulta = $ResultadoConsulta.'<div class="fve-borde-beneficios">';
     $ResultadoConsulta = $ResultadoConsulta.'<div class="pnlMarco">';    
     $ResultadoConsulta = $ResultadoConsulta.'<div>';
@@ -43,10 +49,17 @@ while($vloResultado = mysqli_fetch_array($resultado))
     $ResultadoConsulta = $ResultadoConsulta.'<p class="ProdNom"><strong>'.$vloResultado['prod_nom'].'</strong></p>';
     $ResultadoConsulta = $ResultadoConsulta.'</div>';
     $ResultadoConsulta = $ResultadoConsulta.'<div>';
-    $ResultadoConsulta = $ResultadoConsulta.'<input type="text" class="form-control txtCantidad decimal" maxlength="5" id="'.$vloResultado['prod_id'].'"/>';
+    //<JBR20171018> Se modifica esta linea para pasar el id al contenedor completo
+    $ResultadoConsulta = $ResultadoConsulta.'<input type="text" class="form-control txtCantidad decimal" maxlength="5" />';
+    //</JBR20171018>
     $ResultadoConsulta = $ResultadoConsulta.' <label class="lblKilo">'.$lblUnidMed.'</label>';
-    $ResultadoConsulta = $ResultadoConsulta.'<p> <p><p class="PrecioArticulo">Precio: ₡ '.$vlcPrecio.'</p>';
+    $ResultadoConsulta = $ResultadoConsulta.'<p><p><p class="PrecioArticulo">Precio: ₡ '.$vlcPrecio.'</p>';
     $ResultadoConsulta = $ResultadoConsulta.'</div>';
+    //<JBR20171018> Se agrega un nuevo campo para las observaciones del cliente.
+    $ResultadoConsulta = $ResultadoConsulta.'<div>';
+    $ResultadoConsulta = $ResultadoConsulta.'<textarea class="form-control txtObservacion" rows="4" cols="50" placeholder="Agrega una observación"></textarea>';
+    $ResultadoConsulta = $ResultadoConsulta.'</div>';
+    //</JBR20171018>
     $ResultadoConsulta = $ResultadoConsulta.'<div>';
     $ResultadoConsulta = $ResultadoConsulta.'<button type="button" class="btn-lg btn-success btnComprar" onclick="pAgregarProd('.$vloResultado['prod_id'].')" value="'.$vloResultado['prod_id'].'">';
     $ResultadoConsulta = $ResultadoConsulta.'<i class="fa fa-cart-plus"></i> Agregar';

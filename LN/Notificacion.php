@@ -12,7 +12,7 @@ class Notificacion
     {
         try
         {
-            $vlcCorreoSaliente = "no-reply@verfrutaexpress.com";
+            $vlcCorreoSaliente = "no-reply-dev@verfrutaexpress.com";
             $vlcPWD = "verfrutaexpress2017";
             $mail = new PHPMailer();
             //indico a la clase que use SMTP

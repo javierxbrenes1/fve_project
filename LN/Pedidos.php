@@ -83,6 +83,7 @@ if($vlnCantTotalArt > 0){
         $vlcBody= $vlcBody.'<th style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">Producto</th>';
         $vlcBody= $vlcBody.'<th style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">Precio unit.</th>';
         $vlcBody= $vlcBody.'<th style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">Subtotal</th>';
+        $vlcBody= $vlcBody.'<th style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">Observ.</th>';
 
         foreach($VloArticulosComprados as $vloFila)
         {
@@ -93,6 +94,7 @@ if($vlnCantTotalArt > 0){
             $vlcBody= $vlcBody.'<td style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">'.$vloFila['nombre'].'</td>';
             $vlcBody= $vlcBody.'<td style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;">'.number_format ($vloFila['precio'], 2 , "." , ",").'</td>';
             $vlcBody= $vlcBody.'<td style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;"> '.$vlnFormatoSubTotal.'</td>';
+            $vlcBody= $vlcBody.'<td style="text-align: left; padding: 5px 10px 5px 0px; border-bottom: 0.2px solid #000;"> '.$vloFila['Observacion'].'</td>';
             $vlcBody= $vlcBody.'</tr>';
         }
         $vlcBody= $vlcBody.'</table>';
@@ -113,7 +115,7 @@ if($vlnCantTotalArt > 0){
         //crea clase de notificacion 
         $vloNotificacion = new Notificacion();
         //Obtiene el resultado de la notificacion
-        $vlcCorreoInterno = 'pedidos@verfrutaexpress.com';
+        $vlcCorreoInterno = 'pedidos-dev@verfrutaexpress.com';//'pedidos@verfrutaexpress.com';
        $vlbSeNotifico =  $vloNotificacion->NotificarPedidoPorCorreo($vlcBody, $vlcEmail, $vlcCorreoInterno, $vlcIDPedido);
 
        if($vlbSeNotifico)
