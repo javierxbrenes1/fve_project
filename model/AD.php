@@ -32,9 +32,9 @@
        {
            try
            {
-               $Host = "verfrutaexpress.com";
-               $User = "verfruta_AppUser";//"verfruta_usuario";//"verfruta_AppUser";
-               $Pass = "Pfgh%3209.790VerFruOn12";//'^b!0ediS$fbN';//"Pfgh%3209.790VerFruOn12";//^b!0ediS$fbN
+               $Host = "localhost";//"verfrutaexpress.com";
+               $User = "root";//"verfruta_AppUser";//"verfruta_usuario";//"verfruta_AppUser";
+               $Pass = "";//"Pfgh%3209.790VerFruOn12";//'^b!0ediS$fbN';//"Pfgh%3209.790VerFruOn12";//^b!0ediS$fbN
                  $BD = "verfruta_Application";//"verfruta_Desarrollo"; //"verfruta_Application";
                  
             $vloConexion = new mysqli($Host,$User,$Pass, $BD);

@@ -35,14 +35,19 @@ include 'AD.php';
             global $ERROR_MESSAGE;
             try {
                
-                $param = mysql_escape_string($pvcbuscar);
                 $AD = new AD();
+                
+                $vloConexion = $AD->ObtenerConexion();
+                
+                $param = mysqli_real_escape_string($vloConexion, $pvcbuscar);
+                
                 $vlcScript = "SELECT * "
                         . "     FROM fve_prod "
                         . "    WHERE prod_nom like '%".$param."%'"
                         . "      AND prod_sts = 1";
-                return $AD->RetornarResultado($vlcScript);
-                
+                $resultado = mysqli_query($vloConexion, $vlcScript);//$AD->RetornarResultado($vlcScript);
+                $vloConexion->close();
+                return $resultado;
             } catch (Exception $exc) {
                 echo $ERROR_MESSAGE;
             }

@@ -125,7 +125,7 @@
                     while($vloResultado = mysqli_fetch_array($resultado))
                     {
                     ?>
-                    <div class="col-md-3 col-sm-4 col-xs-12 text-center Producto">
+                    <div id="<?php echo $vloResultado['prod_id']; ?>" class="col-md-3 col-sm-4 col-xs-12 text-center Producto">
                         <div class="fve-borde-beneficios">
                             <div class="pnlMarco">    
                                 <div>
@@ -135,9 +135,12 @@
                                     <p class="ProdNom"><strong><?php echo $vloResultado['prod_nom']?></strong></p>
                                 </div>
                                 <div>
-                                    <input type="text" class="form-control txtCantidad decimal" maxlength="5" id="<?php echo $vloResultado['prod_id']; ?>"/>
+                                    <input type="text" class="form-control txtCantidad decimal" maxlength="5"/>
                                     <label class="lblKilo"> <?php echo $vloResultado['prod_unit_med'] ?></label>
                                     <p> <p><p class="PrecioArticulo">Precio:  ₡ <?php echo  number_format ( $vloResultado['prod_prc_act'], 2 , "." , ",");?></p>
+                                </div>
+                                <div>
+                                    <textarea class="form-control txtObservacion" rows="4" cols="50" placeholder="Agrega una observación"></textarea>
                                 </div>
                                 <div>
                                     <button type="button" class="btn-lg btn-success btnComprar" onclick="pAgregarProd(<?php echo $vloResultado['prod_id'];?>)"value="<?php echo $vloResultado['prod_id'];?>" />
@@ -173,7 +176,7 @@
         </div>
     </div>
     <div class="modal fade" id="modalEnvio">
-      <div class="modal-dialog modal-sm">
+      <div class="modal-dialog modal-lg">
         <div class="modal-content">
           
             <div class="modal-header" style="background-color: #6A5854; color:#fff; text-align: center; border-radius: 2px;">
@@ -183,22 +186,22 @@
           
           <div class="modal-body">
               <form data-toggle="validator" role="form" id="FormPedido">
-              <div class="form-group">
+              <div class="form-group col-sm-6">
                 <!-- Ingrese su nombre-->
                 <label for="txtNomCli" class="control-label">Nombre</label>
                 <input type ="text" class="form-control" id="txtNomCli" name="clienteNombre" placeholder= "&#xf007; Ingrese su nombre.." required oninvalid="this.setCustomValidity('Por Favor ingrese un nombre válido')" oninput="setCustomValidity('')" />
               </div>
-              <div class="form-group"> 
+              <div class="form-group col-sm-6"> 
                 <label for="txtEmail" required>Email</label>
                 <input type="email" class="form-control" id ="txtEmail" name="Email"
                 placeholder="&#xf003; Escribe tu email..." required oninvalid="this.setCustomValidity('Por Favor ingrese un correo electronico válido')" oninput="setCustomValidity('')">
               </div>
-              <div class="form-group">  
+              <div class="form-group col-sm-6">  
                   <label for="txtTel">Teléfono Principal</label>
                   <input type="text" pattern="^[2|8|7|6]\d{7}$" class="form-control" id="txtTel" name="TelPrincipal"
                          placeholder="&#xf095; Tel. Principal. Ejm:(88888888)" required oninvalid="this.setCustomValidity('Por Favor ingrese un teléfono válido para comunicarnos con usted, en formato (88888888).')" oninput="setCustomValidity('')">
               </div>
-              <div class="form-group">  
+              <div class="form-group col-sm-6">  
                   <label for="txtTelAux">Teléfono Secundario</label>
                   <input type="text" pattern="^[2|8|7|6]\d{7}$" class="form-control" id="txtTelAux" name="TelSecundario"
                          placeholder="&#xf095; Tel. Secundario.">
@@ -215,7 +218,7 @@
                     if($vlnTotReg > 0)
                     {
                   ?>
-                  <div class="form-group">
+                  <div class="form-group col-sm-12">
                       <label for="cboZona">Zona de entrega: </label>
                       <select id="cboZona" name="Zona" class="form-control"required>
                        <?php
@@ -227,16 +230,11 @@
                       </select>
                   </div>
                   <?php
-                  }
-//                    }else
-//                    {
-//                        echo "no hay zonas";
-//                    }
-                    //crea el objeto 
+                  } 
                   ?>
                   
               <!--</div> -->
-                <div class="form-group">  
+                <div class="form-group col-sm-12">  
                     <label for="txtDir">Direcci&oacute;n Exacta</label>
                   <textarea id="txtDir" name="Direccion" class="form-control" 
                             rows="3" cols="50" required oninvalid="this.setCustomValidity('Por Favor ingrese su dirección de forma correcta para hacer llegar su pedido.')" oninput="setCustomValidity('')"></textarea>

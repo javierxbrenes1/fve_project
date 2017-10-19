@@ -3,8 +3,9 @@
     include 'Carrito.php';
     include '../model/Productos.php';
     //Obtiene los datos por el metodo GET
-    $vlcProdId = $_GET['id'];
-    $vlnProdCantidad = $_GET['cant'];
+    $vlcProdId = $_POST['id'];
+    $vlnProdCantidad = $_POST['cant'];
+    $vloProdObservacion = $_POST['obs'];
     //Crea instancia de Carrito
     $vloCarrito = new Carrito();
     //Crea un nuevo arreglo de datos
@@ -37,7 +38,8 @@ if($vlcProdId!="" && $vlnProdCantidad!=""){
                                  "precio" => $vloFila['prod_prc_act'],
                                  "nombre" => $vloFila['prod_nom'],
                                  "img" => $vloFila['prod_rut_img'],
-                                 "unidad" => $vloFila['prod_unit_med']);
+                                 "unidad" => $vloFila['prod_unit_med'],
+                                 "Observacion" => $vloProdObservacion);
             }
             //Agrega el carrito    
             $vloCarrito->add($vloProd);

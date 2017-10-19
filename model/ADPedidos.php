@@ -16,7 +16,7 @@ class ADPedidos {
         $vloResultado;
         try {
             //Crea el script a ejecutar
-            $vlcScript = "CALL spInicializaDatosPedido('".$pvcNombre."','".$pvcEmail."','".$pvcTelPrin."','".$pvcTelSec."','".$pvcDireccion."',".$pvnZona.",".$pvnTotProd.",".$pvnMontTotal.")";
+                $vlcScript = "CALL spInicializaDatosPedido('".$pvcNombre."','".$pvcEmail."','".$pvcTelPrin."','".$pvcTelSec."','".$pvcDireccion."',".$pvnZona.",".$pvnTotProd.",".$pvnMontTotal.")";
             
             //crea instancia de AD
             $vloAD = new AD();
@@ -50,12 +50,12 @@ class ADPedidos {
                 //Calcula el subtotal
                 $vlnSubTotal = $vloProducto['cantidad']*$vloProducto['precio'];
                 //Crea arreglo de articulos a almacenar
-                $sqlArray[] = "('".$pvcIDEncPedido."',".$vlnIDDet.",'".$vloProducto['id']."',".$vloProducto['cantidad'].",".$vlnSubTotal.")";
+                $sqlArray[] = "('".$pvcIDEncPedido."',".$vlnIDDet.",'".$vloProducto['id']."',".$vloProducto['cantidad'].",".$vlnSubTotal.",'".$vloProducto['Observacion']."')";
                 //aumenta el id del detalle del pedido 
                 $vlnIDDet++;
             
             }
-           $vlcScript = " INSERT INTO fve_ped_det(ped_enc_id,ped_det_id,prod_id,ped_det_can_prod,ped_det_mont) "
+           $vlcScript = " INSERT INTO fve_ped_det(ped_enc_id,ped_det_id,prod_id,ped_det_can_prod,ped_det_mont, ped_det_obs) "
                         . "VALUES ".  implode(',', $sqlArray);
            
             $vloAD->EjecutarComando($vlcScript);

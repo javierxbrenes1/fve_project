@@ -22,6 +22,7 @@ if(!class_exists('Carrito')){
             $vlcCodHtml = $vlcCodHtml.'<th align="center">Cantidad</th>';
             $vlcCodHtml = $vlcCodHtml.'<th align="center">Precio unitario</th>';
             $vlcCodHtml = $vlcCodHtml.'<th align="center">Subtotal</th>';
+            $vlcCodHtml = $vlcCodHtml.'<th align="center">Observación</th>';
             $vlcCodHtml = $vlcCodHtml.'<th align="center"></th>';
             $vlcCodHtml = $vlcCodHtml.'</thead>';
             $vlcCodHtml = $vlcCodHtml.'</tbody>';
@@ -32,6 +33,7 @@ if(!class_exists('Carrito')){
             {
                 $vlnTotalProductos +=1;
                 $vlnSubtotal = $vloFila['cantidad']*$vloFila['precio'];
+                $vlcObservacion = $vloFila['Observacion'];
                 $vlnMontoTotal += $vlnSubtotal;
                 $vlnFormatoSubTotal =  number_format ( $vlnSubtotal, 2 , "." , ",");
                 $vlnPrecioUnitario = number_format ( $vloFila['precio'], 2 , "." , ",");
@@ -43,6 +45,7 @@ if(!class_exists('Carrito')){
                 $vlcCodHtml = $vlcCodHtml."<td>"."<p>".$vloFila['cantidad'].' '.$vloFila['unidad']."</p>"."</td>";
                 $vlcCodHtml = $vlcCodHtml."<td>"."<p>".$vlnPrecioUnitario."</p>"."</td>";
                 $vlcCodHtml = $vlcCodHtml."<td>"."<p>".$vlnFormatoSubTotal."</p>"."</td>";
+                $vlcCodHtml = $vlcCodHtml."<td>"."<p>".$vlcObservacion."</p>"."</td>";
                 $vlcCodHtml = $vlcCodHtml."<td><span class=";
                 $vlcCodHtml = $vlcCodHtml.'"table-remove glyphicon glyphicon-remove lblEliminarArt"';
                 $vlcCodHtml = $vlcCodHtml."onclick=";
