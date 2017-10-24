@@ -7,13 +7,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
         <link rel="shortcut icon" href="assets/images/favicon.JPG">
         <title>Tienda verfruta express</title>
-    
+
     <!-- Links de css -->
         <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/estilos.css" rel="stylesheet" type="text/css"/>
         <link href="assets/lib/sweetalerts/sweetalert.css" rel="stylesheet" type="text/css"/>
-        
+
         <script src="assets/js/jquery.min.js" type="text/javascript"></script>
         <script src="assets/js/jquery-ui.min.js" type="text/javascript"></script>
         <script src="assets/js/jquery.numeric.js" type="text/javascript"></script>
@@ -21,21 +21,21 @@
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script src="assets/js/funciones.js" type="text/javascript"></script>
         <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-        <!-- Google fonts -->	
+        <!-- Google fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Crete+Round:400,400italic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
     </head>
     <body>
-     <div id="wrapper">   
+     <div id="wrapper">
         <div id="TopBar">
             <!--<img src="assets/images/logo.png" height="60" width="60" class=" pull-left img-logo" id="logo"/>-->
             <ul class="list-inline pull-right">
-                <?php 
-                    if(!class_exists('Carrito')){ 
+                <?php
+                    if(!class_exists('Carrito')){
                         include 'LN/Carrito.php';
                     }
-                    
+
                     $vloCarrito = new Carrito();
                     $vlnTotalArt = $vloCarrito->articulos_total();
                     $vlnConc = "";
@@ -47,7 +47,7 @@
         </div>
          <div class="pull-right Back">
              <a href="#Menu"> <i class="fa fa-arrow-up"></i> </a>
-         </div> 
+         </div>
          <nav class="navbar navbar-default BarraCategorias" id="Menu">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -72,12 +72,12 @@
                                 </div>
                             </div>
                         </form>
-                    </div> 
+                    </div>
                 </div>
             </div>
         </nav>
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
-             
+
             <ol class="carousel-indicators hidden-xs" >
               <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
               <li data-target="#carousel-example-generic" data-slide-to="1"></li>
@@ -85,7 +85,7 @@
               <li data-target="#carousel-example-generic" data-slide-to="3"></li>
             </ol>
 
-             
+
             <div class="carousel-inner" style='height: auto'>
                 <div class="item active">
                   <img  class="img-responsive" src="assets/images/slider3.jpg" height="150" alt="...">
@@ -100,8 +100,8 @@
                   <img class="img-responsive" src="assets/images/slider4.jpg" height="150" alt="...">
                 </div>
             </div>
-        </div>  
-         <div id="content"> 
+        </div>
+         <div id="content">
         <section>
             <div class="container">
                 <div class="row">
@@ -113,7 +113,7 @@
                 <hr />
                 <div class="row" id="pnlProdCategoria">
                     <?php
-                    if(!class_exists('Productos')){ 
+                    if(!class_exists('Productos')){
                         include 'model/Productos.php';
                     }
                     $vloProductos = new Productos();
@@ -127,7 +127,7 @@
                     ?>
                     <div id="<?php echo $vloResultado['prod_id']; ?>" class="col-md-3 col-sm-4 col-xs-12 text-center Producto">
                         <div class="fve-borde-beneficios">
-                            <div class="pnlMarco">    
+                            <div class="pnlMarco">
                                 <div>
                                     <img class="img-responsive center-block imgProd"  src="assets/img/<?php echo $vloResultado['prod_rut_img']; ?>"/>
                                 </div>
@@ -153,10 +153,10 @@
                             </div>
                         </div>
                     </div>
-                    <?php        
+                    <?php
                     } //Fin de while
                     } //fin if si hubieron filas
-                    else  //si no hay filas 
+                    else  //si no hay filas
                     {?>
                         <!--crea un h1 indicando que no hay articulos en promocion-->
                         <h1 class="text-center">No hay productos en promoción</h1>
@@ -166,9 +166,9 @@
                 </div>
             </div>
         </section>
-                 
+
         </div>
-         <div id="push"></div>     
+         <div id="push"></div>
     </div>
     <div id="footer">
         <div class="container-fluid text-right">
@@ -178,12 +178,12 @@
     <div class="modal fade" id="modalEnvio">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
-          
+
             <div class="modal-header" style="background-color: #6A5854; color:#fff; text-align: center; border-radius: 2px;">
-                <p class="pull-right CerrarModal">X</p>  
-              <h4>Verfruta Express.</h4> 
+                <p class="pull-right CerrarModal">X</p>
+              <h4>Verfruta Express.</h4>
           </div>
-          
+
           <div class="modal-body">
               <form data-toggle="validator" role="form" id="FormPedido">
               <div class="form-group col-sm-6">
@@ -191,22 +191,22 @@
                 <label for="txtNomCli" class="control-label">Nombre</label>
                 <input type ="text" class="form-control" id="txtNomCli" name="clienteNombre" placeholder= "&#xf007; Ingrese su nombre.." required oninvalid="this.setCustomValidity('Por Favor ingrese un nombre válido')" oninput="setCustomValidity('')" />
               </div>
-              <div class="form-group col-sm-6"> 
+              <div class="form-group col-sm-6">
                 <label for="txtEmail" required>Email</label>
                 <input type="email" class="form-control" id ="txtEmail" name="Email"
                 placeholder="&#xf003; Escribe tu email..." required oninvalid="this.setCustomValidity('Por Favor ingrese un correo electronico válido')" oninput="setCustomValidity('')">
               </div>
-              <div class="form-group col-sm-6">  
+              <div class="form-group col-sm-6">
                   <label for="txtTel">Teléfono Principal</label>
                   <input type="text" pattern="^[2|8|7|6]\d{7}$" class="form-control" id="txtTel" name="TelPrincipal"
                          placeholder="&#xf095; Tel. Principal. Ejm:(88888888)" required oninvalid="this.setCustomValidity('Por Favor ingrese un teléfono válido para comunicarnos con usted, en formato (88888888).')" oninput="setCustomValidity('')">
               </div>
-              <div class="form-group col-sm-6">  
+              <div class="form-group col-sm-6">
                   <label for="txtTelAux">Teléfono Secundario</label>
                   <input type="text" pattern="^[2|8|7|6]\d{7}$" class="form-control" id="txtTelAux" name="TelSecundario"
                          placeholder="&#xf095; Tel. Secundario.">
               </div>
-                <!--<div class="form-group">-->  
+                <!--<div class="form-group">-->
                   <!--<label for="cboZona">Zona de entrega: </label>-->
                   <?php
                     include 'model/Zonas.php';
@@ -218,9 +218,9 @@
                     if($vlnTotReg > 0)
                     {
                   ?>
-                  <div class="form-group col-sm-12">
+                  <div class="form-group col-sm-6">
                       <label for="cboZona">Zona de entrega: </label>
-                      <select id="cboZona" name="Zona" class="form-control"required>
+                      <select id="cboZona" name="Zona" class="form-control" required>
                        <?php
                         while($vloFila = mysqli_fetch_array($vloZonasDeEntrega))
                         {
@@ -230,25 +230,50 @@
                       </select>
                   </div>
                   <?php
-                  } 
+                  }
                   ?>
-                  
+                  <!-- Dias de entrega -->
+                  <div class="form-group col-sm-6">
+                    <label for="comDias">Dia de entrega:</label>
+                    <select id="comDias" class="form-control"  name = "DiaEntrega" required>
+                      <<option value="Viernes">Viernes</option>
+                      <option value="Sabado">Sábado</option>
+                      <option value="Domingo">Domingo</option>
+                    </select>
+                  </div>
+                  <!--Medios de pago -->
+                  <div class="form-group col-sm-12">
+                      <label for="combos">Medio de pago: </label>
+                    <div class="col-sm-12" id="combos">
+                      <div class="col-sm-12">
+                        <input type="checkbox" name="MedioPago" id="cboEfectivo" value="Efectivo" checked>
+                        <label for="cboEfectivo" style="margin-right: 5px;">Efectivo</label>
+                        <input type="checkbox" name="MedioPago" id="cboTarjeta" value="Tarjeta">
+                        <label for="cboTarjeta">Tarjeta</label>
+                      </div>
+
+                    </div>
+
+                  </div>
               <!--</div> -->
-                <div class="form-group col-sm-12">  
+                <div class="form-group col-sm-12">
                     <label for="txtDir">Direcci&oacute;n Exacta</label>
-                  <textarea id="txtDir" name="Direccion" class="form-control" 
+                  <textarea id="txtDir" name="Direccion" class="form-control txtObservacion"
                             rows="3" cols="50" required oninvalid="this.setCustomValidity('Por Favor ingrese su dirección de forma correcta para hacer llegar su pedido.')" oninput="setCustomValidity('')"></textarea>
               </div>
-              <p>Se le recuerda que los pedidos serán entregados los dias viernes,sabados y domingos</p>
+              <div class="col-sm-12">
+                <p>Se le recuerda que los pedidos serán entregados los dias viernes,sabados y domingos</p>
+              </div>
+
               <button type="submit" class="btn btn-success btn-block" id="btnEnviarPedido">Enviar Pedido</button>
            </div>
               <div class="modal-footer">
-                  
+
               </div>
             </form>
           </div>
         </div>
-      </div>        
+      </div>
     </body>
 </html>
 <?php ob_end_flush();

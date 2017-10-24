@@ -1,9 +1,9 @@
 <?php
-//Desarrador: Javier Brenes 
-//fecha: 18/10/2017 
+//Desarrador: Javier Brenes
+//fecha: 18/10/2017
 //Descripcion: se realizan mejoras al sistema para agregar mas funcionalidad al usuario.
 //TAGS: <JBR20171018></JBR20171018>
-if(!class_exists('Productos')){ 
+if(!class_exists('Productos')){
     include '../model/Productos.php';
 }
 //String para contatenar el html
@@ -25,7 +25,7 @@ if(is_numeric($vloParametro)){
     }
 }else
 {
-    
+
     $resultado = $vloProductos->BuscarProductos($vloParametro);
 }
 //etiqueta para la unidad de medida
@@ -41,7 +41,7 @@ while($vloResultado = mysqli_fetch_array($resultado))
     $ResultadoConsulta = $ResultadoConsulta.'<div class="col-md-3 col-sm-4 col-xs-12 text-center Producto" id="'.$vloResultado['prod_id'].'">';
     //</JBR20171018>
     $ResultadoConsulta = $ResultadoConsulta.'<div class="fve-borde-beneficios">';
-    $ResultadoConsulta = $ResultadoConsulta.'<div class="pnlMarco">';    
+    $ResultadoConsulta = $ResultadoConsulta.'<div class="pnlMarco">';
     $ResultadoConsulta = $ResultadoConsulta.'<div>';
     $ResultadoConsulta = $ResultadoConsulta.'<img class="img-responsive center-block imgProd"  src="assets/img/'.$vloResultado['prod_rut_img'].'"/>';
     $ResultadoConsulta = $ResultadoConsulta.'</div>';
@@ -66,16 +66,16 @@ while($vloResultado = mysqli_fetch_array($resultado))
     $ResultadoConsulta = $ResultadoConsulta.'</button>';
     $ResultadoConsulta = $ResultadoConsulta.'</div>';
     $ResultadoConsulta = $ResultadoConsulta.'</div>';
-    
+
     if($vloResultado['prod_prm'] == 1)
     {
         $ResultadoConsulta = $ResultadoConsulta.'<div class="EnOferta"><p>oferta</p></div>';
     }
     $ResultadoConsulta = $ResultadoConsulta.'</div>';
     $ResultadoConsulta = $ResultadoConsulta.'</div>';
-} 
-} 
-else{  
+}
+}
+else{
     //crea un h1 indicando que no hay articulos en promocion-->
     $ResultadoConsulta = '<h1 class="text-center">No se encontrarón productos</h1>';
 
