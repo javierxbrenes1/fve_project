@@ -56,7 +56,7 @@ if($vlnCantTotalArt > 0){
     //Obtiene el id del pedido
     $vlcIDPedido = $vloADPedidos->InicializarPedido($vlcNombre, $vlcEmail, $vlnTelPrinc,
                                                     $vlcTelSec, $vlcDireccion, $vlnZona,
-                                                    $vlnCantTotalArt, $vlnMontoTotalCarrito);
+                                                    $vlnCantTotalArt, $vlnMontoTotalCarrito, $vlcDiaEntrega, $vlcMedioPago);
 
     if($vlcIDPedido!=''){
         //Envia a guardar el detalle
@@ -80,6 +80,8 @@ if($vlnCantTotalArt > 0){
         $vlcBody= $vlcBody.'<p><strong>Pedido N&uacute;mero: </strong>'.$vlcIDPedido.'</p>';
         $vlcBody= $vlcBody.'<p><strong>Fecha del pedido: </strong>'.$vlcFechaPedido.'</p>';
         $vlcBody= $vlcBody.'<p><strong>Zona de pedido: </strong>'.$vlcZonaNombre.'</p>';
+        $vlcBody= $vlcBody.'<p><strong>D&iacutea de entrega: </strong>'.$vlcDiaEntrega.'</p>';
+        $vlcBody= $vlcBody.'<p><strong>Medio de pago: </strong>'.$vlcMedioPago.'</p>';
         $vlcBody= $vlcBody.'<p><strong>Direcci&oacute;n: </strong>'.$vlcDireccion.'</p>';
         $vlcBody= $vlcBody.'<p><strong>N&uacute;m. de tel&eacute;fono: </strong>'.$vlnTelPrinc.'</p>';
         if($vlcTelSec!='')
@@ -127,7 +129,7 @@ if($vlnCantTotalArt > 0){
         //crea clase de notificacion
         $vloNotificacion = new Notificacion();
         //Obtiene el resultado de la notificacion
-        $vlcCorreoInterno = 'pedidos-dev@verfrutaexpress.com';//'pedidos@verfrutaexpress.com';
+        $vlcCorreoInterno = 'pedidos@verfrutaexpress.com';
        $vlbSeNotifico =  $vloNotificacion->NotificarPedidoPorCorreo($vlcBody, $vlcEmail, $vlcCorreoInterno, $vlcIDPedido);
 
        if($vlbSeNotifico)

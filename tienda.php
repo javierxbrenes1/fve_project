@@ -191,22 +191,14 @@
                 <label for="txtNomCli" class="control-label">Nombre</label>
                 <input type ="text" class="form-control" id="txtNomCli" name="clienteNombre" placeholder= "&#xf007; Ingrese su nombre.." required oninvalid="this.setCustomValidity('Por Favor ingrese un nombre válido')" oninput="setCustomValidity('')" />
               </div>
-<<<<<<< HEAD
               <div class="form-group col-sm-6">
-=======
-              <div class="form-group col-sm-6">
->>>>>>> origin/Nueva_admi
                 <label for="txtEmail" required>Email</label>
                 <input type="email" class="form-control" id ="txtEmail" name="Email"
                 placeholder="&#xf003; Escribe tu email..." required oninvalid="this.setCustomValidity('Por Favor ingrese un correo electronico válido')" oninput="setCustomValidity('')">
               </div>
-<<<<<<< HEAD
               <div class="form-group col-sm-6">
-=======
-              <div class="form-group col-sm-6">
->>>>>>> origin/Nueva_admi
-                  <label for="txtTel">Teléfono Principal</label>
-                  <input type="text" pattern="^[2|8|7|6]\d{7}$" class="form-control" id="txtTel" name="TelPrincipal"
+                <label for="txtTel">Teléfono Principal</label>
+                <input type="text" pattern="^[2|8|7|6]\d{7}$" class="form-control" id="txtTel" name="TelPrincipal"
                          placeholder="&#xf095; Tel. Principal. Ejm:(88888888)" required oninvalid="this.setCustomValidity('Por Favor ingrese un teléfono válido para comunicarnos con usted, en formato (88888888).')" oninput="setCustomValidity('')">
               </div>
               <div class="form-group col-sm-6">
@@ -244,7 +236,11 @@
                   <div class="form-group col-sm-6">
                     <label for="comDias">Dia de entrega:</label>
                     <select id="comDias" class="form-control"  name = "DiaEntrega" required>
-                      <<option value="Viernes">Viernes</option>
+                      <option value="Lunes">Lunes</option>
+                      <option value="Martes">Martes</option>
+                      <option value="Miercoles">Miércoles</option>
+                      <option value="Jueves">Jueves</option>
+                      <option value="Viernes">Viernes</option>
                       <option value="Sabado">Sábado</option>
                       <option value="Domingo">Domingo</option>
                     </select>
@@ -256,12 +252,10 @@
                       <div class="col-sm-12">
                         <input type="checkbox" name="MedioPago" id="cboEfectivo" value="Efectivo" checked>
                         <label for="cboEfectivo" style="margin-right: 5px;">Efectivo</label>
-                        <input type="checkbox" name="MedioPago" id="cboTarjeta" value="Tarjeta">
+                        <input type="checkbox"  name="MedioPago" id="cboTarjeta" value="Tarjeta">
                         <label for="cboTarjeta">Tarjeta</label>
                       </div>
-
                     </div>
-
                   </div>
               <!--</div> -->
                 <div class="form-group col-sm-12">
@@ -270,7 +264,7 @@
                             rows="3" cols="50" required oninvalid="this.setCustomValidity('Por Favor ingrese su dirección de forma correcta para hacer llegar su pedido.')" oninput="setCustomValidity('')"></textarea>
               </div>
               <div class="col-sm-12">
-                <p>Se le recuerda que los pedidos serán entregados los dias viernes,sabados y domingos</p>
+                <p>Esta a punto de finalizar su pedido gracias por preferirnos, Dios le bendiga en abundancia. <i style="color:red;" class="fa fa-heart" aria-hidden="true"></i></p>
               </div>
 
               <button type="submit" class="btn btn-success btn-block" id="btnEnviarPedido">Enviar Pedido</button>

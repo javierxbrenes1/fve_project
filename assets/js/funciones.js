@@ -51,17 +51,8 @@ $("document").ready(function(){
         $("#pnlProdCategoria").load("LN/Categoria.php?id="+vlcParametro, function(){
              var pnlbloqueo = $(".block-loading");
              pnlbloqueo.remove();
-<<<<<<< HEAD
-             
         });
          e.preventDefault();
-           
-=======
-
-        });
-         e.preventDefault();
-
->>>>>>> origin/Nueva_admi
     });
 
     $("#lstCat").on("click","li",function(){
@@ -90,19 +81,8 @@ $("document").ready(function(){
                     var pnlbloqueo = $(".block-loading");
                     pnlbloqueo.remove();
                 });
-<<<<<<< HEAD
-                                                                         
-           /*setTimeout(function(){
-               var pnlbloqueo = $(".block-loading");
-               pnlbloqueo.remove();
-           },2500);  
-            */
-          $(this).scrollTop(0);  
-       
-=======
-          $(this).scrollTop(0);
 
->>>>>>> origin/Nueva_admi
+          $(this).scrollTop(0);
     });
 
     $(".btnCarrito").click(function(){
@@ -172,11 +152,6 @@ function pAgregarProd(pvnID)
         if(vlotxtCant.val().length > 0 && parseFloat(vlotxtCant.val()) !== 0)
         {
             var vloTextObservacion = (vlotxtObs !== undefined) ? vlotxtObs.val() : "";
-<<<<<<< HEAD
-            
-=======
-
->>>>>>> origin/Nueva_admi
             $.ajax({
                 url: 'LN/Almacen.php',
                 type:"POST",
@@ -190,11 +165,6 @@ function pAgregarProd(pvnID)
                     //Mensaje
                 }
             });
-<<<<<<< HEAD
-            
-=======
-
->>>>>>> origin/Nueva_admi
         }else
         {
             vlotxtCant.focus();
@@ -250,11 +220,6 @@ function ElimProd(vloIdProd)
         }
 
     });
-<<<<<<< HEAD
-    
-=======
-
->>>>>>> origin/Nueva_admi
 }
 
 function MostrarMenu()

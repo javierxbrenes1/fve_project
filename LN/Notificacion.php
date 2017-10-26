@@ -1,18 +1,18 @@
 <?php
-if(!class_exists('Carrito')){ 
-    include 'Carrito.php'; 
+if(!class_exists('Carrito')){
+    include 'Carrito.php';
 }
 require_once('../model/email/class.phpmailer.php');
 class Notificacion
 {
     //Contructor
     function __construct(){}
-    
+
     function NotificarPedidoPorCorreo($pvcMensaje,$pvcCorreoCliente,$pvcCorreoPedidos,$pvcIDPedido)
     {
         try
         {
-            $vlcCorreoSaliente = "no-reply-dev@verfrutaexpress.com";
+            $vlcCorreoSaliente = "no-reply@verfrutaexpress.com";
             $vlcPWD = "verfrutaexpress2017";
             $mail = new PHPMailer();
             //indico a la clase que use SMTP
@@ -42,13 +42,12 @@ class Notificacion
                 return false;
             } else {
                 return true;
-            } 
+            }
         }catch(Exception $ex)
         {
-            
+
         }
     }
-    
-    
-}
 
+
+}

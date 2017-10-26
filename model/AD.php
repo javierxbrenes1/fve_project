@@ -32,10 +32,10 @@
        {
            try
            {
-               $Host = "localhost";//"verfrutaexpress.com";
-               $User = "root";//"verfruta_AppUser";//"verfruta_usuario";//"verfruta_AppUser";
-               $Pass = "";//"Pfgh%3209.790VerFruOn12";//'^b!0ediS$fbN';//"Pfgh%3209.790VerFruOn12";//^b!0ediS$fbN
-                 $BD = "verfruta_Application";//"verfruta_Desarrollo"; //"verfruta_Application";
+               $Host = "verfrutaexpress.com";
+               $User = "verfruta_AppUser";
+               $Pass = "Pfgh%3209.790VerFruOn12";
+                 $BD = "verfruta_Application";
 
             $vloConexion = new mysqli($Host,$User,$Pass, $BD);
 
@@ -46,7 +46,7 @@
             $vloConexion->set_charset("utf8");
 
             return $vloConexion;
-           
+
            }catch(Exception $ex){
                echo "Error con la conexión";
            }
