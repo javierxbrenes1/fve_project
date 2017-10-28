@@ -145,6 +145,7 @@ function PLimpiarCampos()
 
 function pAgregarProd(pvnID)
 {
+
     var vlotxtCant = $(".txtCantidad", '#' + pvnID);
     var vlotxtObs = $(".txtObservacion", '#' + pvnID);
     if(vlotxtCant !== undefined )
@@ -161,8 +162,9 @@ function pAgregarProd(pvnID)
                    vlotxtCant.val("");
                    vlotxtObs.val("");
                 },
-                error: function(){
-                    //Mensaje
+                function (jqXHR, textStatus, errorThrown) {
+                    //Desbloquea la pantalla
+                    Mensaje('Error', 'Status Code: ' + jqXHR.status + ' Error: ' + errorThrown, "error", "ok");
                 }
             });
         }else
@@ -201,12 +203,14 @@ function pMostrarCarrito()
 
 function ElimProd(vloIdProd)
 {
+  BloquearPantalla();
     $.ajax({
         type: "POST",
         url: "LN/MantCarrito.php",
         data: {id: vloIdProd},
         success: function(data)
         {
+          DesbloquearPantalla();
             //alert(data);
             var array = data.split("|");
                 //alert(array[0].substring(0,(array[0].length)-1));
@@ -215,8 +219,19 @@ function ElimProd(vloIdProd)
                 if(array[1] != "0"){
                    vlnTexto = vlnTexto + " (" + array[1] + ")";
                 }
-
                 $(".btnCarrito").html(vlnTexto);
+                //si el arreglo mide 3
+                if(array.length > 2){
+                  //Mostrar mensaje Error
+                  Mensaje("Error",
+                  array[2],
+                  "error", "ok");
+                }
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            //Desbloquea la pantalla
+            DesbloquearPantalla();
+            Mensaje('Error', 'Status Code: ' + jqXHR.status + ' Error: ' + errorThrown, "error", "ok");
         }
 
     });

@@ -80,7 +80,7 @@ if($vlnCantTotalArt > 0){
         $vlcBody= $vlcBody.'<p><strong>Pedido N&uacute;mero: </strong>'.$vlcIDPedido.'</p>';
         $vlcBody= $vlcBody.'<p><strong>Fecha del pedido: </strong>'.$vlcFechaPedido.'</p>';
         $vlcBody= $vlcBody.'<p><strong>Zona de pedido: </strong>'.$vlcZonaNombre.'</p>';
-        $vlcBody= $vlcBody.'<p><strong>D&iacutea de entrega: </strong>'.$vlcDiaEntrega.'</p>';
+        $vlcBody= $vlcBody.'<p><strong>D&iacute;a de entrega: </strong>'.$vlcDiaEntrega.'</p>';
         $vlcBody= $vlcBody.'<p><strong>Medio de pago: </strong>'.$vlcMedioPago.'</p>';
         $vlcBody= $vlcBody.'<p><strong>Direcci&oacute;n: </strong>'.$vlcDireccion.'</p>';
         $vlcBody= $vlcBody.'<p><strong>N&uacute;m. de tel&eacute;fono: </strong>'.$vlnTelPrinc.'</p>';

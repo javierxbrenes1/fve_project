@@ -1,7 +1,18 @@
-[08-Sep-2016 12:55:03 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'La unique_id 20161002 no existe!' in /home3/verfrutadmin/public_html/LN/Carrito.php:114
-Stack trace:
-#0 /home3/verfrutadmin/public_html/LN/MantCarrito.php(12): Carrito->remove_producto('20161002')
-#1 {main}
-  thrown in /home3/verfrutadmin/public_html/LN/Carrito.php on line 114
-[01-Oct-2017 02:29:53 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/verfrutadmin/public_html/LN/Carrito.php on line 65
-[01-Oct-2017 02:30:11 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/verfrutadmin/public_html/LN/Carrito.php on line 65
+[03-Oct-2017 10:11:45 America/Chicago] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home3/verfrutadmin/public_html/tienda.php:1) in /home3/verfrutadmin/public_html/LN/Carrito.php on line 2
+[03-Oct-2017 10:11:45 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home3/verfrutadmin/public_html/tienda.php:1) in /home3/verfrutadmin/public_html/LN/Carrito.php on line 2
+[03-Oct-2017 10:11:58 America/Chicago] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home3/verfrutadmin/public_html/tienda.php:1) in /home3/verfrutadmin/public_html/LN/Carrito.php on line 2
+[03-Oct-2017 10:11:58 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home3/verfrutadmin/public_html/tienda.php:1) in /home3/verfrutadmin/public_html/LN/Carrito.php on line 2
+[03-Oct-2017 10:12:13 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home3/verfrutadmin/public_html/tienda.php:1) in /home3/verfrutadmin/public_html/LN/Carrito.php on line 2
+[03-Oct-2017 10:12:21 America/Chicago] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home3/verfrutadmin/public_html/tienda.php:1) in /home3/verfrutadmin/public_html/LN/Carrito.php on line 2
+[03-Oct-2017 10:12:21 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home3/verfrutadmin/public_html/tienda.php:1) in /home3/verfrutadmin/public_html/LN/Carrito.php on line 2
+[03-Oct-2017 10:12:57 America/Chicago] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home3/verfrutadmin/public_html/tienda.php:1) in /home3/verfrutadmin/public_html/LN/Carrito.php on line 2
+[03-Oct-2017 10:12:57 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home3/verfrutadmin/public_html/tienda.php:1) in /home3/verfrutadmin/public_html/LN/Carrito.php on line 2
+[03-Oct-2017 10:13:34 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home3/verfrutadmin/public_html/tienda.php:1) in /home3/verfrutadmin/public_html/LN/Carrito.php on line 2
+[03-Oct-2017 10:14:17 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home3/verfrutadmin/public_html/tienda.php:1) in /home3/verfrutadmin/public_html/LN/Carrito.php on line 2
+[03-Oct-2017 10:15:00 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home3/verfrutadmin/public_html/tienda.php:1) in /home3/verfrutadmin/public_html/LN/Carrito.php on line 2
+[03-Oct-2017 10:15:34 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home3/verfrutadmin/public_html/tienda.php:1) in /home3/verfrutadmin/public_html/LN/Carrito.php on line 2
+[03-Oct-2017 10:15:39 America/Chicago] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home3/verfrutadmin/public_html/tienda.php:1) in /home3/verfrutadmin/public_html/LN/Carrito.php on line 2
+[03-Oct-2017 10:15:39 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home3/verfrutadmin/public_html/tienda.php:1) in /home3/verfrutadmin/public_html/LN/Carrito.php on line 2
+[04-Oct-2017 10:44:59 America/Chicago] PHP Warning:  session_start(): open(/tmp/sess_b406d0c4e47c6db9fcfc5a3df01248b4, O_RDWR) failed: Permission denied (13) in /home3/verfrutadmin/public_html/LN/Carrito.php on line 2
+[04-Oct-2017 10:44:59 America/Chicago] PHP Warning:  Unknown: open(/tmp/sess_b406d0c4e47c6db9fcfc5a3df01248b4, O_RDWR) failed: Permission denied (13) in Unknown on line 0
+[04-Oct-2017 10:44:59 America/Chicago] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0
