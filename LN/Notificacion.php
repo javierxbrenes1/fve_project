@@ -4,6 +4,7 @@ if(!class_exists('Carrito')){
 }
 require_once('../model/email/class.phpmailer.php');
 require_once('../model/ADParam.php');
+require_once('../model/pdf/html2pdf.php');
 class Notificacion
 {
     //Contructor
