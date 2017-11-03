@@ -3,17 +3,22 @@ if(!class_exists('Carrito')){
     include 'Carrito.php';
 }
 require_once('../model/email/class.phpmailer.php');
+require_once('../model/ADParam.php');
 class Notificacion
 {
     //Contructor
     function __construct(){}
 
-    function NotificarPedidoPorCorreo($pvcMensaje,$pvcCorreoCliente,$pvcCorreoPedidos,$pvcIDPedido)
+    function NotificarPedidoPorCorreo($pvcMensaje,$pvcCorreoCliente,$pvcIDPedido)
     {
         try
         {
-            $vlcCorreoSaliente = "no-reply@verfrutaexpress.com";
-            $vlcPWD = "verfrutaexpress2017";
+            //Create the ADParams object
+            $vloParams = new ADParam();
+            //Get the send mauil
+            $vlcCorreoSaliente = $vloParams->getParam('CORREO_SALIENTE');//"no-reply@verfrutaexpress.com";
+            $vlcPWD = $vloParams->getParam('PWD_CORREO');//"verfrutaexpress2017";
+            $pvcCorreoPedidos = $vloParams->getParam('REM_CORRES');
             $mail = new PHPMailer();
             //indico a la clase que use SMTP
             $mail->IsSMTP();
@@ -21,11 +26,11 @@ class Notificacion
             //$mail->SMTPDebug = 2;
             //Debo de hacer autenticación SMTP
             $mail->SMTPAuth = true;
-            $mail->SMTPSecure= "ssl";
+            $mail->SMTPSecure= $vloParams->getParam('SMTP_SEG');//"ssl";
             //indico el servidor de Gmail para SMTP
-            $mail->Host = "gator2022.hostgator.com";//"smtp.gmail.com";
+            $mail->Host = $vloParams->getParam('SMTP');//"gator2022.hostgator.com";//"smtp.gmail.com";
             //indico el puerto que usa Gmail
-            $mail->Port= 465;
+            $mail->Port= $vloParams->getParam('PORT_SMTP');
             //indico un usuario / clave de un usuario de gmail
             $mail->Username = $vlcCorreoSaliente;//
             $mail->Password= $vlcPWD;//

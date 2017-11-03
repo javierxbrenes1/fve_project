@@ -120,17 +120,16 @@ if($vlnCantTotalArt > 0){
         $vlcBody= $vlcBody.'</div>';
         $vlcBody= $vlcBody.'<hr align="center" width="99%">';
         $vlcBody= $vlcBody.'<hr align="center" width="99%">';
-        $vlcBody= $vlcBody.'<p>';
+        //$vlcBody= $vlcBody.'<p>';
         $vlcBody= $vlcBody.'<H4>Gracias por su compra</H4>';
-        $vlcBody = $vlcBody.'Se le recuerda que los pedidos seran entregados los dias viernes,sabados y domingos, uno de nuestros agentes se pondra en contacto con usted.';
-        $vlcBody = $vlcBody.'</p>';
+        //$vlcBody = $vlcBody.'</p>';
         $vlcBody= $vlcBody.'</div>';
 
         //crea clase de notificacion
         $vloNotificacion = new Notificacion();
         //Obtiene el resultado de la notificacion
         $vlcCorreoInterno = 'pedidos@verfrutaexpress.com';
-       $vlbSeNotifico =  $vloNotificacion->NotificarPedidoPorCorreo($vlcBody, $vlcEmail, $vlcCorreoInterno, $vlcIDPedido);
+       $vlbSeNotifico =  $vloNotificacion->NotificarPedidoPorCorreo($vlcBody, $vlcEmail, $vlcIDPedido);
 
        if($vlbSeNotifico)
        {

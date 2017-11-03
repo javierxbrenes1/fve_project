@@ -11,7 +11,6 @@ $("document").ready(function(){
     $("#FormPedido").submit(function(e){
         $('#modalEnvio').modal('hide');
         BloquearPantalla();
-        console.log($("#FormPedido").serialize());
         $.ajax({
                     type: "GET",
                     url: "LN/Pedidos.php",
