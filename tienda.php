@@ -120,7 +120,6 @@
                     //Obtiene las filas devueltas.
                     $resultado = $vloProductos->ProductosEnPromocion();
                     //verificar si se devolvieron registros
-                    //$vloCantRegistros = mysql_num_rows($resultado);
                     if($resultado->num_rows > 0){
                     while($vloResultado = mysqli_fetch_array($resultado))
                     {

@@ -34,10 +34,10 @@
            {
               $params = parse_ini_file("BD.ini");
 
-               $Host = $params['Host'];//"verfrutaexpress.com";
-               $User = $params['User'];//"verfruta_AppUser";
-               $Pass = $params['Pass'];//"Pfgh%3209.790VerFruOn12";
-                 $BD = $params['BD']; //"verfruta_Application";
+               $Host = $params['Host'];
+               $User = $params['User'];
+               $Pass = $params['Pass'];
+                 $BD = $params['BD'];
 
             $vloConexion = new mysqli($Host,$User,$Pass, $BD);
 

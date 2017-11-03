@@ -7,7 +7,7 @@ include 'AD.php';
         var $ERROR_MESSAGE   = "Ocurrio un error, lo lamentamos.!,favor noticarlo al siguiente correo electronico: soporte@verfrutaexpress.com";
         //Constructor
         function __construct(){}
-        
+
         public function Catalogo($pvbActivos)
         {
             global $ERROR_MESSAGE;
@@ -19,40 +19,40 @@ include 'AD.php';
                 {
                     $vlcScript = $vlcScript." WHERE prod_sts = '1';";
                 }
-                
+
                 return $AccesoAdatos->RetornarResultado($vlcScript) ;
             } catch (Exception $ex) {
-            
-                echo $ERROR_MESSAGE;      
-                  
+
+                echo $ERROR_MESSAGE;
+
             }
-            
+
         }
-        
-        
+
+
         public function BuscarProductos($pvcbuscar)
         {
             global $ERROR_MESSAGE;
             try {
-               
+
                 $AD = new AD();
-                
+
                 $vloConexion = $AD->ObtenerConexion();
-                
+
                 $param = mysqli_real_escape_string($vloConexion, $pvcbuscar);
-                
+
                 $vlcScript = "SELECT * "
                         . "     FROM fve_prod "
                         . "    WHERE prod_nom like '%".$param."%'"
                         . "      AND prod_sts = 1";
-                $resultado = mysqli_query($vloConexion, $vlcScript);//$AD->RetornarResultado($vlcScript);
+                $resultado = mysqli_query($vloConexion, $vlcScript);
                 $vloConexion->close();
                 return $resultado;
             } catch (Exception $exc) {
                 echo $ERROR_MESSAGE;
             }
         }
-        
+
         public function ProductosEnPromocion(){
             global $ERROR_MESSAGE;
             try{
@@ -63,10 +63,10 @@ include 'AD.php';
                         . "      AND prod_sts = '1' ";
                  return $AccesoAdatos->RetornarResultado($vlcScript) ;
             } catch (Exception $ex) {
-                 echo $ERROR_MESSAGE; 
+                 echo $ERROR_MESSAGE;
             }
         }
-        
+
         public function ObtenerCategorias()
         {
             global $ERROR_MESSAGE;
@@ -76,10 +76,10 @@ include 'AD.php';
                         . "     FROM fve_tip_prod ";
                  return $AccesoAdatos->RetornarResultado($vlcScript) ;
             } catch (Exception $ex) {
-                 echo $ERROR_MESSAGE;  
+                 echo $ERROR_MESSAGE;
             }
         }
-        
+
         public function ProductosPorCategoria($pvnCategoria)
         {
             global $ERROR_MESSAGE;
@@ -91,10 +91,10 @@ include 'AD.php';
                         . "      AND tip_prod_id= '".$pvnCategoria."';";
                  return $AccesoAdatos->RetornarResultado($vlcScript) ;
             } catch (Exception $ex) {
-                 echo $ERROR_MESSAGE;   
+                 echo $ERROR_MESSAGE;
             }
         }
-        
+
         public function ObtenerDetallesArt($pvcID)
         {
             global $ERROR_MESSAGE;

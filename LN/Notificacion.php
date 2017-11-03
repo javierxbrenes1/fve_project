@@ -16,32 +16,28 @@ class Notificacion
             //Create the ADParams object
             $vloParams = new ADParam();
             //Get the send mauil
-            $vlcCorreoSaliente = $vloParams->getParam('CORREO_SALIENTE');//"no-reply@verfrutaexpress.com";
-            $vlcPWD = $vloParams->getParam('PWD_CORREO');//"verfrutaexpress2017";
+            $vlcCorreoSaliente = $vloParams->getParam('CORREO_SALIENTE');
+            $vlcPWD = $vloParams->getParam('PWD_CORREO');
             $pvcCorreoPedidos = $vloParams->getParam('REM_CORRES');
             $mail = new PHPMailer();
             //indico a la clase que use SMTP
             $mail->IsSMTP();
-            //permite modo debug para ver mensajes de las cosas que van ocurriendo
-            //$mail->SMTPDebug = 2;
             //Debo de hacer autenticación SMTP
             $mail->SMTPAuth = true;
-            $mail->SMTPSecure= $vloParams->getParam('SMTP_SEG');//"ssl";
+            $mail->SMTPSecure= $vloParams->getParam('SMTP_SEG');
             //indico el servidor de Gmail para SMTP
-            $mail->Host = $vloParams->getParam('SMTP');//"gator2022.hostgator.com";//"smtp.gmail.com";
+            $mail->Host = $vloParams->getParam('SMTP');
             //indico el puerto que usa Gmail
             $mail->Port= $vloParams->getParam('PORT_SMTP');
             //indico un usuario / clave de un usuario de gmail
-            $mail->Username = $vlcCorreoSaliente;//
-            $mail->Password= $vlcPWD;//
+            $mail->Username = $vlcCorreoSaliente;
+            $mail->Password= $vlcPWD;
             $mail->SetFrom($vlcCorreoSaliente, 'Pedidos Verfruta express');
             //Se lo envia a la persona que se encarga de los pedidos
             $mail->AddBCC($pvcCorreoPedidos,"Pedidos Verfruta Express");
-            //$mail->AddBCC("pedidosverfrutaexpress@gmail.com","Pedidos Verfruta Express");
             $mail->Subject = "Solicitud de Pedido ".$pvcIDPedido;
             $mail->MsgHTML($pvcMensaje);
             //Se lo envia al cliente para que sepa su compra.
-            //$address = $pvcCorreoCliente;
             $mail->AddAddress($pvcCorreoCliente);
             if(!$mail->Send()) {
                 return false;

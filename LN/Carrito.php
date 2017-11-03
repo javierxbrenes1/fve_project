@@ -72,7 +72,7 @@ class Carrito
 	//método que retorna el número de artículos del carrito
 	public function articulos_total()
 	{
-		return count($this->carrito);//$this->carrito["articulos_total"] ? $this->carrito["articulos_total"] : 0;
+		return count($this->carrito);
 	}
 
 	//este método retorna el contenido del carrito
@@ -125,7 +125,7 @@ class Carrito
       //Retorna falso
       return false;
     }
-    
+
 
 	}
 
